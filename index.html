@@ -67,7 +67,7 @@
           <p>Welcome to the experiment!</p>
           <p>On each of the following pages, you will see a scenario and be asked a question about it.</p>
           <p>Please read the scenario presented carefully and type your responses in the box.</p>
-          <p>Keep your response as short and concise as possible.</p>
+          <p>Please Keep your response as short and concise as possible.</p>
         `,
         choices: ['Begin Experiment']
       };
@@ -107,7 +107,7 @@
             buttonElement.onclick = function() {
               const response = inputElement.value.trim();
               if (response === "") {
-                alert("Please fill out this field.");
+                alert("Please enter your response.");
               } else {
                 jsPsych.finishTrial({
                   response: response
