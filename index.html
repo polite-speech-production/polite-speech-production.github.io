@@ -1,13 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research Project</title>
-</head>
-<body>
-    <h1>Welcome to My Research Project</h1>
-    <p>This is a simple HTML page to test the GitHub Pages site for our research project. Here, we will share our findings, updates, and more about our study.</p>
-    <p>Stay tuned for more updates!</p>
-</body>
+<html>
+  <head>
+    <title>Scenario-Based Experiment</title>
+    <script src="https://unpkg.com/jspsych@7.3.4"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.1.0"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-text@1.1.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <link href="https://unpkg.com/jspsych@7.3.4/css/jspsych.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <p>Loading the experiment... Please wait.</p>
+  </body>
+  <script>
+    // Function to fetch and parse the CSV file using PapaParse
+    async function fetchAndParseCSV(csvUrl) {
+      const response = await fetch(csvUrl);
+      const csvText = await response.text();
+
+      return new Promise((resolve) => {
+        Papa.parse(csvText, {
+          header: false, // No header in this CSV
+          skipEmptyLines: true,
+          complete: function(results) {
+            // Since there's no header, each row is in an array
+            const scenarios = results.data.map(row => row[0]); // Get the first element of each row
+            resolve(scenarios);
+          }
+        });
+      });
+    }
+
+    // Function to save data locally as a file
+    function saveData(filename, data) {
+      const blob = new Blob([data], { type: 'text/plain' });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Function to start the experiment
+    async function startExperiment() {
+      // Path to the local CSV file
+      const csvUrl = './scenarios_utterance_production_free_response_format.csv';
+      
+      // Fetch scenarios from the CSV file
+      const all_scenarios = await fetchAndParseCSV(csvUrl);
+
+      console.log(`Loaded ${all_scenarios.length} scenarios.`);
+
+      // Initialize jsPsych
+      const jsPsych = initJsPsych({
+        on_finish: function() {
+          // Save the data locally as a file
+          const jsonData = jsPsych.data.get().json();
+          saveData('participant_data.json', jsonData);
+        }
+      });
+
+      // Define the welcome page
+      const welcome_page = {
+        type: jsPsychHtmlButtonResponse,
+        stimulus: `
+          <p>Welcome to the experiment!</p>
+          <p>On each of the following pages, you will see a scenario and be asked a question about it.</p>
+          <p>Please read the scenario presented carefully and type your responses in the box.</p>
+          <p>Keep your response as short and concise as possible.</p>
+        `,
+        choices: ['Begin Experiment']
+      };
+
+      // Function to randomly shuffle and sample 20 scenarios
+      function getRandomScenarios(scenarios, count) {
+        const shuffled = scenarios.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, count);
+      }
+
+      // Randomly sample 20 complete scenarios
+      const sampled_scenarios = getRandomScenarios(all_scenarios, 20);
+
+      // Create trials using timeline variables
+      const trials = {
+        timeline: [{
+          type: jsPsychHtmlButtonResponse,
+          stimulus: jsPsych.timelineVariable('question'),
+          choices: [],
+          on_load: function() {
+            // Create a container for the textarea and button, and center it
+            const container = document.createElement('div');
+            container.setAttribute('style', 'display: flex; flex-direction: column; align-items: center; margin-top: 20px;');
+
+            // Add a text input for the response
+            const inputElement = document.createElement('textarea');
+            inputElement.setAttribute('id', 'response');
+            inputElement.setAttribute('rows', '4');
+            inputElement.setAttribute('cols', '50');
+            inputElement.setAttribute('placeholder', 'Enter your response here');
+            inputElement.setAttribute('style', 'margin-bottom: 10px;');
+            container.appendChild(inputElement);
+
+            // Add the submit button below the textarea
+            const buttonElement = document.createElement('button');
+            buttonElement.textContent = 'Submit';
+            buttonElement.onclick = function() {
+              jsPsych.finishTrial({
+                response: inputElement.value
+              });
+            };
+            container.appendChild(buttonElement);
+
+            document.querySelector('.jspsych-content').appendChild(container);
+          }
+        }],
+        timeline_variables: sampled_scenarios.map(scenario => ({
+          question: formatScenario(scenario)
+        }))
+      };
+
+      // Function to format scenario text
+      function formatScenario(scenario) {
+        // Wrap the entire content in a div with left alignment and set a fixed width for better readability
+        return `
+          <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+            ${scenario
+              .replace(/Scenario:/, '<b>Scenario:</b><br>')
+              .replace(/Rating:/, '<br><br><b>Rating:</b><br>')
+              .replace(/Question:/, '<br><br><b>Question:</b><br>')}
+          </div>
+        `;
+      }
+
+      // Create the timeline and add the welcome page and trials
+      const timeline = [];
+      timeline.push(welcome_page);
+      timeline.push(trials);
+
+      // Start the experiment
+      jsPsych.run(timeline);
+    }
+
+    // Start the experiment after the page loads
+    startExperiment();
+  </script>
 </html>
