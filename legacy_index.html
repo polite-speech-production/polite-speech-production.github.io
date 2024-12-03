@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scenario-Based Experiment</title>
+    <script src="https://unpkg.com/jspsych@7.3.4"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.1.0"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-text@1.1.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <link href="https://unpkg.com/jspsych@7.3.4/css/jspsych.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <p>Loading the experiment... Please wait.</p>
+  </body>
+  <script>
+    // Function to fetch and parse the CSV file using PapaParse
+    async function fetchAndParseCSV(csvUrl) {
+      const response = await fetch(csvUrl);
+      const csvText = await response.text();
+
+      return new Promise((resolve) => {
+        Papa.parse(csvText, {
+          header: false, // No header in this CSV
+          skipEmptyLines: true,
+          complete: function(results) {
+            // Since there's no header, each row is in an array
+            const scenarios = results.data.map(row => row[0]); // Get the first element of each row
+            resolve(scenarios);
+          }
+        });
+      });
+    }
+
+    // Function to save data locally as a file
+    function saveData(filename, data) {
+      const blob = new Blob([data], { type: 'text/plain' });
+      const link = document.createElement('a');
+      link.href = window.URL.createObjectURL(blob);
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Function to start the experiment
+    async function startExperiment() {
+      // Path to the local CSV file
+      const csvUrl = './scenarios_utterance_production_free_response_format.csv';
+      
+      // Fetch scenarios from the CSV file
+      const all_scenarios = await fetchAndParseCSV(csvUrl);
+
+      console.log(`Loaded ${all_scenarios.length} scenarios.`);
+
+      // Initialize jsPsych
+      const jsPsych = initJsPsych({
+        on_finish: function() {
+          // Save the data locally as a file
+          const jsonData = jsPsych.data.get().json();
+          saveData('participant_data.json', jsonData);
+        }
+      });
+
+      // Define the welcome page
+      const welcome_page = {
+        type: jsPsychHtmlButtonResponse,
+        stimulus: `
+          <p>Welcome to the experiment!</p>
+          <p>On each of the following pages, you will see a scenario and be asked a question about it.</p>
+          <p>Please read the scenario presented carefully and type your responses in the box.</p>
+          <p>Keep your response as short and concise as possible.</p>
+        `,
+        choices: ['Begin Experiment']
+      };
+
+      // Function to randomly shuffle and sample 20 scenarios
+      function getRandomScenarios(scenarios, count) {
+        const shuffled = scenarios.sort(() => 0.5 - Math.random());
+        return shuffled.slice(0, count);
+      }
+
+      // Randomly sample 20 complete scenarios
+      const sampled_scenarios = getRandomScenarios(all_scenarios, 20);
+
+      // Create trials using the jsPsychSurveyText plugin
+      const trials = {
+  timeline: [{
+    type: jsPsychSurveyText,
+    questions: [jsPsych.timelineVariable('question')],
+    button_label: 'Submit',
+    on_finish: function(data) {
+      const response = data.response.Q0.trim();
+      if (response === "") {
+        data.trial_data = {
+          error: "Field left blank"
+        };
+      }
+    }
+  }],
+  timeline_variables: sampled_scenarios.map(scenario => ({
+    question: {
+      prompt: `<div style="text-align: left; max-width: 600px; margin: 0 auto;">
+                ${scenario
+                  .replace(/Scenario:/, '<b>Scenario:</b><br>')
+                  .replace(/Rating:/, '<br><br><b>Rating:</b><br>')
+                  .replace(/Question:/, '<br><br><b>Question:</b><br>')}
+              </div>`,
+      placeholder: 'Enter your response here',
+      required: true,
+      rows: 3,  // Increase this number for more vertical space
+      columns: 50  // Increase this number for more horizontal space
+    }
+  }))
+};
+
+      // Create the timeline and add the welcome page and trials
+      const timeline = [];
+      timeline.push(welcome_page);
+      timeline.push(trials);
+
+      // Start the experiment
+      jsPsych.run(timeline);
+    }
+
+    // Start the experiment after the page loads
+    startExperiment();
+  </script>
+</html>
