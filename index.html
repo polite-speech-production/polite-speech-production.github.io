@@ -105,9 +105,14 @@
             const buttonElement = document.createElement('button');
             buttonElement.textContent = 'Submit';
             buttonElement.onclick = function() {
-              jsPsych.finishTrial({
-                response: inputElement.value
-              });
+              const response = inputElement.value.trim();
+              if (response === "") {
+                alert("Please fill out this field.");
+              } else {
+                jsPsych.finishTrial({
+                  response: response
+                });
+              }
             };
             container.appendChild(buttonElement);
 
