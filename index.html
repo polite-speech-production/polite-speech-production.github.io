@@ -184,9 +184,11 @@
           //         </div>`,
           prompt: `<div style="text-align: left; max-width: 600px; margin: 0 auto;">
           ${scenario.replace(/Scenario:/, '<b>Scenario:</b><br>')
-                   .replace(/Rating:/, '<br><br><b>Rating:</b><br>') 
+                   .replace(/Rating:/, '<br><br><b>Rating:</b><br>')
+                   .replace(/actually/, '<strong>actually</strong>')
                    .replace(/\d out of 5 hearts/, renderHearts(rating))
-                   .replace(/Question:/, '<br><b>Question:</b><br>')}
+                   .replace(/Question:/, '<br><b>Question:</b><br>')
+          }
         </div>`,
           placeholder: 'Enter your response here',
           required: true,
