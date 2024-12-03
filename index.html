@@ -109,9 +109,8 @@
         stimulus: `
           <p>Welcome to the experiment!</p>
           <p>On each of the following pages, you will see a scenario and be asked a question about it.</p>
-          <p>For the rating: 1 heart means the person does not like the performance at all and 5 hearts means the person likes it a lot.</p>
           <p>Please read the scenario carefully and type your responses in the box.</p>
-          <p>Please keep your response as short and concise as possible.</p>
+          <p>Keep your response as short and concise as possible.</p>
         `,
         choices: ['Begin Experiment']
       };
@@ -123,81 +122,43 @@
 
       const sampled_scenarios = getRandomScenarios(all_scenarios, 2);
 
-      // const trials = {
-      //   timeline: [{
-      //     type: jsPsychSurveyText,
-      //     questions: [jsPsych.timelineVariable('question')],
-      //     button_label: 'Submit',
-      //     on_finish: function(data) {
-      //       const response = data.response.Q0.trim();
-      //       if (response === "") {
-      //         data.trial_data = { error: "Field left blank" };
-      //       }
-      //       // Ensure the stimulus is recorded
-      //       data.stimulus = jsPsych.timelineVariable('question').prompt;
-      //     }
-      //   }],
-      //   timeline_variables: sampled_scenarios.map(scenario => {
-      //     const ratingMatch = scenario.match(/(\d) out of 5 hearts/);
-      //     const rating = ratingMatch ? parseInt(ratingMatch[1]) : 0;
-      //     return {
-      //       question: {
-      //         prompt: `<div style="text-align: left; max-width: 600px; margin: 0 auto;">
-      //                   ${scenario.replace(/Scenario:/, '<b>Scenario:</b><br>')
-      //                            .replace(/Rating:/, '<br><br><b>Rating:</b><br>')
-      //                           //  .replace(/Rating:/, '<br><br><b>Rating:</b><br>' + renderHearts(rating))
-      //                            .replace(/\d out of 5 hearts/, renderHearts(rating))
-      //                            .replace(/Question:/, '<br><br><b>Question:</b><br>')}
-      //                 </div>`,
-      //         placeholder: 'Enter your response here',
-      //         required: true,
-      //         rows: 3,
-      //         columns: 50
-      //       }
-      //     };
-      //   })
-      // };
-
       const trials = {
-    timeline: [{
-      type: jsPsychSurveyText,
-      questions: [jsPsych.timelineVariable('question')],
-      button_label: 'Submit',
-      on_finish: function(data) {
-        const response = data.response.Q0.trim();
-        if (response === "") {
-          data.trial_data = { error: "Field left blank" };
-        }
-        data.stimulus = jsPsych.timelineVariable('question').prompt;
-      }
-    }],
-    timeline_variables: sampled_scenarios.map(scenario => {
-      const ratingMatch = scenario.match(/(\d) out of 5 hearts/);
-      const rating = ratingMatch ? parseInt(ratingMatch[1]) : 0;
-      return {
-        question: {
-          // prompt: `<div style="text-align: left; max-width: 600px; margin: 0 auto;">
-          //           ${scenario.replace(/Scenario:/, '<b>Scenario:</b><br>')
-          //                    .replace(/Rating:/, '<br><br><b>Rating:</b><br>')
-          //                    .replace(/\d out of 5 hearts/, renderHearts(rating))
-          //                    .replace(/Question:/, '<br><br><b>Question:</b><br>')}
-          //         </div>`,
-          prompt: `<div style="text-align: left; max-width: 600px; margin: 0 auto;">
-          ${scenario.replace(/Scenario:/, '<b>Scenario:</b><br>')
-                   .replace(/Rating:/, '<br><br><b>Rating:</b><br>')
-                   .replace(/actually/, '<strong>actually</strong>')
-                   .replace(/\d out of 5 hearts/, renderHearts(rating))
-                   .replace(/Question:/, '<br><b>Question:</b><br>')
+        timeline: [{
+          type: jsPsychSurveyText,
+          questions: [jsPsych.timelineVariable('question')],
+          button_label: 'Submit',
+          on_finish: function(data) {
+            const response = data.response.Q0.trim();
+            if (response === "") {
+              data.trial_data = { error: "Field left blank" };
+            }
+            data.stimulus = jsPsych.timelineVariable('question').prompt;
           }
-        </div>`,
-          placeholder: 'Enter your response here',
-          required: true,
-          rows: 3,
-          columns: 50
-        }
+        }],
+        timeline_variables: sampled_scenarios.map(scenario => {
+          const ratingMatch = scenario.match(/(\d) out of 5 hearts/);
+          const rating = ratingMatch ? parseInt(ratingMatch[1]) : 0;
+          return {
+            question: {
+              prompt: `<div style="text-align: left; max-width: 600px; margin: 0 auto;">
+              ${scenario.replace(/Scenario:/, '<b>Scenario:</b><br>')
+                       .replace(/Rating:/, '<br><br><b>Rating:</b><br>') 
+                       .replace(/\d out of 5 hearts/, renderHearts(rating))
+                       .replace(/Question:/, '<br><b>Question:</b><br>')
+                       .replace(/(If .*? wanted to BOTH make .*? feel good AND give accurate and informative feedback,)/, '<strong>$1</strong>')
+                       .replace(/(If .*? wanted to give as accurate and informative feedback as possible, but not necessarily make .*? feel good,)/, '<strong>$1</strong>')
+                       .replace(/(If .*? wanted to make .*? feel good, but not necessarily give informative feedback,)/, '<strong>$1</strong>')
+                       .replace(/actually/, '<strong>actually</strong>')
+                      }
+            </div>`,
+              placeholder: 'Enter your response here',
+              required: true,
+              rows: 3,
+              columns: 50
+            }
+          };
+        })
       };
-    })
-  };
 
       // Define the DataPipe save trial
       const save_data = {
