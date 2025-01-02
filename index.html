@@ -72,7 +72,7 @@
 
   // Dynamically create a list of all 64 CSV filenames
   const csvFiles = Array.from({ length: 3}, (_, i) =>
-    `./data/scenarios_utterance_production_free_response_format_shuffled_${i}.csv`
+    `./data_final/scenarios_utterance_production_free_response_format_shuffled_${i}.csv`
   );
 
   // Function to get the next CSV file in sequence
@@ -113,9 +113,18 @@ function getNextCSVFile() {
       });
     }
 
+    // function renderHearts(rating) {
+    //   let heartsHTML = '<div class="hearts-container">';
+    //   for (let i = 0; i < 5; i++) {
+    //     heartsHTML += `<div class="heart ${i < rating ? 'filled' : ''}"></div>`;
+    //   }
+    //   heartsHTML += '</div>';
+    //   return heartsHTML;
+    // }
+
     function renderHearts(rating) {
       let heartsHTML = '<div class="hearts-container">';
-      for (let i = 0; i < 5; i++) {
+      for (let i = 0; i < 4; i++) {
         heartsHTML += `<div class="heart ${i < rating ? 'filled' : ''}"></div>`;
       }
       heartsHTML += '</div>';
@@ -140,7 +149,7 @@ function getNextCSVFile() {
         stimulus: `
           <p>Welcome to the experiment!</p>
           <p>On each of the following pages, you will see a scenario and be asked a question about it.</p>
-          <p>For the rating: 1 heart means the person does not like the performance at all and 5 hearts means the person likes it a lot.</p>
+          <p>For the rating: 0 heart means the person does not like the performance at all and 4 hearts means the person likes it a lot.</p>
           <p>Please read the scenario carefully and type your responses in the box.</p>
           <p>Please keep your response as short and concise as possible.</p>
         `,
@@ -161,14 +170,14 @@ function getNextCSVFile() {
           }
         }],
         timeline_variables: shuffled_scenarios.map(scenario => {
-          const ratingMatch = scenario.match(/(\d) out of 5 hearts/);
+          const ratingMatch = scenario.match(/(\d) out of 4 hearts/);
           const rating = ratingMatch ? parseInt(ratingMatch[1]) : 0;
           return {
             question: {
               prompt: `<div style="text-align: left; max-width: 600px; margin: 0 auto;">
               ${scenario.replace(/Scenario:/, '<b>Scenario:</b><br>')
                        .replace(/Rating:/, '<br><br><b>Rating:</b><br>') 
-                       .replace(/\d out of 5 hearts/, renderHearts(rating))
+                       .replace(/\d out of 4 hearts/, renderHearts(rating))
                        .replace(/Question:/, '<br><b>Question:</b><br>')
                        .replace(/(If .*? wanted to BOTH make .*? feel good AND give accurate and informative feedback,)/, '<strong>$1</strong>')
                        .replace(/(If .*? wanted to give as accurate and informative feedback as possible, but not necessarily make .*? feel good,)/, '<strong>$1</strong>')
