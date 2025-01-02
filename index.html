@@ -2,25 +2,22 @@
 <html>
   <head>
     <title>Scenario-Based Experiment</title>
-    <!-- jsPsych scripts -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' https://script.google.com https://*.google.com"> -->
     <script src="https://unpkg.com/jspsych@7.3.4"></script>
     <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.1.0"></script>
     <script src="https://unpkg.com/@jspsych/plugin-survey-text@1.1.3"></script>
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
     <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
-    
-    <!-- jsPsych CSS -->
     <link href="https://unpkg.com/jspsych@7.3.4/css/jspsych.css" rel="stylesheet" type="text/css" />
-    
     <style>
       .hearts-container {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 5px;
-        margin: 10px 0;
+        margin: 8px 0;
       }
-
+    
       .heart {
         position: relative;
         width: 20px;
@@ -28,7 +25,7 @@
         display: inline-block;
         margin: 0 2px;
       }
-
+    
       .heart:before,
       .heart:after {
         content: "";
@@ -42,85 +39,399 @@
         transform: rotate(-45deg);
         transform-origin: 0 100%;
       }
-
+    
       .heart:after {
         left: 0;
         transform: rotate(45deg);
         transform-origin: 100% 100%;
       }
-
+    
       .filled:before,
       .filled:after {
         background-color: red;
       }
 
-      .hearts-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-        margin: 8px 0; /* Slightly increased for spacing */
-      }
-
       .jspsych-survey-text-question textarea {
-        font-size: 16px !important; /* Increase input font size */
-        padding: 8px;              /* Better appearance */
+        font-size: 16px !important;
+        padding: 8px;
       }
     </style>
   </head>
-  
   <body>
     <p>Loading the experiment... Please wait.</p>
   </body>
-  
   <script>
-    // 1) List all CSV filenames you want to use
-    //    (You can add more if needed; just be sure your Apps Script "NUM_CSV_FILES" matches)
-    const csvFiles = [
-      './data_final/scenarios_utterance_production_free_response_format_shuffled_0.csv',
-      './data_final/scenarios_utterance_production_free_response_format_shuffled_1.csv',
-      './data_final/scenarios_utterance_production_free_response_format_shuffled_2.csv'
-    ];
+    // Replace with your Google Apps Script web app URL
+    const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzisnsbWihUcmAXU0fb8Z0uvS3TNBdqv6b7VKBS_jtkpK_CkChqqVh-qHwFfTSmUqCG/exec";
 
-    // 2) The URL to your deployed Google Apps Script (Web App)
-    //    (Provided in your question)
-    const GAS_URL = "https://script.google.com/macros/s/AKfycbwV0-5BJ6r2SI3bO8mJr9ANG7se6ayWRbuJodVZOz9VPYUqGJWptMrD0kn4Y8s65fE/exec";
+    // Create list of CSV files
+    const csvFiles = Array.from({ length: 5}, (_, i) =>
+      `./data_final/scenarios_utterance_production_free_response_format_shuffled_${i}.csv`
+    );
 
-    /**
-     * Function to fetch a *global index* from the Google Apps Script.
-     * That script increments a counter in your Google Sheet and returns the "old" index.
-     */
-    async function fetchGlobalIndex() {
-      const response = await fetch(GAS_URL);
-      const data = await response.json();
-      return data.index; // The integer index
+
+    function jsonp(url) {
+  console.log("Making JSONP request to:", url);
+  
+  return new Promise((resolve, reject) => {
+    const callbackName = 'jsonp_' + Date.now();
+    console.log("Created callback name:", callbackName);
+
+    window[callbackName] = function(data) {
+      console.log("Received JSONP response:", data);
+      delete window[callbackName];
+      document.head.removeChild(script);
+      resolve(data);
+    };
+
+    const script = document.createElement('script');
+    const fullUrl = `${url}${url.includes('?') ? '&' : '?'}callback=${callbackName}`;
+    script.src = fullUrl;
+    console.log("Full URL:", fullUrl);
+
+    script.onerror = (error) => {
+      console.error("Script load error:", error);
+      delete window[callbackName];
+      document.head.removeChild(script);
+      reject(new Error('Script load failed'));
+    };
+
+    document.head.appendChild(script);
+  });
+}
+
+async function getNextCSVFile() {
+  try {
+    // Check localStorage first
+    const storedCSV = localStorage.getItem('assignedCSV');
+    if (storedCSV) {
+      console.log("Using stored CSV:", storedCSV);
+      return storedCSV;
     }
 
-    /**
-     * Determine which CSV file the participant uses:
-     * - If localStorage has an assignedCSV, use that.
-     * - Otherwise, fetch a global index from Apps Script, pick that file, store it.
-     */
-    async function getAssignedCSV() {
-      let assignedCSV = localStorage.getItem('assignedCSV');
-      if (!assignedCSV) {
-        // No CSV assigned yet, so get a global index
-        let globalIndex = await fetchGlobalIndex();
+    console.log("Requesting new CSV assignment...");
+    const response = await jsonp(GOOGLE_SCRIPT_URL);
+    console.log("JSONP response received:", response);
 
-        // Safety check: ensure index is in bounds (0 <= globalIndex < csvFiles.length)
-        if (globalIndex < 0 || globalIndex >= csvFiles.length) {
-          globalIndex = 0;
-        }
-
-        assignedCSV = csvFiles[globalIndex];
-        localStorage.setItem('assignedCSV', assignedCSV);
-      }
-      return assignedCSV;
+    if (response && typeof response.index === 'number') {
+      const index = response.index % csvFiles.length;
+      const csvFile = csvFiles[index];
+      localStorage.setItem('assignedCSV', csvFile);
+      console.log("Assigned CSV:", csvFile);
+      return csvFile;
+    } else {
+      throw new Error('Invalid response format');
     }
+  } catch (error) {
+    console.error("Error in CSV assignment:", error);
+    // Fallback to timestamp-based assignment
+    const timestamp = Date.now();
+    const index = timestamp % csvFiles.length;
+    const csvFile = csvFiles[index];
+    localStorage.setItem('assignedCSV', csvFile);
+    console.log("Fallback CSV assigned:", csvFile);
+    return csvFile;
+  }
+}
 
-    /**
-     * Helper function to fetch & parse CSV using PapaParse
-     */
+
+//     function jsonp(url) {
+//   return new Promise((resolve, reject) => {
+//     // Create a unique callback name
+//     const callbackName = 'jsonp_' + Math.random().toString(36).substr(2, 9);
+    
+//     // Add callback to window object
+//     window[callbackName] = function(data) {
+//       // Clean up
+//       delete window[callbackName];
+//       document.head.removeChild(script);
+//       resolve(data);
+//     };
+
+//     // Create script element
+//     const script = document.createElement('script');
+//     script.src = `${url}${url.includes('?') ? '&' : '?'}callback=${callbackName}`;
+    
+//     // Handle errors
+//     script.onerror = () => {
+//       delete window[callbackName];
+//       document.head.removeChild(script);
+//       reject(new Error('Failed to load script'));
+//     };
+
+//     // Add script to document
+//     document.head.appendChild(script);
+    
+//     // Set timeout
+//     setTimeout(() => {
+//       if (window[callbackName]) {
+//         delete window[callbackName];
+//         document.head.removeChild(script);
+//         reject(new Error('Request timeout'));
+//       }
+//     }, 10000);
+//   });
+// }
+
+// async function getNextCSVFile() {
+//   // Check localStorage first
+//   const storedCSV = localStorage.getItem('assignedCSV');
+//   if (storedCSV) {
+//     console.log("Using stored CSV:", storedCSV);
+//     return storedCSV;
+//   }
+
+//   try {
+//     console.log("Requesting new CSV assignment...");
+    
+//     // Make JSONP request
+//     const response = await jsonp(GOOGLE_SCRIPT_URL);
+//     console.log("Received response:", response);
+
+//     if (response && typeof response.index === 'number') {
+//       const index = response.index % csvFiles.length;
+//       const csvFile = csvFiles[index];
+      
+//       // Store assignment
+//       localStorage.setItem('assignedCSV', csvFile);
+//       console.log("Assigned new CSV:", csvFile);
+      
+//       return csvFile;
+//     } else {
+//       throw new Error('Invalid response format');
+//     }
+//   } catch (error) {
+//     console.error("Error getting CSV assignment:", error);
+//     // Fallback to first CSV
+//     const fallbackCSV = csvFiles[0];
+//     localStorage.setItem('assignedCSV', fallbackCSV);
+//     return fallbackCSV;
+//   }
+// }
+
+//     function loadJSONP(url) {
+//   return new Promise((resolve, reject) => {
+//     // Create a unique callback name
+//     const callbackName = 'jsonp_callback_' + Date.now();
+    
+//     // Create script element
+//     const script = document.createElement('script');
+    
+//     // Setup the callback function
+//     window[callbackName] = function(data) {
+//       // Clean up
+//       document.body.removeChild(script);
+//       delete window[callbackName];
+//       resolve(data);
+//     };
+
+//     // Setup script error handling
+//     script.onerror = function() {
+//       document.body.removeChild(script);
+//       delete window[callbackName];
+//       reject(new Error('JSONP request failed'));
+//     };
+
+//     // Add the script to the page
+//     script.src = `${url}${url.includes('?') ? '&' : '?'}callback=${callbackName}`;
+//     document.body.appendChild(script);
+//   });
+// }
+
+// async function getNextCSVFile() {
+//   try {
+//     // Check localStorage first
+//     const storedCSV = localStorage.getItem('assignedCSV');
+//     if (storedCSV) {
+//       console.log("Retrieved stored CSV:", storedCSV);
+//       return storedCSV;
+//     }
+
+//     console.log("Requesting new CSV assignment...");
+    
+//     // Get index from Google Apps Script
+//     const index = await loadJSONP(GOOGLE_SCRIPT_URL);
+//     console.log("Received index:", index);
+
+//     // Ensure index is valid
+//     const validIndex = parseInt(index) % csvFiles.length;
+//     const csvFile = csvFiles[validIndex];
+
+//     // Store the assignment
+//     localStorage.setItem('assignedCSV', csvFile);
+//     console.log("Assigned new CSV:", csvFile);
+    
+//     return csvFile;
+
+//   } catch (error) {
+//     console.error("Error in CSV assignment:", error);
+//     // Fallback to first CSV
+//     const fallbackCSV = csvFiles[0];
+//     localStorage.setItem('assignedCSV', fallbackCSV);
+//     return fallbackCSV;
+//   }
+// }
+
+
+    // async function getNextCSVFile() {
+    //   // First check localStorage
+    //   const storedCSV = localStorage.getItem('assignedCSV');
+    //   if (storedCSV) {
+    //     console.log("Using stored CSV:", storedCSV);
+    //     return storedCSV;
+    //   }
+
+    //   return new Promise((resolve) => {
+    //     // Create unique callback name
+    //     const callbackName = 'callback_' + Date.now();
+        
+    //     // Create script element
+    //     const script = document.createElement('script');
+        
+    //     // Define callback function
+    //     window[callbackName] = function(index) {
+    //       // Clean up
+    //       delete window[callbackName];
+    //       document.body.removeChild(script);
+          
+    //       // Ensure index is valid
+    //       const validIndex = parseInt(index) % csvFiles.length;
+    //       const csvFile = csvFiles[validIndex];
+          
+    //       // Store assignment
+    //       localStorage.setItem('assignedCSV', csvFile);
+    //       console.log("Assigned new CSV:", csvFile);
+    //       resolve(csvFile);
+    //     };
+
+    //     // Add script to page
+    //     script.src = `${GOOGLE_SCRIPT_URL}?callback=${callbackName}`;
+    //     document.body.appendChild(script);
+
+    //     // Set timeout for fallback
+    //     setTimeout(() => {
+    //       if (window[callbackName]) {
+    //         // Clean up if callback wasn't called
+    //         delete window[callbackName];
+    //         document.body.removeChild(script);
+            
+    //         // Use fallback
+    //         const csvFile = csvFiles[0];
+    //         localStorage.setItem('assignedCSV', csvFile);
+    //         console.log("Timeout - using fallback CSV:", csvFile);
+    //         resolve(csvFile);
+    //       }
+    //     }, 5000);
+    //   });
+    // }
+
+
+    // async function getNextCSVFile() {
+    //   // Check localStorage first
+    //   const storedCSV = localStorage.getItem('assignedCSV');
+    //   if (storedCSV) {
+    //     console.log("Retrieved stored CSV:", storedCSV);
+    //     return storedCSV;
+    //   }
+
+    //   try {
+    //     console.log("Fetching new CSV assignment...");
+    //     const response = await fetch(GOOGLE_SCRIPT_URL);
+    //     if (!response.ok) {
+    //       throw new Error(`HTTP error! status: ${response.status}`);
+    //     }
+    //     const index = await response.text();
+    //     console.log("Received index:", index);
+        
+    //     const csvFile = `./data_final/scenarios_utterance_production_free_response_format_shuffled_${index}.csv`;
+    //     localStorage.setItem('assignedCSV', csvFile);
+    //     console.log("Assigned new CSV:", csvFile);
+    //     return csvFile;
+    //   } catch (error) {
+    //     console.error('Error getting CSV assignment:', error);
+    //     const randomIndex = Math.floor(Math.random() * csvFiles.length);
+    //     const csvFile = csvFiles[randomIndex];
+    //     localStorage.setItem('assignedCSV', csvFile);
+    //     console.log("Fallback to random CSV:", csvFile);
+    //     return csvFile;
+    //   }
+    // }
+
+
+//     async function getNextCSVFile() {
+//   // Check localStorage first
+//   const storedCSV = localStorage.getItem('assignedCSV');
+//   if (storedCSV) {
+//     console.log("Retrieved stored CSV:", storedCSV);
+//     return storedCSV;
+//   }
+
+//   try {
+//     console.log("Fetching new CSV assignment...");
+//     // Using no-cors mode
+//     const response = await fetch(GOOGLE_SCRIPT_URL, {
+//       method: 'GET',
+//       mode: 'no-cors'
+//     });
+
+//     // Since no-cors mode returns an opaque response, we need a different approach
+//     // We'll use a timestamp-based rotation instead
+//     const timestamp = Date.now();
+//     const index = Math.floor(timestamp % csvFiles.length);
+    
+//     console.log("Generated index:", index);
+    
+//     const csvFile = csvFiles[index];
+//     localStorage.setItem('assignedCSV', csvFile);
+//     console.log("Assigned new CSV:", csvFile);
+//     return csvFile;
+
+//   } catch (error) {
+//     console.error('Error in CSV assignment:', error);
+//     const fallbackIndex = 0;
+//     const csvFile = csvFiles[fallbackIndex];
+//     localStorage.setItem('assignedCSV', csvFile);
+//     console.log("Fallback to default CSV:", csvFile);
+//     return csvFile;
+//   }
+// }
+
+  //   async function getNextCSVFile() {
+  // const storedCSV = localStorage.getItem('assignedCSV');
+  // if (storedCSV) {
+  //   console.log("Retrieved stored CSV:", storedCSV);
+  //   return storedCSV;
+  // }
+
+  // try {
+  //   console.log("Fetching new CSV assignment...");
+  //   const response = await fetch(GOOGLE_SCRIPT_URL, {
+  //     method: 'GET',
+  //     mode: 'cors', // Enable CORS
+  //   });
+
+  //   if (!response.ok) {
+  //     throw new Error(`HTTP error! status: ${response.status}`);
+  //   }
+
+  //   const data = await response.json();
+  //   const index = data.index; // Extract the index
+  //   console.log("Received index:", index);
+
+  //   const csvFile = `./data_final/scenarios_utterance_production_free_response_format_shuffled_${index}.csv`;
+  //   localStorage.setItem('assignedCSV', csvFile);
+  //   console.log("Assigned new CSV:", csvFile);
+  //   return csvFile;
+  // } catch (error) {
+  //       console.error('Error getting CSV assignment:', error);
+  //       const randomIndex = Math.floor(Math.random() * csvFiles.length);
+  //       const csvFile = csvFiles[randomIndex];
+  //       localStorage.setItem('assignedCSV', csvFile);
+  //       console.log("Fallback to random CSV:", csvFile);
+  //       return csvFile;
+  //     }
+  //   }
+
     async function fetchAndParseCSV(csvUrl) {
       const response = await fetch(csvUrl);
       const csvText = await response.text();
@@ -129,7 +440,6 @@
           header: false,
           skipEmptyLines: true,
           complete: function(results) {
-            // Assuming each row is a single cell containing the scenario text
             const scenarios = results.data.map(row => row[0]);
             resolve(scenarios);
           }
@@ -137,9 +447,6 @@
       });
     }
 
-    /**
-     * Renders a row of 4 hearts based on a rating
-     */
     function renderHearts(rating) {
       let heartsHTML = '<div class="hearts-container">';
       for (let i = 0; i < 4; i++) {
@@ -149,41 +456,31 @@
       return heartsHTML;
     }
 
-    /**
-     * Main experiment function
-     */
     async function startExperiment() {
-      // Get assigned CSV from localStorage or from the global index
-      const selectedCSV = await getAssignedCSV();
+      const selectedCSV = await getNextCSVFile();
       console.log("Using CSV file:", selectedCSV);
 
-      // Fetch + parse the scenarios from the chosen CSV
       const all_scenarios = await fetchAndParseCSV(selectedCSV);
-
-      // Shuffle if desired (some CSVs may already be in random order)
       const shuffled_scenarios = all_scenarios.sort(() => Math.random() - 0.5);
 
-      // Initialize jsPsych
       const jsPsych = initJsPsych({
         on_finish: function() {
           console.log("Experiment finished");
         }
       });
 
-      // -- WELCOME PAGE
       const welcome_page = {
         type: jsPsychHtmlButtonResponse,
         stimulus: `
           <p>Welcome to the experiment!</p>
           <p>On each of the following pages, you will see a scenario and be asked a question about it.</p>
-          <p>For the rating: 0 heart means the person does not like the performance at all, and 4 hearts means the person likes it a lot.</p>
+          <p>For the rating: 0 heart means the person does not like the performance at all and 4 hearts means the person likes it a lot.</p>
           <p>Please read the scenario carefully and type your responses in the box.</p>
           <p>Please keep your response as short and concise as possible.</p>
         `,
         choices: ['Begin Experiment']
       };
 
-      // -- MAIN TRIALS
       const trials = {
         timeline: [{
           type: jsPsychSurveyText,
@@ -194,33 +491,28 @@
             if (response === "") {
               data.trial_data = { error: "Field left blank" };
             }
-            // For later reference: store the prompt in the data
             data.stimulus = jsPsych.timelineVariable('question').prompt;
           }
         }],
         timeline_variables: shuffled_scenarios.map(scenario => {
-          // Attempt to parse "X out of 4 hearts" from scenario
           const ratingMatch = scenario.match(/(\d) out of 4 hearts/);
           const rating = ratingMatch ? parseInt(ratingMatch[1]) : 0;
-
           return {
             question: {
               prompt: `<div style="text-align: left; max-width: 600px; margin: 0 auto;">
-                ${scenario
-                  // Replace these keywords to style them nicely
-                  .replace(/Scenario:/, '<b>Scenario:</b><br>')
-                  .replace(/Rating:/, '<br><br><b>Rating:</b><br>')
-                  .replace(/\d out of 4 hearts/, renderHearts(rating))
-                  .replace(/Question:/, '<br><b>Question:</b><br>')
-                  .replace(/(If .*? wanted to BOTH make .*? feel good AND give accurate and informative feedback,)/, '<strong>$1</strong>')
-                  .replace(/(If .*? wanted to give as accurate and informative feedback as possible, but not necessarily make .*? feel good,)/, '<strong>$1</strong>')
-                  .replace(/(If .*? wanted to make .*? feel good, but not necessarily give informative feedback,)/, '<strong>$1</strong>')
-                  .replace(/(If .*? wanted to BOTH make .*? feel good AND share .*? honest thoughts,)/, '<strong>$1</strong>')
-                  .replace(/(If .*? wanted to share .*? honest thoughts, but not necessarily make .*? feel good,)/, '<strong>$1</strong>')
-                  .replace(/(If .*? wanted to make .*? feel good, but not necessarily share .*? honest thoughts,)/, '<strong>$1</strong>')
-                  .replace(/actually/, '<strong>actually</strong>')
-                }
-              </div>`,
+              ${scenario.replace(/Scenario:/, '<b>Scenario:</b><br>')
+                       .replace(/Rating:/, '<br><br><b>Rating:</b><br>') 
+                       .replace(/\d out of 4 hearts/, renderHearts(rating))
+                       .replace(/Question:/, '<br><b>Question:</b><br>')
+                       .replace(/(If .*? wanted to BOTH make .*? feel good AND give accurate and informative feedback,)/, '<strong>$1</strong>')
+                       .replace(/(If .*? wanted to give as accurate and informative feedback as possible, but not necessarily make .*? feel good,)/, '<strong>$1</strong>')
+                       .replace(/(If .*? wanted to make .*? feel good, but not necessarily give informative feedback,)/, '<strong>$1</strong>')
+                       .replace(/(If .*? wanted to BOTH make .*? feel good AND share .*? honest thoughts,)/, '<strong>$1</strong>')
+                       .replace(/(If .*? wanted to share .*? honest thoughts, but not necessarily make .*? feel good,)/, '<strong>$1</strong>')
+                       .replace(/(If .*? wanted to make .*? feel good, but not necessarily share .*? honest thoughts,)/, '<strong>$1</strong>')
+                       .replace(/actually/, '<strong>actually</strong>')
+                      }
+            </div>`,
               placeholder: 'Enter your response here',
               required: true,
               rows: 3,
@@ -230,16 +522,14 @@
         })
       };
 
-      // -- SAVE DATA (jsPsychPipe)
       const save_data = {
         type: jsPsychPipe,
         action: "save",
-        experiment_id: "odX6wgoMZaHY", // Replace with your actual experiment ID if needed
+        experiment_id: "odX6wgoMZaHY", // Replace with your experiment ID
         filename: `participant_${jsPsych.randomization.randomID(10)}.csv`,
         data_string: () => jsPsych.data.get().csv()
       };
 
-      // -- THANK YOU PAGE
       const thank_you_page = {
         type: jsPsychHtmlButtonResponse,
         stimulus: `
@@ -253,18 +543,15 @@
         }
       };
 
-      // -- BUILD TIMELINE
       const timeline = [];
       timeline.push(welcome_page);
       timeline.push(trials);
       timeline.push(save_data);
       timeline.push(thank_you_page);
 
-      // -- RUN
       jsPsych.run(timeline);
     }
 
-    // Start the experiment once the page loads
     startExperiment();
   </script>
 </html>
