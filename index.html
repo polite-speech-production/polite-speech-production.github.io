@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Scenario-Based Experiment</title>
+    <!-- jsPsych scripts -->
+    <script src="https://unpkg.com/jspsych@7.3.4"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-html-button-response@1.1.0"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-text@1.1.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
+    
+    <!-- jsPsych CSS -->
+    <link href="https://unpkg.com/jspsych@7.3.4/css/jspsych.css" rel="stylesheet" type="text/css" />
+    
+    <style>
+      .hearts-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        margin: 10px 0;
+      }
+
+      .heart {
+        position: relative;
+        width: 20px;
+        height: 18px;
+        display: inline-block;
+        margin: 0 2px;
+      }
+
+      .heart:before,
+      .heart:after {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 0;
+        width: 10px;
+        height: 16px;
+        border-radius: 10px 10px 0 0;
+        background-color: lightgray;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+      }
+
+      .heart:after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: 100% 100%;
+      }
+
+      .filled:before,
+      .filled:after {
+        background-color: red;
+      }
+
+      .hearts-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        margin: 8px 0; /* Slightly increased for spacing */
+      }
+
+      .jspsych-survey-text-question textarea {
+        font-size: 16px !important; /* Increase input font size */
+        padding: 8px;              /* Better appearance */
+      }
+    </style>
+  </head>
+  
+  <body>
+    <p>Loading the experiment... Please wait.</p>
+  </body>
+  
+  <script>
+    // 1) List all CSV filenames you want to use
+    //    (You can add more if needed; just be sure your Apps Script "NUM_CSV_FILES" matches)
+    const csvFiles = [
+      './data_final/scenarios_utterance_production_free_response_format_shuffled_0.csv',
+      './data_final/scenarios_utterance_production_free_response_format_shuffled_1.csv',
+      './data_final/scenarios_utterance_production_free_response_format_shuffled_2.csv'
+    ];
+
+    // 2) The URL to your deployed Google Apps Script (Web App)
+    //    (Provided in your question)
+    const GAS_URL = "https://script.google.com/macros/s/AKfycbwV0-5BJ6r2SI3bO8mJr9ANG7se6ayWRbuJodVZOz9VPYUqGJWptMrD0kn4Y8s65fE/exec";
+
+    /**
+     * Function to fetch a *global index* from the Google Apps Script.
+     * That script increments a counter in your Google Sheet and returns the "old" index.
+     */
+    async function fetchGlobalIndex() {
+      const response = await fetch(GAS_URL);
+      const data = await response.json();
+      return data.index; // The integer index
+    }
+
+    /**
+     * Determine which CSV file the participant uses:
+     * - If localStorage has an assignedCSV, use that.
+     * - Otherwise, fetch a global index from Apps Script, pick that file, store it.
+     */
+    async function getAssignedCSV() {
+      let assignedCSV = localStorage.getItem('assignedCSV');
+      if (!assignedCSV) {
+        // No CSV assigned yet, so get a global index
+        let globalIndex = await fetchGlobalIndex();
+
+        // Safety check: ensure index is in bounds (0 <= globalIndex < csvFiles.length)
+        if (globalIndex < 0 || globalIndex >= csvFiles.length) {
+          globalIndex = 0;
+        }
+
+        assignedCSV = csvFiles[globalIndex];
+        localStorage.setItem('assignedCSV', assignedCSV);
+      }
+      return assignedCSV;
+    }
+
+    /**
+     * Helper function to fetch & parse CSV using PapaParse
+     */
+    async function fetchAndParseCSV(csvUrl) {
+      const response = await fetch(csvUrl);
+      const csvText = await response.text();
+      return new Promise((resolve) => {
+        Papa.parse(csvText, {
+          header: false,
+          skipEmptyLines: true,
+          complete: function(results) {
+            // Assuming each row is a single cell containing the scenario text
+            const scenarios = results.data.map(row => row[0]);
+            resolve(scenarios);
+          }
+        });
+      });
+    }
+
+    /**
+     * Renders a row of 4 hearts based on a rating
+     */
+    function renderHearts(rating) {
+      let heartsHTML = '<div class="hearts-container">';
+      for (let i = 0; i < 4; i++) {
+        heartsHTML += `<div class="heart ${i < rating ? 'filled' : ''}"></div>`;
+      }
+      heartsHTML += '</div>';
+      return heartsHTML;
+    }
+
+    /**
+     * Main experiment function
+     */
+    async function startExperiment() {
+      // Get assigned CSV from localStorage or from the global index
+      const selectedCSV = await getAssignedCSV();
+      console.log("Using CSV file:", selectedCSV);
+
+      // Fetch + parse the scenarios from the chosen CSV
+      const all_scenarios = await fetchAndParseCSV(selectedCSV);
+
+      // Shuffle if desired (some CSVs may already be in random order)
+      const shuffled_scenarios = all_scenarios.sort(() => Math.random() - 0.5);
+
+      // Initialize jsPsych
+      const jsPsych = initJsPsych({
+        on_finish: function() {
+          console.log("Experiment finished");
+        }
+      });
+
+      // -- WELCOME PAGE
+      const welcome_page = {
+        type: jsPsychHtmlButtonResponse,
+        stimulus: `
+          <p>Welcome to the experiment!</p>
+          <p>On each of the following pages, you will see a scenario and be asked a question about it.</p>
+          <p>For the rating: 0 heart means the person does not like the performance at all, and 4 hearts means the person likes it a lot.</p>
+          <p>Please read the scenario carefully and type your responses in the box.</p>
+          <p>Please keep your response as short and concise as possible.</p>
+        `,
+        choices: ['Begin Experiment']
+      };
+
+      // -- MAIN TRIALS
+      const trials = {
+        timeline: [{
+          type: jsPsychSurveyText,
+          questions: [jsPsych.timelineVariable('question')],
+          button_label: 'Submit',
+          on_finish: function(data) {
+            const response = data.response.Q0.trim();
+            if (response === "") {
+              data.trial_data = { error: "Field left blank" };
+            }
+            // For later reference: store the prompt in the data
+            data.stimulus = jsPsych.timelineVariable('question').prompt;
+          }
+        }],
+        timeline_variables: shuffled_scenarios.map(scenario => {
+          // Attempt to parse "X out of 4 hearts" from scenario
+          const ratingMatch = scenario.match(/(\d) out of 4 hearts/);
+          const rating = ratingMatch ? parseInt(ratingMatch[1]) : 0;
+
+          return {
+            question: {
+              prompt: `<div style="text-align: left; max-width: 600px; margin: 0 auto;">
+                ${scenario
+                  // Replace these keywords to style them nicely
+                  .replace(/Scenario:/, '<b>Scenario:</b><br>')
+                  .replace(/Rating:/, '<br><br><b>Rating:</b><br>')
+                  .replace(/\d out of 4 hearts/, renderHearts(rating))
+                  .replace(/Question:/, '<br><b>Question:</b><br>')
+                  .replace(/(If .*? wanted to BOTH make .*? feel good AND give accurate and informative feedback,)/, '<strong>$1</strong>')
+                  .replace(/(If .*? wanted to give as accurate and informative feedback as possible, but not necessarily make .*? feel good,)/, '<strong>$1</strong>')
+                  .replace(/(If .*? wanted to make .*? feel good, but not necessarily give informative feedback,)/, '<strong>$1</strong>')
+                  .replace(/(If .*? wanted to BOTH make .*? feel good AND share .*? honest thoughts,)/, '<strong>$1</strong>')
+                  .replace(/(If .*? wanted to share .*? honest thoughts, but not necessarily make .*? feel good,)/, '<strong>$1</strong>')
+                  .replace(/(If .*? wanted to make .*? feel good, but not necessarily share .*? honest thoughts,)/, '<strong>$1</strong>')
+                  .replace(/actually/, '<strong>actually</strong>')
+                }
+              </div>`,
+              placeholder: 'Enter your response here',
+              required: true,
+              rows: 3,
+              columns: 50
+            }
+          };
+        })
+      };
+
+      // -- SAVE DATA (jsPsychPipe)
+      const save_data = {
+        type: jsPsychPipe,
+        action: "save",
+        experiment_id: "odX6wgoMZaHY", // Replace with your actual experiment ID if needed
+        filename: `participant_${jsPsych.randomization.randomID(10)}.csv`,
+        data_string: () => jsPsych.data.get().csv()
+      };
+
+      // -- THANK YOU PAGE
+      const thank_you_page = {
+        type: jsPsychHtmlButtonResponse,
+        stimulus: `
+          <p>Thank you for participating in this experiment!</p>
+          <p>We appreciate your help, and your responses have been successfully recorded.</p>
+          <p>You may now close this window.</p>
+        `,
+        choices: ['Finish'],
+        on_finish: function() {
+          alert("You can now close this window.");
+        }
+      };
+
+      // -- BUILD TIMELINE
+      const timeline = [];
+      timeline.push(welcome_page);
+      timeline.push(trials);
+      timeline.push(save_data);
+      timeline.push(thank_you_page);
+
+      // -- RUN
+      jsPsych.run(timeline);
+    }
+
+    // Start the experiment once the page loads
+    startExperiment();
+  </script>
+</html>
