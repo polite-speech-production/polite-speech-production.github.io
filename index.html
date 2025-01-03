@@ -81,6 +81,11 @@
   justify-content: center;
   gap: 30px; /* This adds space between No and Yes */
 }
+
+/* Hide the asterisk but keep the field required */
+.jspsych-survey-multi-choice-question .required {
+  display: none;
+}
     </style>
   </head>
   <body>
@@ -315,7 +320,7 @@ const trials = {
     },
     questions: [
       {
-        prompt: "Your response",
+        prompt: "",
         options: ["Yes", "No"],
         required: true,
         horizontal: true
