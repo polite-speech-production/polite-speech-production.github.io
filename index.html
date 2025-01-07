@@ -210,7 +210,7 @@ async function getNextCSVFile() {
         stimulus: `
           <div style="max-width: 1000px; margin: 0 auto; text-align: left;">
           <p style="text-align: center;"><b><i>Welcome to the experiment!</i></b></p>
-          <p>In this experiment, you will be given several scenarios and asked to give responses to questions about the scenarios.</p>
+          <p>In this experiment, you will read several scenarios and then we will ask you some questions about those scenarios.</p>
           <p>The experiment is expected to take about 10 minutes to complete, including the time it takes to read instructions and answer several warm-up questions.</p>
           </div>
           `,
@@ -241,44 +241,46 @@ const note_page = {
             
             <p>Please be patient if the experiment loads slowly :)</p>
 
-            <p>Please read instruction on each page carefully before proceeding to the next page.</p>
+            <p>Please read the instructions on each page carefully before proceeding to the next page.</p>
 
             <p>If you encounter any problems or errors, we recommend switching to incognito mode or opening it in another web browser.</p>
 
-            <p>If the problem or error still resists, please send us an email at <a href="mailto:hjzhao@cs.stanford.edu" style="color: blue;">hjzhao@cs.stanford.edu</a>, and we will make sure you are compensated for your time!</p>
+            <p>If the problem or error still persists, please send us an email at <a href="mailto:hjzhao@cs.stanford.edu" style="color: blue;">hjzhao@cs.stanford.edu</a>, and we will make sure you are compensated for your time!</p>
         </div>
     `,
     choices: ['Next']
 };
 
-const start_experiment_transition = {
-    type: jsPsychHtmlButtonResponse,
-    stimulus: `
-        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p>Now let's get started! You will be given instructions of the experiment on the next page.</p>
-            <p>Click 'Start' when you're ready to begin.</p>
-        </div>
-    `,
-    choices: ['Start']  // Changed the button text to 'Start' instead of 'Next'
-};
+// const start_experiment_transition = {
+//     type: jsPsychHtmlButtonResponse,
+//     stimulus: `
+//         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+//             <p>Now let's get started! You will be given instructions of the experiment on the next page.</p>
+//             <p>Click 'Start' when you're ready to begin.</p>
+//         </div>
+//     `,
+//     choices: ['Start']  // Changed the button text to 'Start' instead of 'Next'
+// };
    
+
 const instruction_page = {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
-        <div style="max-width: 800px; margin: 0 auto; text-align: left;">
-            <h2 style="text-align: center;">Instructions</h2>
-            
-            <p>On the following pages, you will be presented with 3 warm-up scenarios and 8 experiment scenarios.</p>
-            
-            <p>In each scenario, people's feelings are represented on a scale of 0 to 3 hearts:</p>
-            <ul>
-                <li>0 hearts is the lowest rating</li>
-                <li>3 hearts is the highest rating</li>
-            </ul>
-            
-            <p>Please read the scenarios carefully and answer the questions honestly.</p>
-            
-            <p style="text-align: center; margin-top: 30px;">Click 'Next' to start the experiment.</p>
+        <div style="max-width: 900px; margin: 0 auto; text-align: left;">
+          <p style="text-align: center;"><b><i>Now let's get started!</i></b></p>
+          
+          <p>On the following pages, you will be presented with 3 warm-up scenarios and 8 experiment scenarios.</p>
+          
+          <p>In each scenario, people's feelings are represented on a scale of 0 to 3 hearts:</p>
+          
+          <ul>
+              <li>0 hearts <span style="display: inline-block; vertical-align: middle;">${renderHearts(0)}</span> is the lowest rating</li>
+              <li>3 hearts <span style="display: inline-block; vertical-align: middle;">${renderHearts(3)}</span> is the highest rating</li>
+          </ul>
+          
+          <p>Please read the scenarios carefully and answer the questions honestly.</p>
+          
+          <p style="text-align: center; margin-top: 30px;">Click 'Next' to start the experiment.</p>
         </div>
     `,
     choices: ['Next']
@@ -288,7 +290,7 @@ const transition_page_warm_up = {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
         <div style="max-width: 1000px; margin: 50px auto; text-align: center; line-height: 1.6;">
-            <p style="font-size: 18px;">Before we begin the main study, we'll start with 3 warm-up questions.</p>
+            <p style="font-size: 18px;">Before we jump into the main study, we'll start with 3 warm-up questions.</p>
         </div>
     `,
     choices: ['Continue'],
@@ -304,24 +306,20 @@ const trials = {
       const rating = ratingMatch ? parseInt(ratingMatch[1]) : 0;
       
       return `<div style="text-align: center; max-width: 600px; margin: 0 auto;">
-        ${data.prompt.replace(/Imagine that Tom saw a prsentation/, 'Imagine that Tom saw a prsentation.<br><br>')
-                     .replace(/Rating:/, '<br><br><b>Rating:</b><br>') 
+        ${data.prompt.replace(/Imagine that Tom saw a presentation/, 'Imagine that Tom saw a presentation.<br><br>')
                      .replace(/\d out of 3 hearts/, renderHearts(rating)+"<br>")
-                     .replace(/Question:/, '<br><b>Question:</b><br>')
-                     .replace(/(If .*? wanted to BOTH make .*? feel good AND give accurate and informative feedback,)/, '<strong>$1</strong>')
-                     .replace(/(If .*? wanted to give as accurate and informative feedback as possible, but not necessarily make .*? feel good,)/, '<strong>$1</strong>')
-                     .replace(/(If .*? wanted to make .*? feel good, but not necessarily give informative feedback,)/, '<strong>$1</strong>')
-                     .replace(/(If .*? wanted to BOTH make .*? feel good AND share .*? honest thoughts,)/, '<strong>$1</strong>')
-                     .replace(/(If .*? wanted to share .*? honest thoughts, but not necessarily make .*? feel good,)/, '<strong>$1</strong>')
-                     .replace(/(If .*? wanted to make .*? feel good, but not necessarily share .*? honest thoughts,)/, '<strong>$1</strong>')
-                     .replace(/actually/, '<strong>actually</strong>')
+                     .replace(/What did Tom feel\?/, "What did Tom feel?<br>")
+                     .replace(/A. 0 hearts/, '<strong>A.</strong> 0 hearts<br>')
+                     .replace(/B. 1 heart /, '<strong>B.</strong> 1 heart <br>')
+                     .replace(/C. 2 hearts/, '<strong>C.</strong> 2 hearts<br>')
+                     .replace(/D. 3 hearts/, '<strong>D.</strong> 3 hearts')
                     }
       </div>`;
     },
     questions: [
       {
         prompt: "",
-        options: ["Yes", "No"],
+        options: ["A", "B", "C", "D"],
         required: true,
         horizontal: true
       }
@@ -346,7 +344,7 @@ const main_study_transition = {
         <div style="max-width: 1200px; margin: 0 auto; text-align: left;">
             <p>Great! You've completed the warm-up questions.</p>
             <p>Now let's begin the main study! </p>
-            <p>You will be presented to 8 different scenarios and asked questions about it. Please keep your responses as short and concise as possible.</p>
+            <p>You will read 8 different scenarios and answer some questions about them. Please keep your responses as short and concise as possible.</p>
             <p>Please think carefully with your responses, you won't be able to go back to your previous questions.</p>
             <p>Remember, there are no right or wrong answers.</p>
             <p>Click 'Next' to continue.</p>
@@ -389,7 +387,7 @@ const remaining_trials = {
         </div>`,
         placeholder: 'Enter your response here',
         required: true,
-        rows: 3,
+        rows: 1,
         columns: 50
       }
     };
@@ -420,7 +418,7 @@ const remaining_trials = {
       timeline.push(welcome_page);
       timeline.push(consent_page);  // Add the consent page here
       timeline.push(note_page);  // Add the note page here
-      timeline.push(start_experiment_transition);  // Add the new transition page here
+      // timeline.push(start_experiment_transition);  // Add the new transition page here
       timeline.push(instruction_page);
       timeline.push(transition_page_warm_up);  // Add the transition page here
       timeline.push(trials);
