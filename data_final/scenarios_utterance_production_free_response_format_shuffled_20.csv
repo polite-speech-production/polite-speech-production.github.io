@@ -23,27 +23,28 @@ B. 1 heart
 C. 2 hearts
 D. 3 hearts"
 "Scenario:
-Imagine that Sarah filmed a movie, but Sarah didn't know how good it was. Sarah approached Lucy, who knows a lot about movies, and asked ""How was my movie?""
-Rating:
-Here's how Lucy actually felt about Sarah's movie:
-0 out of 3 hearts
-Question:
-If Lucy wanted to BOTH make Sarah feel good AND give accurate and informative feedback,
-What would Lucy be most likely to say?"
-"Scenario:
-Imagine that Kevin drew a painting, but Kevin didn't know how good it was. Kevin approached Jake, who knows a lot about paintings, and asked ""How was my painting?""
+Imagine that Kevin drew a painting, but he didn't know how good his painting looked. Kevin approached Jake, who knows a lot about paintings, and asked ""How was my painting?""
 Rating:
 Here's how Jake actually felt about Kevin's painting:
 3 out of 3 hearts
 Question:
 What would Jake be most likely to say?"
 "Scenario:
-Imagine that John wanted to get Josh’s opinion about a video game they just played. After Josh finished the game, John asked, “What did you think?” 
+Imagine that Grace gave a tap dance performance, but she didn't know how good her dance looked. Grace approached Heather, who knows a lot about tap dance, and asked ""How was my dance?""
 Rating:
-Here's how Josh actually felt about the video game:
+Here's how Heather actually felt about Grace's dance:
+2 out of 3 hearts
+Question:
+If Heather wanted to make Grace feel good, but not necessarily give informative feedback,
+What would Heather be most likely to say?"
+"Scenario:
+Imagine that Sarah filmed a movie, but she didn't know how good it was. Sarah approached Lucy, who knows a lot about movies, and asked ""How was my movie?""
+Rating:
+Here's how Lucy actually felt about Sarah's movie:
 0 out of 3 hearts
 Question:
-If Josh wanted to BOTH make John feel good AND share his honest thoughts, What would Josh be most likely to say?"
+If Lucy wanted to BOTH make Sarah feel good AND give accurate and informative feedback,
+What would Lucy be most likely to say?"
 "Scenario:
 Imagine that Aiden wanted to get Sam’s opinion about a restaurant they just visited. After Sam visited the restaurant, Aiden asked, “What did you think?” 
 Rating:
@@ -52,12 +53,20 @@ Here's how Sam actually felt about the restaurant:
 Question:
 What would Sam be most likely to say?"
 "Scenario:
-Imagine that William wanted to get Taylor’s opinion about a movie they just watched. After Taylor finished the movie, William asked, “What did you think?” 
+Imagine that Tom played a cello solo part at a concert, but he didn't know how good his playing sounded. Tom approached Bill, who knows a lot about playing cello, and asked ""How was my solo?""
 Rating:
-Here's how Taylor actually felt about the movie:
-2 out of 3 hearts
+Here's how Bill actually felt about Tom's solo:
+1 out of 3 hearts
 Question:
-If Taylor wanted to make William feel good, but not necessarily share their honest thoughts, What would Taylor be most likely to say?"
+If Bill wanted to give as accurate and informative feedback as possible, but not necessarily make Tom feel good,
+What would Bill be most likely to say?"
+"Scenario:
+Imagine that John wanted to get Josh’s opinion about a video game they just played. After Josh finished the game, John asked, “What did you think?” 
+Rating:
+Here's how Josh actually felt about the video game:
+0 out of 3 hearts
+Question:
+If Josh wanted to BOTH make John feel good AND share his honest thoughts, What would Josh be most likely to say?"
 "Scenario:
 Imagine that Lucas wanted to get Sam’s opinion about a book they just read. After Sam finished the book, Lucas asked, “What did you think?” 
 Rating:
@@ -66,18 +75,9 @@ Here's how Sam actually felt about the book:
 Question:
 If Sam wanted to share their honest thoughts, but not necessarily make Lucas feel good, What would Sam be most likely to say?"
 "Scenario:
-Imagine that Tom played a cello solo part at a concert, but Tom didn't know how good it was. Tom approached Bill, who knows a lot about playing cello, and asked ""How was my solo?""
+Imagine that William wanted to get Taylor’s opinion about a movie they just watched. After Taylor finished the movie, William asked, “What did you think?” 
 Rating:
-Here's how Bill actually felt about Tom's solo:
-1 out of 3 hearts
-Question:
-If Bill wanted to give as accurate and informative feedback as possible, but not necessarily make Tom feel good,
-What would Bill be most likely to say?"
-"Scenario:
-Imagine that Grace gave a tap dance performance, but Grace didn't know how good it was. Grace approached Heather, who knows a lot about tap dance, and asked ""How was my dance?""
-Rating:
-Here's how Heather actually felt about Grace's dance:
+Here's how Taylor actually felt about the movie:
 2 out of 3 hearts
 Question:
-If Heather wanted to make Grace feel good, but not necessarily give informative feedback,
-What would Heather be most likely to say?"
+If Taylor wanted to make William feel good, but not necessarily share their honest thoughts, What would Taylor be most likely to say?"

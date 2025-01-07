@@ -23,7 +23,7 @@ B. 1 heart
 C. 2 hearts
 D. 3 hearts"
 "Scenario:
-Imagine that Henry designed a mobile app, but Henry didn't know how good it was. Henry approached George, who knows a lot about mobile apps, and asked ""How was my app?""
+Imagine that Henry designed a mobile app, but he didn't know how good it was. Henry approached George, who knows a lot about mobile apps, and asked ""How was my app?""
 Rating:
 Here's how George actually felt about Henry's app:
 0 out of 3 hearts
@@ -31,21 +31,42 @@ Question:
 If George wanted to make Henry feel good, but not necessarily give informative feedback,
 What would George be most likely to say?"
 "Scenario:
-Imagine that Kevin drew a painting, but Kevin didn't know how good it was. Kevin approached Jake, who knows a lot about paintings, and asked ""How was my painting?""
+Imagine that Patrick wrote a review for a book, but he didn't know how good his review was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
 Rating:
-Here's how Jake actually felt about Kevin's painting:
+Here's how Nathan actually felt about Patrick's review:
+1 out of 3 hearts
+Question:
+What would Nathan be most likely to say?"
+"Scenario:
+Imagine that Liam wanted to get Alex’s opinion about a restaurant they just visited. After Alex visited the restaurant, Liam asked, “What did you think?” 
+Rating:
+Here's how Alex actually felt about the restaurant:
 2 out of 3 hearts
 Question:
-If Jake wanted to BOTH make Kevin feel good AND give accurate and informative feedback,
-What would Jake be most likely to say?"
+If Alex wanted to BOTH make Liam feel good AND share their honest thoughts, What would Alex be most likely to say?"
 "Scenario:
-Imagine that Diana gave a monologue during a school play, but Diana didn't know how good it was. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
+Imagine that Jayden wanted to get Charlie’s opinion about a TV episode they just watched. After Charlie finished the episode, Jayden asked, “What did you think?” 
+Rating:
+Here's how Charlie actually felt about the TV-show:
+3 out of 3 hearts
+Question:
+If Charlie wanted to share their honest thoughts, but not necessarily make Jayden feel good, What would Charlie be most likely to say?"
+"Scenario:
+Imagine that Diana gave a monologue during a school play, but she didn't know how good her performance went. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
 Rating:
 Here's how Ann actually felt about Diana's monologue:
 3 out of 3 hearts
 Question:
 If Ann wanted to give as accurate and informative feedback as possible, but not necessarily make Diana feel good,
 What would Ann be most likely to say?"
+"Scenario:
+Imagine that Kevin drew a painting, but he didn't know how good his painting looked. Kevin approached Jake, who knows a lot about paintings, and asked ""How was my painting?""
+Rating:
+Here's how Jake actually felt about Kevin's painting:
+2 out of 3 hearts
+Question:
+If Jake wanted to BOTH make Kevin feel good AND give accurate and informative feedback,
+What would Jake be most likely to say?"
 "Scenario:
 Imagine that Andrew wanted to get Jacob’s opinion about a video game they just played. After Jacob finished the game, Andrew asked, “What did you think?” 
 Rating:
@@ -60,24 +81,3 @@ Here's how Sarah actually felt about the song:
 0 out of 3 hearts
 Question:
 If Sarah wanted to make Gabriel feel good, but not necessarily share her honest thoughts, What would Sarah be most likely to say?"
-"Scenario:
-Imagine that Liam wanted to get Alex’s opinion about a restaurant they just visited. After Alex visited the restaurant, Liam asked, “What did you think?” 
-Rating:
-Here's how Alex actually felt about the restaurant:
-2 out of 3 hearts
-Question:
-If Alex wanted to BOTH make Liam feel good AND share their honest thoughts, What would Alex be most likely to say?"
-"Scenario:
-Imagine that Patrick wrote a review for a book, but Patrick didn't know how good it was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
-Rating:
-Here's how Nathan actually felt about Patrick's review:
-1 out of 3 hearts
-Question:
-What would Nathan be most likely to say?"
-"Scenario:
-Imagine that Jayden wanted to get Charlie’s opinion about a TV episode they just watched. After Charlie finished the episode, Jayden asked, “What did you think?” 
-Rating:
-Here's how Charlie actually felt about the TV-show:
-3 out of 3 hearts
-Question:
-If Charlie wanted to share their honest thoughts, but not necessarily make Jayden feel good, What would Charlie be most likely to say?"

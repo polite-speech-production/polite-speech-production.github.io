@@ -23,34 +23,13 @@ B. 1 heart
 C. 2 hearts
 D. 3 hearts"
 "Scenario:
-Imagine that Gabriel wanted to get Sage’s opinion about a TV episode they just watched. After Sage finished the episode, Gabriel asked, “What did you think?” 
+Imagine that Diana gave a monologue during a school play, but she didn't know how good her performance went. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
 Rating:
-Here's how Sage actually felt about the TV-show:
+Here's how Ann actually felt about Diana's monologue:
 2 out of 3 hearts
 Question:
-If Sage wanted to BOTH make Gabriel feel good AND share their honest thoughts, What would Sage be most likely to say?"
-"Scenario:
-Imagine that Henry designed a mobile app, but Henry didn't know how good it was. Henry approached George, who knows a lot about mobile apps, and asked ""How was my app?""
-Rating:
-Here's how George actually felt about Henry's app:
-3 out of 3 hearts
-Question:
-If George wanted to give as accurate and informative feedback as possible, but not necessarily make Henry feel good,
-What would George be most likely to say?"
-"Scenario:
-Imagine that Lucas wanted to get James’s opinion about a song they just heard. After James finished listening to the song, Lucas asked, “What did you think?” 
-Rating:
-Here's how James actually felt about the song:
-3 out of 3 hearts
-Question:
-If James wanted to share his honest thoughts, but not necessarily make Lucas feel good, What would James be most likely to say?"
-"Scenario:
-Imagine that Emma had a piano recital, but Emma didn't know how good it was. Emma approached Wendy, who knows a lot about playing piano, and asked ""How was my performance?""
-Rating:
-Here's how Wendy actually felt about Emma's performance:
-1 out of 3 hearts
-Question:
-What would Wendy be most likely to say?"
+If Ann wanted to BOTH make Diana feel good AND give accurate and informative feedback,
+What would Ann be most likely to say?"
 "Scenario:
 Imagine that David wanted to get Sage’s opinion about a book they just read. After Sage finished the book, David asked, “What did you think?” 
 Rating:
@@ -59,7 +38,14 @@ Here's how Sage actually felt about the book:
 Question:
 What would Sage be most likely to say?"
 "Scenario:
-Imagine that Patrick wrote a review for a book, but Patrick didn't know how good it was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
+Imagine that Lucas wanted to get James’s opinion about a song they just heard. After James finished listening to the song, Lucas asked, “What did you think?” 
+Rating:
+Here's how James actually felt about the song:
+3 out of 3 hearts
+Question:
+If James wanted to share his honest thoughts, but not necessarily make Lucas feel good, What would James be most likely to say?"
+"Scenario:
+Imagine that Patrick wrote a review for a book, but he didn't know how good his review was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
 Rating:
 Here's how Nathan actually felt about Patrick's review:
 0 out of 3 hearts
@@ -67,13 +53,12 @@ Question:
 If Nathan wanted to make Patrick feel good, but not necessarily give informative feedback,
 What would Nathan be most likely to say?"
 "Scenario:
-Imagine that Diana gave a monologue during a school play, but Diana didn't know how good it was. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
+Imagine that Gabriel wanted to get Sage’s opinion about a TV episode they just watched. After Sage finished the episode, Gabriel asked, “What did you think?” 
 Rating:
-Here's how Ann actually felt about Diana's monologue:
+Here's how Sage actually felt about the TV-show:
 2 out of 3 hearts
 Question:
-If Ann wanted to BOTH make Diana feel good AND give accurate and informative feedback,
-What would Ann be most likely to say?"
+If Sage wanted to BOTH make Gabriel feel good AND share their honest thoughts, What would Sage be most likely to say?"
 "Scenario:
 Imagine that Liam wanted to get Taylor’s opinion about a video game they just played. After Taylor finished the game, Liam asked, “What did you think?” 
 Rating:
@@ -81,3 +66,18 @@ Here's how Taylor actually felt about the video game:
 0 out of 3 hearts
 Question:
 If Taylor wanted to make Liam feel good, but not necessarily share their honest thoughts, What would Taylor be most likely to say?"
+"Scenario:
+Imagine that Henry designed a mobile app, but he didn't know how good it was. Henry approached George, who knows a lot about mobile apps, and asked ""How was my app?""
+Rating:
+Here's how George actually felt about Henry's app:
+3 out of 3 hearts
+Question:
+If George wanted to give as accurate and informative feedback as possible, but not necessarily make Henry feel good,
+What would George be most likely to say?"
+"Scenario:
+Imagine that Emma performed at a piano recital, but she didn't know how good her playing sounded. Emma approached Wendy, who knows a lot about playing piano, and asked ""How was my performance?""
+Rating:
+Here's how Wendy actually felt about Emma's performance:
+1 out of 3 hearts
+Question:
+What would Wendy be most likely to say?"
