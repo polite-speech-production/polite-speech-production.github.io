@@ -1,71 +1,83 @@
-"Imagine that Tom saw a prsentation
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 0 out of 3 hearts
-Did Tom think the presentation deserved 0 out of 3 hearts?"
-"Imagine that Tom saw a prsentation
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 2 out of 3 hearts
-Did Tom think the presentation deserved 2 out of 3 hearts?"
-"Imagine that Tom saw a prsentation
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 3 out of 3 hearts
-Did Tom think the presentation deserved 3 out of 3 hearts?"
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
 "Scenario:
-Imagine that Kevin drew a painting, but Kevin didn't know how good it was. Kevin approached Jake, who knows a lot about paintings, and asked ""How was my painting?""
+Imagine that Jayden wanted to get Chris’s opinion about a song they just heard. After Chris finished listening to the song, Jayden asked, “What did you think?” 
 Rating:
-Here's how Jake actually felt about Kevin's painting:
-3 out of 3 hearts
+Here's how Chris actually felt about the song:
+1 out of 3 hearts
 Question:
-What would Jake be most likely to say?"
+If Chris wanted to share his honest thoughts, but not necessarily make Jayden feel good, What would Chris be most likely to say?"
 "Scenario:
-Imagine that David recommended a book to Ellie, and wanted to get Ellie’s opinion on it. After Ellie finished reading the book, David approached Ellie, and asked, “What did you think about the book?” 
+Imagine that Patrick wrote a review for a book, but Patrick didn't know how good it was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
 Rating:
-Here's how Ellie actually felt about the book:
+Here's how Nathan actually felt about Patrick's review:
 2 out of 3 hearts
 Question:
-If Ellie wanted to share her honest thoughts, but not necessarily make David feel good, What would Ellie be most likely to say?"
+If Nathan wanted to make Patrick feel good, but not necessarily give informative feedback,
+What would Nathan be most likely to say?"
 "Scenario:
-Imagine that Chris composed a song, but Chris didn't know how good it was. Chris approached Sean, who knows a lot about composing songs, and asked ""How was my song?""
+Imagine that Jackson wanted to get Alex’s opinion about a book they just read. After Alex finished the book, Jackson asked, “What did you think?” 
 Rating:
-Here's how Sean actually felt about Chris's song:
+Here's how Alex actually felt about the book:
 3 out of 3 hearts
 Question:
-If Sean wanted to BOTH make Chris feel good AND give accurate and informative feedback,
-What would Sean be most likely to say?"
+What would Alex be most likely to say?"
 "Scenario:
-Imagine that Amelia recommended a TV-show to Mattem, and wanted to get Mattem’s opinion on it. After Mattem watched the TV-show, Amelia approached Mattem, and asked, “What did you think about the TV-show?” 
+Imagine that David wanted to get Sam’s opinion about a video game they just played. After Sam finished the game, David asked, “What did you think?” 
 Rating:
-Here's how Mattem actually felt about the TV-show:
+Here's how Sam actually felt about the video game:
+2 out of 3 hearts
+Question:
+If Sam wanted to make David feel good, but not necessarily share their honest thoughts, What would Sam be most likely to say?"
+"Scenario:
+Imagine that Emma had a piano recital, but Emma didn't know how good it was. Emma approached Wendy, who knows a lot about playing piano, and asked ""How was my performance?""
+Rating:
+Here's how Wendy actually felt about Emma's performance:
+3 out of 3 hearts
+Question:
+What would Wendy be most likely to say?"
+"Scenario:
+Imagine that Anthony wanted to get Alex’s opinion about a TV episode they just watched. After Alex finished the episode, Anthony asked, “What did you think?” 
+Rating:
+Here's how Alex actually felt about the TV-show:
 0 out of 3 hearts
 Question:
-If Mattem wanted to BOTH make Amelia feel good AND share his honest thoughts, What would Mattem be most likely to say?"
+If Alex wanted to BOTH make Anthony feel good AND share their honest thoughts, What would Alex be most likely to say?"
 "Scenario:
-Imagine that Mia recommended a TV-show to Mattem, and wanted to get Mattem’s opinion on it. After Mattem watched the TV-show, Mia approached Mattem, and asked, “What did you think about the TV-show?” 
+Imagine that Diana gave a monologue during a school play, but Diana didn't know how good it was. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
 Rating:
-Here's how Mattem actually felt about the TV-show:
-2 out of 3 hearts
+Here's how Ann actually felt about Diana's monologue:
+0 out of 3 hearts
 Question:
-If Mattem wanted to make Mia feel good, but not necessarily share his honest thoughts, What would Mattem be most likely to say?"
+If Ann wanted to BOTH make Diana feel good AND give accurate and informative feedback,
+What would Ann be most likely to say?"
 "Scenario:
-Imagine that John recommended a book to Sarah, and wanted to get Sarah’s opinion on it. After Sarah finished reading the book, John approached Sarah, and asked, “What did you think about the book?” 
+Imagine that Henry designed a mobile app, but Henry didn't know how good it was. Henry approached George, who knows a lot about mobile apps, and asked ""How was my app?""
 Rating:
-Here's how Sarah actually felt about the book:
+Here's how George actually felt about Henry's app:
 1 out of 3 hearts
 Question:
-What would Sarah be most likely to say?"
-"Scenario:
-Imagine that Mika baked some cookies, but Mika didn't know how good it was. Mika approached Hailey, who knows a lot about baking, and asked ""How did my cookie taste?""
-Rating:
-Here's how Hailey actually felt about Mika's cookie:
-3 out of 3 hearts
-Question:
-If Hailey wanted to give as accurate and informative feedback as possible, but not necessarily make Mika feel good,
-What would Hailey be most likely to say?"
-"Scenario:
-Imagine that Tom played a cello solo part at a concert, but Tom didn't know how good it was. Tom approached Bill, who knows a lot about playing cello, and asked ""How was my solo?""
-Rating:
-Here's how Bill actually felt about Tom's solo:
-1 out of 3 hearts
-Question:
-If Bill wanted to make Tom feel good, but not necessarily give informative feedback,
-What would Bill be most likely to say?"
+If George wanted to give as accurate and informative feedback as possible, but not necessarily make Henry feel good,
+What would George be most likely to say?"

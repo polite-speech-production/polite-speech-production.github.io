@@ -1,71 +1,83 @@
-"Imagine that Tom saw a prsentation
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 0 out of 3 hearts
-Did Tom think the presentation deserved 0 out of 3 hearts?"
-"Imagine that Tom saw a prsentation
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 2 out of 3 hearts
-Did Tom think the presentation deserved 2 out of 3 hearts?"
-"Imagine that Tom saw a prsentation
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 3 out of 3 hearts
-Did Tom think the presentation deserved 3 out of 3 hearts?"
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
 "Scenario:
-Imagine that Elijah recommended a video game to Charlie, and wanted to get Charlie’s opinion on it. After Charlie played the video game, Elijah approached Charlie, and asked, “What did you think about the video game?” 
+Imagine that Mika baked some cookies, but Mika didn't know how good it was. Mika approached Hailey, who knows a lot about baking, and asked ""How did my cookie taste?""
 Rating:
-Here's how Charlie actually felt about the video game:
-2 out of 3 hearts
+Here's how Hailey actually felt about Mika's cookie:
+1 out of 3 hearts
 Question:
-If Charlie wanted to BOTH make Elijah feel good AND share their honest thoughts, What would Charlie be most likely to say?"
+What would Hailey be most likely to say?"
 "Scenario:
-Imagine that Layla recommended a movie to Michael, and wanted to get Michael’s opinion on it. After Michael finished watching the movie, Layla approached Michael, and asked, “What did you think about the movie?” 
+Imagine that Jackson wanted to get Charlie’s opinion about a book they just read. After Charlie finished the book, Jackson asked, “What did you think?” 
 Rating:
-Here's how Michael actually felt about the movie:
+Here's how Charlie actually felt about the book:
+3 out of 3 hearts
+Question:
+If Charlie wanted to share their honest thoughts, but not necessarily make Jackson feel good, What would Charlie be most likely to say?"
+"Scenario:
+Imagine that Aiden wanted to get Taylor’s opinion about a movie they just watched. After Taylor finished the movie, Aiden asked, “What did you think?” 
+Rating:
+Here's how Taylor actually felt about the movie:
 0 out of 3 hearts
 Question:
-If Michael wanted to make Layla feel good, but not necessarily share his honest thoughts, What would Michael be most likely to say?"
+If Taylor wanted to make Aiden feel good, but not necessarily share their honest thoughts, What would Taylor be most likely to say?"
+"Scenario:
+Imagine that Samuel wanted to get Sam’s opinion about a video game they just played. After Sam finished the game, Samuel asked, “What did you think?” 
+Rating:
+Here's how Sam actually felt about the video game:
+2 out of 3 hearts
+Question:
+If Sam wanted to BOTH make Samuel feel good AND share their honest thoughts, What would Sam be most likely to say?"
 "Scenario:
 Imagine that Bob just gave a presentation, but Bob didn't know how good it was. Bob approached John, who knows a lot about giving presentations, and asked ""How was my presentation?""
 Rating:
 Here's how John actually felt about Bob's presentation:
 0 out of 3 hearts
 Question:
-If John wanted to give as accurate and informative feedback as possible, but not necessarily make Bob feel good,
+If John wanted to make Bob feel good, but not necessarily give informative feedback,
 What would John be most likely to say?"
 "Scenario:
-Imagine that Henry designed a mobile app, but Henry didn't know how good it was. Henry approached George, who knows a lot about mobile apps, and asked ""How was my app?""
+Imagine that Patrick wrote a review for a book, but Patrick didn't know how good it was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
 Rating:
-Here's how George actually felt about Henry's app:
+Here's how Nathan actually felt about Patrick's review:
 2 out of 3 hearts
 Question:
-What would George be most likely to say?"
-"Scenario:
-Imagine that Jenny wrote a poem, but Jenny didn't know how good it was. Jenny approached Karen, who knows a lot about poems, and asked ""How was my poem?""
-Rating:
-Here's how Karen actually felt about Jenny's poem:
-3 out of 3 hearts
-Question:
-If Karen wanted to make Jenny feel good, but not necessarily give informative feedback,
-What would Karen be most likely to say?"
-"Scenario:
-Imagine that Lily recommended a book to Mattem, and wanted to get Mattem’s opinion on it. After Mattem finished reading the book, Lily approached Mattem, and asked, “What did you think about the book?” 
-Rating:
-Here's how Mattem actually felt about the book:
-0 out of 3 hearts
-Question:
-If Mattem wanted to share his honest thoughts, but not necessarily make Lily feel good, What would Mattem be most likely to say?"
-"Scenario:
-Imagine that Riley recommended a video game to Hannah, and wanted to get Hannah’s opinion on it. After Hannah played the video game, Riley approached Hannah, and asked, “What did you think about the video game?” 
-Rating:
-Here's how Hannah actually felt about the video game:
-3 out of 3 hearts
-Question:
-What would Hannah be most likely to say?"
+If Nathan wanted to BOTH make Patrick feel good AND give accurate and informative feedback,
+What would Nathan be most likely to say?"
 "Scenario:
 Imagine that Emma had a piano recital, but Emma didn't know how good it was. Emma approached Wendy, who knows a lot about playing piano, and asked ""How was my performance?""
 Rating:
 Here's how Wendy actually felt about Emma's performance:
-0 out of 3 hearts
+3 out of 3 hearts
 Question:
-If Wendy wanted to BOTH make Emma feel good AND give accurate and informative feedback,
+If Wendy wanted to give as accurate and informative feedback as possible, but not necessarily make Emma feel good,
 What would Wendy be most likely to say?"
+"Scenario:
+Imagine that John wanted to get Sam’s opinion about a restaurant they just visited. After Sam visited the restaurant, John asked, “What did you think?” 
+Rating:
+Here's how Sam actually felt about the restaurant:
+1 out of 3 hearts
+Question:
+What would Sam be most likely to say?"

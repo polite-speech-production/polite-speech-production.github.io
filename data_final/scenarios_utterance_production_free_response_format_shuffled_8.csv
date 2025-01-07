@@ -1,71 +1,83 @@
-"Imagine that Tom saw a prsentation
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 0 out of 3 hearts
-Did Tom think the presentation deserved 0 out of 3 hearts?"
-"Imagine that Tom saw a prsentation
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 2 out of 3 hearts
-Did Tom think the presentation deserved 2 out of 3 hearts?"
-"Imagine that Tom saw a prsentation
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 3 out of 3 hearts
-Did Tom think the presentation deserved 3 out of 3 hearts?"
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
 "Scenario:
-Imagine that Bob just gave a presentation, but Bob didn't know how good it was. Bob approached John, who knows a lot about giving presentations, and asked ""How was my presentation?""
+Imagine that Sarah filmed a movie, but Sarah didn't know how good it was. Sarah approached Lucy, who knows a lot about movies, and asked ""How was my movie?""
 Rating:
-Here's how John actually felt about Bob's presentation:
+Here's how Lucy actually felt about Sarah's movie:
+3 out of 3 hearts
+Question:
+What would Lucy be most likely to say?"
+"Scenario:
+Imagine that Ryan wanted to get Charlie’s opinion about a TV episode they just watched. After Charlie finished the episode, Ryan asked, “What did you think?” 
+Rating:
+Here's how Charlie actually felt about the TV-show:
+1 out of 3 hearts
+Question:
+If Charlie wanted to share their honest thoughts, but not necessarily make Ryan feel good, What would Charlie be most likely to say?"
+"Scenario:
+Imagine that Sebastian wanted to get Emily’s opinion about a song they just heard. After Emily finished listening to the song, Sebastian asked, “What did you think?” 
+Rating:
+Here's how Emily actually felt about the song:
+2 out of 3 hearts
+Question:
+If Emily wanted to make Sebastian feel good, but not necessarily share her honest thoughts, What would Emily be most likely to say?"
+"Scenario:
+Imagine that Henry wanted to get Sage’s opinion about a restaurant they just visited. After Sage visited the restaurant, Henry asked, “What did you think?” 
+Rating:
+Here's how Sage actually felt about the restaurant:
 0 out of 3 hearts
 Question:
-If John wanted to BOTH make Bob feel good AND give accurate and informative feedback,
-What would John be most likely to say?"
+If Sage wanted to BOTH make Henry feel good AND share their honest thoughts, What would Sage be most likely to say?"
 "Scenario:
-Imagine that Christopher recommended a song to Charlie, and wanted to get Charlie’s opinion on it. After Charlie listened the song, Christopher approached Charlie, and asked, “What did you think about the song?” 
+Imagine that Jenny wrote a poem, but Jenny didn't know how good it was. Jenny approached Karen, who knows a lot about poems, and asked ""How was my poem?""
 Rating:
-Here's how Charlie actually felt about the song:
+Here's how Karen actually felt about Jenny's poem:
 0 out of 3 hearts
 Question:
-What would Charlie be most likely to say?"
+If Karen wanted to BOTH make Jenny feel good AND give accurate and informative feedback,
+What would Karen be most likely to say?"
+"Scenario:
+Imagine that William wanted to get Michael’s opinion about a video game they just played. After Michael finished the game, William asked, “What did you think?” 
+Rating:
+Here's how Michael actually felt about the video game:
+3 out of 3 hearts
+Question:
+What would Michael be most likely to say?"
+"Scenario:
+Imagine that Chris composed a song, but Chris didn't know how good it was. Chris approached Sean, who knows a lot about composing songs, and asked ""How was my song?""
+Rating:
+Here's how Sean actually felt about Chris's song:
+2 out of 3 hearts
+Question:
+If Sean wanted to make Chris feel good, but not necessarily give informative feedback,
+What would Sean be most likely to say?"
 "Scenario:
 Imagine that James baked a cake, but James didn't know how good it was. James approached Kyle, who knows a lot about baking, and asked ""How did my cake taste?""
 Rating:
 Here's how Kyle actually felt about James's cake:
-2 out of 3 hearts
+1 out of 3 hearts
 Question:
 If Kyle wanted to give as accurate and informative feedback as possible, but not necessarily make James feel good,
 What would Kyle be most likely to say?"
-"Scenario:
-Imagine that Diana gave a monologue during a school play, but Diana didn't know how good it was. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
-Rating:
-Here's how Ann actually felt about Diana's monologue:
-1 out of 3 hearts
-Question:
-What would Ann be most likely to say?"
-"Scenario:
-Imagine that Jayden recommended a movie to Chris, and wanted to get Chris’s opinion on it. After Chris finished watching the movie, Jayden approached Chris, and asked, “What did you think about the movie?” 
-Rating:
-Here's how Chris actually felt about the movie:
-3 out of 3 hearts
-Question:
-If Chris wanted to share his honest thoughts, but not necessarily make Jayden feel good, What would Chris be most likely to say?"
-"Scenario:
-Imagine that Bob just gave a presentation, but Bob didn't know how good it was. Bob approached John, who knows a lot about giving presentations, and asked ""How was my presentation?""
-Rating:
-Here's how John actually felt about Bob's presentation:
-3 out of 3 hearts
-Question:
-If John wanted to make Bob feel good, but not necessarily give informative feedback,
-What would John be most likely to say?"
-"Scenario:
-Imagine that Addison recommended a song to Emily, and wanted to get Emily’s opinion on it. After Emily listened the song, Addison approached Emily, and asked, “What did you think about the song?” 
-Rating:
-Here's how Emily actually felt about the song:
-1 out of 3 hearts
-Question:
-If Emily wanted to make Addison feel good, but not necessarily share her honest thoughts, What would Emily be most likely to say?"
-"Scenario:
-Imagine that Harper recommended a TV-show to James, and wanted to get James’s opinion on it. After James watched the TV-show, Harper approached James, and asked, “What did you think about the TV-show?” 
-Rating:
-Here's how James actually felt about the TV-show:
-1 out of 3 hearts
-Question:
-If James wanted to BOTH make Harper feel good AND share his honest thoughts, What would James be most likely to say?"

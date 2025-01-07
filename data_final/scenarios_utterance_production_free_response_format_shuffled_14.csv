@@ -1,71 +1,83 @@
-"Imagine that Tom saw a prsentation
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 0 out of 3 hearts
-Did Tom think the presentation deserved 0 out of 3 hearts?"
-"Imagine that Tom saw a prsentation
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 2 out of 3 hearts
-Did Tom think the presentation deserved 2 out of 3 hearts?"
-"Imagine that Tom saw a prsentation
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 3 out of 3 hearts
-Did Tom think the presentation deserved 3 out of 3 hearts?"
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
 "Scenario:
-Imagine that Sebastian recommended a movie to Jessica, and wanted to get Jessica’s opinion on it. After Jessica finished watching the movie, Sebastian approached Jessica, and asked, “What did you think about the movie?” 
+Imagine that James baked a cake, but James didn't know how good it was. James approached Kyle, who knows a lot about baking, and asked ""How did my cake taste?""
 Rating:
-Here's how Jessica actually felt about the movie:
+Here's how Kyle actually felt about James's cake:
 2 out of 3 hearts
 Question:
-If Jessica wanted to share her honest thoughts, but not necessarily make Sebastian feel good, What would Jessica be most likely to say?"
+If Kyle wanted to BOTH make James feel good AND give accurate and informative feedback,
+What would Kyle be most likely to say?"
 "Scenario:
-Imagine that Patrick wrote a review for a book, but Patrick didn't know how good it was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
+Imagine that Gabriel wanted to get Sage’s opinion about a TV episode they just watched. After Sage finished the episode, Gabriel asked, “What did you think?” 
 Rating:
-Here's how Nathan actually felt about Patrick's review:
+Here's how Sage actually felt about the TV-show:
+2 out of 3 hearts
+Question:
+If Sage wanted to BOTH make Gabriel feel good AND share their honest thoughts, What would Sage be most likely to say?"
+"Scenario:
+Imagine that David wanted to get Sage’s opinion about a book they just read. After Sage finished the book, David asked, “What did you think?” 
+Rating:
+Here's how Sage actually felt about the book:
+1 out of 3 hearts
+Question:
+What would Sage be most likely to say?"
+"Scenario:
+Imagine that Sarah filmed a movie, but Sarah didn't know how good it was. Sarah approached Lucy, who knows a lot about movies, and asked ""How was my movie?""
+Rating:
+Here's how Lucy actually felt about Sarah's movie:
 0 out of 3 hearts
 Question:
-What would Nathan be most likely to say?"
+If Lucy wanted to make Sarah feel good, but not necessarily give informative feedback,
+What would Lucy be most likely to say?"
 "Scenario:
-Imagine that Patrick wrote a review for a book, but Patrick didn't know how good it was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
+Imagine that Lucas wanted to get James’s opinion about a song they just heard. After James finished listening to the song, Lucas asked, “What did you think?” 
 Rating:
-Here's how Nathan actually felt about Patrick's review:
+Here's how James actually felt about the song:
+3 out of 3 hearts
+Question:
+If James wanted to share his honest thoughts, but not necessarily make Lucas feel good, What would James be most likely to say?"
+"Scenario:
+Imagine that Tom played a cello solo part at a concert, but Tom didn't know how good it was. Tom approached Bill, who knows a lot about playing cello, and asked ""How was my solo?""
+Rating:
+Here's how Bill actually felt about Tom's solo:
+1 out of 3 hearts
+Question:
+What would Bill be most likely to say?"
+"Scenario:
+Imagine that Liam wanted to get Taylor’s opinion about a video game they just played. After Taylor finished the game, Liam asked, “What did you think?” 
+Rating:
+Here's how Taylor actually felt about the video game:
 0 out of 3 hearts
 Question:
-If Nathan wanted to BOTH make Patrick feel good AND give accurate and informative feedback,
-What would Nathan be most likely to say?"
+If Taylor wanted to make Liam feel good, but not necessarily share their honest thoughts, What would Taylor be most likely to say?"
 "Scenario:
 Imagine that Chris composed a song, but Chris didn't know how good it was. Chris approached Sean, who knows a lot about composing songs, and asked ""How was my song?""
 Rating:
 Here's how Sean actually felt about Chris's song:
-1 out of 3 hearts
+3 out of 3 hearts
 Question:
-If Sean wanted to make Chris feel good, but not necessarily give informative feedback,
+If Sean wanted to give as accurate and informative feedback as possible, but not necessarily make Chris feel good,
 What would Sean be most likely to say?"
-"Scenario:
-Imagine that Jenny wrote a poem, but Jenny didn't know how good it was. Jenny approached Karen, who knows a lot about poems, and asked ""How was my poem?""
-Rating:
-Here's how Karen actually felt about Jenny's poem:
-1 out of 3 hearts
-Question:
-If Karen wanted to give as accurate and informative feedback as possible, but not necessarily make Jenny feel good,
-What would Karen be most likely to say?"
-"Scenario:
-Imagine that Sofia recommended a TV-show to James, and wanted to get James’s opinion on it. After James watched the TV-show, Sofia approached James, and asked, “What did you think about the TV-show?” 
-Rating:
-Here's how James actually felt about the TV-show:
-1 out of 3 hearts
-Question:
-What would James be most likely to say?"
-"Scenario:
-Imagine that Harper recommended a song to Sage, and wanted to get Sage’s opinion on it. After Sage listened the song, Harper approached Sage, and asked, “What did you think about the song?” 
-Rating:
-Here's how Sage actually felt about the song:
-0 out of 3 hearts
-Question:
-If Sage wanted to BOTH make Harper feel good AND share their honest thoughts, What would Sage be most likely to say?"
-"Scenario:
-Imagine that Mila recommended a TV-show to Ellie, and wanted to get Ellie’s opinion on it. After Ellie watched the TV-show, Mila approached Ellie, and asked, “What did you think about the TV-show?” 
-Rating:
-Here's how Ellie actually felt about the TV-show:
-1 out of 3 hearts
-Question:
-If Ellie wanted to make Mila feel good, but not necessarily share her honest thoughts, What would Ellie be most likely to say?"

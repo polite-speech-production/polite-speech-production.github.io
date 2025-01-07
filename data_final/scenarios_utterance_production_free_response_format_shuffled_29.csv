@@ -1,71 +1,83 @@
-"Imagine that Tom saw a prsentation
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 0 out of 3 hearts
-Did Tom think the presentation deserved 0 out of 3 hearts?"
-"Imagine that Tom saw a prsentation
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 2 out of 3 hearts
-Did Tom think the presentation deserved 2 out of 3 hearts?"
-"Imagine that Tom saw a prsentation
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 3 out of 3 hearts
-Did Tom think the presentation deserved 3 out of 3 hearts?"
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
 "Scenario:
-Imagine that Paisley recommended a restaurant to Taylor, and wanted to get Taylor’s opinion on it. After Taylor visited the restaurant, Paisley approached Taylor, and asked, “What did you think about the restaurant?” 
+Imagine that Ethan wanted to get Jessica’s opinion about a movie they just watched. After Jessica finished the movie, Ethan asked, “What did you think?” 
 Rating:
-Here's how Taylor actually felt about the restaurant:
-2 out of 3 hearts
-Question:
-What would Taylor be most likely to say?"
-"Scenario:
-Imagine that Grace gave a tap dance performance, but Grace didn't know how good it was. Grace approached Heather, who knows a lot about tap dance, and asked ""How was my dance?""
-Rating:
-Here's how Heather actually felt about Grace's dance:
-3 out of 3 hearts
-Question:
-If Heather wanted to make Grace feel good, but not necessarily give informative feedback,
-What would Heather be most likely to say?"
-"Scenario:
-Imagine that Amelia recommended a video game to James, and wanted to get James’s opinion on it. After James played the video game, Amelia approached James, and asked, “What did you think about the video game?” 
-Rating:
-Here's how James actually felt about the video game:
-0 out of 3 hearts
-Question:
-If James wanted to BOTH make Amelia feel good AND share his honest thoughts, What would James be most likely to say?"
-"Scenario:
-Imagine that James baked a cake, but James didn't know how good it was. James approached Kyle, who knows a lot about baking, and asked ""How did my cake taste?""
-Rating:
-Here's how Kyle actually felt about James's cake:
+Here's how Jessica actually felt about the movie:
 1 out of 3 hearts
 Question:
-What would Kyle be most likely to say?"
-"Scenario:
-Imagine that Emma had a piano recital, but Emma didn't know how good it was. Emma approached Wendy, who knows a lot about playing piano, and asked ""How was my performance?""
-Rating:
-Here's how Wendy actually felt about Emma's performance:
-2 out of 3 hearts
-Question:
-If Wendy wanted to give as accurate and informative feedback as possible, but not necessarily make Emma feel good,
-What would Wendy be most likely to say?"
+If Jessica wanted to BOTH make Ethan feel good AND share her honest thoughts, What would Jessica be most likely to say?"
 "Scenario:
 Imagine that Grace gave a tap dance performance, but Grace didn't know how good it was. Grace approached Heather, who knows a lot about tap dance, and asked ""How was my dance?""
 Rating:
 Here's how Heather actually felt about Grace's dance:
-3 out of 3 hearts
+1 out of 3 hearts
 Question:
 If Heather wanted to BOTH make Grace feel good AND give accurate and informative feedback,
 What would Heather be most likely to say?"
 "Scenario:
-Imagine that Michael recommended a book to Taylor, and wanted to get Taylor’s opinion on it. After Taylor finished reading the book, Michael approached Taylor, and asked, “What did you think about the book?” 
+Imagine that Diana gave a monologue during a school play, but Diana didn't know how good it was. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
 Rating:
-Here's how Taylor actually felt about the book:
+Here's how Ann actually felt about Diana's monologue:
 3 out of 3 hearts
 Question:
-If Taylor wanted to share their honest thoughts, but not necessarily make Michael feel good, What would Taylor be most likely to say?"
+If Ann wanted to make Diana feel good, but not necessarily give informative feedback,
+What would Ann be most likely to say?"
 "Scenario:
-Imagine that Harper recommended a video game to Hannah, and wanted to get Hannah’s opinion on it. After Hannah played the video game, Harper approached Hannah, and asked, “What did you think about the video game?” 
+Imagine that Kevin drew a painting, but Kevin didn't know how good it was. Kevin approached Jake, who knows a lot about paintings, and asked ""How was my painting?""
 Rating:
-Here's how Hannah actually felt about the video game:
+Here's how Jake actually felt about Kevin's painting:
+2 out of 3 hearts
+Question:
+If Jake wanted to give as accurate and informative feedback as possible, but not necessarily make Kevin feel good,
+What would Jake be most likely to say?"
+"Scenario:
+Imagine that Isaac wanted to get Michael’s opinion about a song they just heard. After Michael finished listening to the song, Isaac asked, “What did you think?” 
+Rating:
+Here's how Michael actually felt about the song:
 0 out of 3 hearts
 Question:
-If Hannah wanted to make Harper feel good, but not necessarily share her honest thoughts, What would Hannah be most likely to say?"
+What would Michael be most likely to say?"
+"Scenario:
+Imagine that Henry designed a mobile app, but Henry didn't know how good it was. Henry approached George, who knows a lot about mobile apps, and asked ""How was my app?""
+Rating:
+Here's how George actually felt about Henry's app:
+0 out of 3 hearts
+Question:
+What would George be most likely to say?"
+"Scenario:
+Imagine that Ethan wanted to get Josh’s opinion about a TV episode they just watched. After Josh finished the episode, Ethan asked, “What did you think?” 
+Rating:
+Here's how Josh actually felt about the TV-show:
+3 out of 3 hearts
+Question:
+If Josh wanted to make Ethan feel good, but not necessarily share his honest thoughts, What would Josh be most likely to say?"
+"Scenario:
+Imagine that Anthony wanted to get Josh’s opinion about a restaurant they just visited. After Josh visited the restaurant, Anthony asked, “What did you think?” 
+Rating:
+Here's how Josh actually felt about the restaurant:
+2 out of 3 hearts
+Question:
+If Josh wanted to share his honest thoughts, but not necessarily make Anthony feel good, What would Josh be most likely to say?"

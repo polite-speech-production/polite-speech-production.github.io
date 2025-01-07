@@ -1,71 +1,83 @@
-"Imagine that Tom saw a prsentation
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 0 out of 3 hearts
-Did Tom think the presentation deserved 0 out of 3 hearts?"
-"Imagine that Tom saw a prsentation
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 2 out of 3 hearts
-Did Tom think the presentation deserved 2 out of 3 hearts?"
-"Imagine that Tom saw a prsentation
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
+"Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 3 out of 3 hearts
-Did Tom think the presentation deserved 3 out of 3 hearts?"
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
 "Scenario:
-Imagine that Aiden recommended a TV-show to Chris, and wanted to get Chris’s opinion on it. After Chris watched the TV-show, Aiden approached Chris, and asked, “What did you think about the TV-show?” 
+Imagine that Lucas wanted to get Jessica’s opinion about a TV episode they just watched. After Jessica finished the episode, Lucas asked, “What did you think?” 
 Rating:
-Here's how Chris actually felt about the TV-show:
-3 out of 3 hearts
-Question:
-If Chris wanted to BOTH make Aiden feel good AND share his honest thoughts, What would Chris be most likely to say?"
-"Scenario:
-Imagine that Mika baked some cookies, but Mika didn't know how good it was. Mika approached Hailey, who knows a lot about baking, and asked ""How did my cookie taste?""
-Rating:
-Here's how Hailey actually felt about Mika's cookie:
-3 out of 3 hearts
-Question:
-What would Hailey be most likely to say?"
-"Scenario:
-Imagine that Ellie recommended a movie to Taylor, and wanted to get Taylor’s opinion on it. After Taylor finished watching the movie, Ellie approached Taylor, and asked, “What did you think about the movie?” 
-Rating:
-Here's how Taylor actually felt about the movie:
-1 out of 3 hearts
-Question:
-If Taylor wanted to share their honest thoughts, but not necessarily make Ellie feel good, What would Taylor be most likely to say?"
-"Scenario:
-Imagine that Emma had a piano recital, but Emma didn't know how good it was. Emma approached Wendy, who knows a lot about playing piano, and asked ""How was my performance?""
-Rating:
-Here's how Wendy actually felt about Emma's performance:
-3 out of 3 hearts
-Question:
-If Wendy wanted to make Emma feel good, but not necessarily give informative feedback,
-What would Wendy be most likely to say?"
-"Scenario:
-Imagine that Gabriel recommended a book to Emily, and wanted to get Emily’s opinion on it. After Emily finished reading the book, Gabriel approached Emily, and asked, “What did you think about the book?” 
-Rating:
-Here's how Emily actually felt about the book:
-3 out of 3 hearts
-Question:
-What would Emily be most likely to say?"
-"Scenario:
-Imagine that Olivia recommended a song to Josh, and wanted to get Josh’s opinion on it. After Josh listened the song, Olivia approached Josh, and asked, “What did you think about the song?” 
-Rating:
-Here's how Josh actually felt about the song:
+Here's how Jessica actually felt about the TV-show:
 0 out of 3 hearts
 Question:
-If Josh wanted to make Olivia feel good, but not necessarily share his honest thoughts, What would Josh be most likely to say?"
+If Jessica wanted to share her honest thoughts, but not necessarily make Lucas feel good, What would Jessica be most likely to say?"
 "Scenario:
-Imagine that Mika baked some cookies, but Mika didn't know how good it was. Mika approached Hailey, who knows a lot about baking, and asked ""How did my cookie taste?""
+Imagine that James baked a cake, but James didn't know how good it was. James approached Kyle, who knows a lot about baking, and asked ""How did my cake taste?""
 Rating:
-Here's how Hailey actually felt about Mika's cookie:
-3 out of 3 hearts
+Here's how Kyle actually felt about James's cake:
+0 out of 3 hearts
 Question:
-If Hailey wanted to BOTH make Mika feel good AND give accurate and informative feedback,
-What would Hailey be most likely to say?"
+If Kyle wanted to give as accurate and informative feedback as possible, but not necessarily make James feel good,
+What would Kyle be most likely to say?"
 "Scenario:
 Imagine that Chris composed a song, but Chris didn't know how good it was. Chris approached Sean, who knows a lot about composing songs, and asked ""How was my song?""
 Rating:
 Here's how Sean actually felt about Chris's song:
 1 out of 3 hearts
 Question:
-If Sean wanted to give as accurate and informative feedback as possible, but not necessarily make Chris feel good,
+If Sean wanted to make Chris feel good, but not necessarily give informative feedback,
 What would Sean be most likely to say?"
+"Scenario:
+Imagine that Andrew wanted to get Ellie’s opinion about a song they just heard. After Ellie finished listening to the song, Andrew asked, “What did you think?” 
+Rating:
+Here's how Ellie actually felt about the song:
+1 out of 3 hearts
+Question:
+If Ellie wanted to make Andrew feel good, but not necessarily share her honest thoughts, What would Ellie be most likely to say?"
+"Scenario:
+Imagine that Sarah filmed a movie, but Sarah didn't know how good it was. Sarah approached Lucy, who knows a lot about movies, and asked ""How was my movie?""
+Rating:
+Here's how Lucy actually felt about Sarah's movie:
+2 out of 3 hearts
+Question:
+What would Lucy be most likely to say?"
+"Scenario:
+Imagine that Jackson wanted to get Alex’s opinion about a video game they just played. After Alex finished the game, Jackson asked, “What did you think?” 
+Rating:
+Here's how Alex actually felt about the video game:
+2 out of 3 hearts
+Question:
+What would Alex be most likely to say?"
+"Scenario:
+Imagine that Jenny wrote a poem, but Jenny didn't know how good it was. Jenny approached Karen, who knows a lot about poems, and asked ""How was my poem?""
+Rating:
+Here's how Karen actually felt about Jenny's poem:
+3 out of 3 hearts
+Question:
+If Karen wanted to BOTH make Jenny feel good AND give accurate and informative feedback,
+What would Karen be most likely to say?"
+"Scenario:
+Imagine that Mason wanted to get Taylor’s opinion about a restaurant they just visited. After Taylor visited the restaurant, Mason asked, “What did you think?” 
+Rating:
+Here's how Taylor actually felt about the restaurant:
+3 out of 3 hearts
+Question:
+If Taylor wanted to BOTH make Mason feel good AND share their honest thoughts, What would Taylor be most likely to say?"
