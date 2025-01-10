@@ -86,12 +86,38 @@
 .jspsych-survey-multi-choice-question .required {
   display: none;
 }
+
+textarea {
+    -webkit-user-select: text !important; /* Safari */
+    -moz-user-select: text !important; /* Firefox */
+    -ms-user-select: text !important; /* IE10+/Edge */
+    user-select: text !important; /* Standard */
+  }
     </style>
   </head>
   <body>
     <p>Loading the experiment... Please wait.</p>
   </body>
   <script>
+    // Add these styles to your existing style section
+const styles = document.createElement('style');
+styles.textContent = `
+  textarea {
+    -webkit-user-select: text !important;
+    -moz-user-select: text !important;
+    -ms-user-select: text !important;
+    user-select: text !important;
+  }
+  
+  textarea::selection {
+    background: transparent;
+  }
+  
+  textarea::-moz-selection {
+    background: transparent;
+  }
+`;
+document.head.appendChild(styles);
     // Replace with your Google Apps Script web app URL
     const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzc9TnnfWFYVsqB5W6mMyg7QS0Q5ctdlYzhSZ3ZJt67LiIlMR2n-EkO17YOkls6wtxV/exec";
 
@@ -251,18 +277,6 @@ const note_page = {
     choices: ['Next']
 };
 
-// const start_experiment_transition = {
-//     type: jsPsychHtmlButtonResponse,
-//     stimulus: `
-//         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-//             <p>Now let's get started! You will be given instructions of the experiment on the next page.</p>
-//             <p>Click 'Start' when you're ready to begin.</p>
-//         </div>
-//     `,
-//     choices: ['Start']  // Changed the button text to 'Start' instead of 'Next'
-// };
-   
-
 const instruction_page = {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
@@ -291,6 +305,7 @@ const transition_page_warm_up = {
     stimulus: `
         <div style="max-width: 1000px; margin: 50px auto; text-align: center; line-height: 1.6;">
             <p style="font-size: 18px;">Before we jump into the main study, we'll start with 3 warm-up questions.</p>
+            <p style="font-size: 18px;">Please <strong>simply match</strong> the visual-heart rating <strong>with</strong> the corresponding textual rating from one of the four options.</p>
         </div>
     `,
     choices: ['Continue'],
@@ -338,42 +353,68 @@ const trials = {
   }))
 };
 
-const main_study_transition = {
-    type: jsPsychHtmlButtonResponse,
-    stimulus: `
-        <div style="max-width: 1200px; margin: 0 auto; text-align: left;">
-            <p>Great! You've completed the warm-up questions.</p>
-            <p>Now let's begin the main study! </p>
-            <p>You will read 8 different scenarios and answer some questions about them. Please keep your responses as short and concise as possible.</p>
-            <p>Please think carefully with your responses, you won't be able to go back to your previous questions.</p>
-            <p>Remember, there are no right or wrong answers.</p>
-            <p>Click 'Next' to continue.</p>
-        </div>
-    `,
-    choices: ['Next']
-};
+    const main_study_transition = {
+        type: jsPsychHtmlButtonResponse,
+        stimulus: `
+            <div style="max-width: 1200px; margin: 0 auto; text-align: left;">
+                <p>Great! Now let's begin the main study! </p>
+                <p>You will read 8 different scenarios and answer some questions about them. </p>
+                <p><b>Please keep your responses as short and concise as possible and ensure they are complete sentences with proper punctuation and start with a capital letter.</b></p>
+                <p>Please think carefully with your responses, you won't be able to go back to your previous questions.</p>
+                <p>Remember, there are no right or wrong answers.</p>
+                <p>Click 'Next' to continue.</p>
+            </div>
+        `,
+        choices: ['Next']
+    };
 
-const remaining_trials = {
+    const remaining_trials = {
   timeline: [{
-    type: jsPsychSurveyText,
-    questions: [jsPsych.timelineVariable('question')],
-    button_label: 'Next',
-    on_load: function() {
-      // Prevent pasting into the input field
-      const inputField = document.querySelector('textarea');
-      if (inputField) {
-        inputField.addEventListener('paste', function(event) {
-          event.preventDefault();
-          alert('Pasting is not allowed. Please type your response manually.');
-        });
-      }
+    type: jsPsychHtmlButtonResponse,
+    stimulus: function() {
+      // Dynamically construct the HTML for the question and input field
+      const question = jsPsych.timelineVariable('question').prompt;
+      return `
+        <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+          ${question}
+        </div>
+        <form id="response-form">
+          <div style="margin-top: 20px;">
+            <textarea 
+              id="response" 
+              placeholder="Enter your response here" 
+              rows="1" 
+              cols="50" 
+              required
+              style="font-size: 16px; line-height: 1.5;"
+            ></textarea>
+          </div>
+          <button type="submit" id="next-button" style="margin-top: 20px; padding: 8px 12px; font-size: 14px; border-radius: 6px;">Next</button>
+        </form>`;
     },
-    on_finish: function(data) {
-      const response = data.response.Q0.trim();
-      if (response === "") {
-        data.trial_data = { error: "Field left blank" };
-      }
-      data.stimulus = jsPsych.timelineVariable('question').prompt;
+    choices: [], // Disable jsPsych default button
+    on_load: function() {
+      const textarea = document.getElementById('response');
+
+      // Prevent pasting and display a warning message
+      textarea.addEventListener('paste', function(event) {
+        event.preventDefault(); // Prevent paste action
+        alert('Pasting is not allowed. Please type your response manually.');
+      });
+
+      // Handle form submission
+      const form = document.getElementById('response-form');
+      form.addEventListener('submit', function(event) {
+        if (!textarea.value.trim()) {
+          textarea.setCustomValidity('Please fill out this field.');
+          textarea.reportValidity(); // Show visual error effect
+          event.preventDefault(); // Prevent form submission
+        } else {
+          textarea.setCustomValidity(''); // Clear any previous validation errors
+          event.preventDefault(); // Prevent default form action
+          jsPsych.finishTrial({ response: textarea.value.trim() });
+        }
+      });
     }
   }],
   timeline_variables: shuffled_scenarios.slice(3).map(scenario => {
@@ -382,27 +423,46 @@ const remaining_trials = {
     return {
       question: {
         prompt: `<div style="text-align: left; max-width: 600px; margin: 0 auto;">
-        ${scenario.replace(/Scenario:/, '<b>Scenario:</b><br>')
-                 .replace(/Rating:/, '<br><br><b>Rating:</b><br>') 
-                 .replace(/\d out of 3 hearts/, rating + " out of 3 hearts" + renderHearts(rating))
-                 .replace(/Question:/, '<br><b>Question:</b><br>')
-                 .replace(/(If .*? wanted to BOTH make .*? feel good AND give accurate and informative feedback,)/, '<strong>$1</strong>')
-                 .replace(/(If .*? wanted to give as accurate and informative feedback as possible,)/, '<strong>$1</strong>')
-                 .replace(/(If .*? wanted to make .*? feel good,)/, '<strong>$1</strong>')
-                 .replace(/(If .*? wanted to BOTH make .*? feel good AND share .*? honest thoughts,)/, '<strong>$1</strong>')
-                 .replace(/(If .*? wanted to share .*? honest thoughts, )/, '<strong>$1</strong>')
-                 .replace(/(If .*? wanted to make .*? feel good,)/, '<strong>$1</strong>') 
-                 .replace(/actually/, '<strong>actually</strong>')
-                }
-        </div>`,
-        placeholder: 'Enter your response here',
-        required: true,
-        rows: 1,
-        columns: 50
+          ${scenario.replace(/Scenario:/, '<b>Scenario:</b><br>')
+                   .replace(/Rating:/, '<br><br><b>Rating:</b><br>') 
+                   .replace(/\d out of 3 hearts/, rating + " out of 3 hearts" + renderHearts(rating))
+                   .replace(/Question:/, '<br><b>Question:</b><br>')
+                   .replace(/(If .*? wanted to BOTH make .*? feel good AND give accurate and informative feedback,)/, '<strong>$1</strong>')
+                   .replace(/(If .*? wanted to give as accurate and informative feedback as possible,)/, '<strong>$1</strong>')
+                   .replace(/(If .*? wanted to make .*? feel good,)/, '<strong>$1</strong>')
+                   .replace(/(If .*? wanted to BOTH make .*? feel good AND share .*? honest thoughts,)/, '<strong>$1</strong>')
+                   .replace(/(If .*? wanted to share .*? honest thoughts, )/, '<strong>$1</strong>')
+                   .replace(/(If .*? wanted to make .*? feel good,)/, '<strong>$1</strong>') 
+                   .replace(/actually/, '<strong>actually</strong>')
+                  }
+          </div>`
       }
     };
   })
 };
+
+// adding a feedback page asking a question about:  Did you experience any difficulties while completing this survey? and please feel free to provide any additional feedback or comments.
+const feedback_page = {
+    type: jsPsychSurveyText,
+    questions: [
+        {
+            prompt: "Did you experience any difficulties while completing this survey?",
+            placeholder: "If not, please type 'N/A'.",
+            rows: 3,
+            columns: 50,
+            required: false
+        },
+        {
+            prompt: "Please feel free to provide any additional feedback or comments.",
+            placeholder: "If not, please type 'N/A'.",
+            rows: 3,
+            columns: 50,
+            required: false
+        }
+    ],
+    button_label: "Submit Feedback"
+};
+
       const save_data = {
         type: jsPsychPipe,
         action: "save",
@@ -434,6 +494,7 @@ const remaining_trials = {
       timeline.push(trials);
       timeline.push(main_study_transition);  // transition to main study
       timeline.push(remaining_trials);
+      timeline.push(feedback_page);
       timeline.push(save_data);
       timeline.push(thank_you_page);
 
