@@ -368,15 +368,27 @@ const trials = {
         choices: ['Next']
     };
 
-    const remaining_trials = {
+const remaining_trials = {
   timeline: [{
     type: jsPsychHtmlButtonResponse,
     stimulus: function() {
-      // Dynamically construct the HTML for the question and input field
       const question = jsPsych.timelineVariable('question').prompt;
+      const ratingMatch = question.match(/(\d) out of 3 hearts/);
+      const rating = ratingMatch ? parseInt(ratingMatch[1]) : 0;
+
       return `
         <div style="text-align: left; max-width: 600px; margin: 0 auto;">
-          ${question}
+          ${question.replace(/Scenario:/, '<b>Scenario:</b><br>')
+                   .replace(/Rating:/, '<br><br><b>Rating:</b><br>')
+                   .replace(/\d out of 3 hearts/, `${rating} out of 3 hearts ${renderHearts(rating)}`)
+                   .replace(/Question:/, '<br><b>Question:</b><br>')
+                   .replace(/(If .*? wanted to BOTH make .*? feel good AND give accurate and informative feedback,)/, '<strong>$1</strong>')
+                   .replace(/(If .*? wanted to give as accurate and informative feedback as possible,)/, '<strong>$1</strong>')
+                   .replace(/(If .*? wanted to make .*? feel good,)/, '<strong>$1</strong>')
+                   .replace(/(If .*? wanted to BOTH make .*? feel good AND share .*? honest thoughts,)/, '<strong>$1</strong>')
+                   .replace(/(If .*? wanted to share .*? honest thoughts, )/, '<strong>$1</strong>')
+                   .replace(/(If .*? wanted to make .*? feel good,)/, '<strong>$1</strong>')
+                   .replace(/actually/, '<strong>actually</strong>')}
         </div>
         <form id="response-form">
           <div style="margin-top: 20px;">
@@ -405,40 +417,28 @@ const trials = {
       // Handle form submission
       const form = document.getElementById('response-form');
       form.addEventListener('submit', function(event) {
-        if (!textarea.value.trim()) {
+        event.preventDefault(); // Prevent default form action
+        const response = textarea.value.trim();
+        if (!response) {
           textarea.setCustomValidity('Please fill out this field.');
-          textarea.reportValidity(); // Show visual error effect
-          event.preventDefault(); // Prevent form submission
+          textarea.reportValidity();
         } else {
-          textarea.setCustomValidity(''); // Clear any previous validation errors
-          event.preventDefault(); // Prevent default form action
-          jsPsych.finishTrial({ response: textarea.value.trim() });
+          textarea.setCustomValidity('');
+          jsPsych.finishTrial({ response }); // Pass response to trial data
         }
       });
-    }
+    },
+    on_finish: function(data) {
+      // Save both response and stimulus to the trial data
+      data.response = data.response; // Response captured in `on_load`'s `finishTrial`
+      data.stimulus = jsPsych.timelineVariable('question').prompt; // Save original prompt as stimulus
+    },
   }],
-  timeline_variables: shuffled_scenarios.slice(3).map(scenario => {
-    const ratingMatch = scenario.match(/(\d) out of 3 hearts/);
-    const rating = ratingMatch ? parseInt(ratingMatch[1]) : 0;
-    return {
-      question: {
-        prompt: `<div style="text-align: left; max-width: 600px; margin: 0 auto;">
-          ${scenario.replace(/Scenario:/, '<b>Scenario:</b><br>')
-                   .replace(/Rating:/, '<br><br><b>Rating:</b><br>') 
-                   .replace(/\d out of 3 hearts/, rating + " out of 3 hearts" + renderHearts(rating))
-                   .replace(/Question:/, '<br><b>Question:</b><br>')
-                   .replace(/(If .*? wanted to BOTH make .*? feel good AND give accurate and informative feedback,)/, '<strong>$1</strong>')
-                   .replace(/(If .*? wanted to give as accurate and informative feedback as possible,)/, '<strong>$1</strong>')
-                   .replace(/(If .*? wanted to make .*? feel good,)/, '<strong>$1</strong>')
-                   .replace(/(If .*? wanted to BOTH make .*? feel good AND share .*? honest thoughts,)/, '<strong>$1</strong>')
-                   .replace(/(If .*? wanted to share .*? honest thoughts, )/, '<strong>$1</strong>')
-                   .replace(/(If .*? wanted to make .*? feel good,)/, '<strong>$1</strong>') 
-                   .replace(/actually/, '<strong>actually</strong>')
-                  }
-          </div>`
-      }
-    };
-  })
+  timeline_variables: shuffled_scenarios.slice(3).map(scenario => ({
+    question: {
+      prompt: scenario
+    },
+  })),
 };
 
 // adding a feedback page asking a question about:  Did you experience any difficulties while completing this survey? and please feel free to provide any additional feedback or comments.
