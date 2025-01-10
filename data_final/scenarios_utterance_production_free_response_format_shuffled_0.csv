@@ -1,5 +1,13 @@
 "Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
+2 out of 3 hearts
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
+"Imagine that Tom saw a presentation
+Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 0 out of 3 hearts
 What did Tom feel?
 A. 0 hearts
@@ -8,34 +16,12 @@ C. 2 hearts
 D. 3 hearts"
 "Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
-2 out of 3 hearts
-What did Tom feel?
-A. 0 hearts
-B. 1 heart 
-C. 2 hearts
-D. 3 hearts"
-"Imagine that Tom saw a presentation
-Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 3 out of 3 hearts
 What did Tom feel?
 A. 0 hearts
 B. 1 heart 
 C. 2 hearts
 D. 3 hearts"
-"Scenario:
-Imagine that Aiden wanted to get Ellie’s opinion about a TV episode they just watched. After Ellie finished the episode, Aiden asked, “What did you think?” 
-Rating:
-Here's how Ellie actually felt about the TV-show:
-3 out of 3 hearts
-Question:
-What would Ellie be most likely to say?"
-"Scenario:
-Imagine that Liam wanted to get Sally’s opinion about a restaurant they just visited. After Sally visited the restaurant, Liam asked, “What did you think?” 
-Rating:
-Here's how Sally actually felt about the restaurant:
-2 out of 3 hearts
-Question:
-If Sally wanted to make Liam feel good, but not necessarily share her honest thoughts, What would Sally be most likely to say?"
 "Scenario:
 Imagine that Bob just gave a presentation, but he didn't know how good it was. Bob approached John, who knows a lot about giving presentations, and asked ""How was my presentation?""
 Rating:
@@ -52,6 +38,13 @@ Here's how Michael actually felt about the movie:
 Question:
 If Michael wanted to share his honest thoughts, but not necessarily make Sebastian feel good, What would Michael be most likely to say?"
 "Scenario:
+Imagine that Sebastian wanted to get Chris’s opinion about a book they just read. After Chris finished the book, Sebastian asked, “What did you think?” 
+Rating:
+Here's how Chris actually felt about the book:
+0 out of 3 hearts
+Question:
+If Chris wanted to BOTH make Sebastian feel good AND share his honest thoughts, What would Chris be most likely to say?"
+"Scenario:
 Imagine that Mika baked some cookies, but she didn't know how good they tasted. Mika approached Hailey, who knows a lot about baking, and asked ""How did my cookie taste?""
 Rating:
 Here's how Hailey actually felt about Mika's cookie:
@@ -60,19 +53,12 @@ Question:
 If Hailey wanted to give as accurate and informative feedback as possible, but not necessarily make Mika feel good,
 What would Hailey be most likely to say?"
 "Scenario:
-Imagine that James baked a cake, but he didn't know how good it tasted. James approached Kyle, who knows a lot about baking, and asked ""How did my cake taste?""
+Imagine that Liam wanted to get Sally’s opinion about a restaurant they just visited. After Sally visited the restaurant, Liam asked, “What did you think?” 
 Rating:
-Here's how Kyle actually felt about James's cake:
-3 out of 3 hearts
+Here's how Sally actually felt about the restaurant:
+2 out of 3 hearts
 Question:
-What would Kyle be most likely to say?"
-"Scenario:
-Imagine that Sebastian wanted to get Chris’s opinion about a book they just read. After Chris finished the book, Sebastian asked, “What did you think?” 
-Rating:
-Here's how Chris actually felt about the book:
-0 out of 3 hearts
-Question:
-If Chris wanted to BOTH make Sebastian feel good AND share his honest thoughts, What would Chris be most likely to say?"
+If Sally wanted to make Liam feel good, but not necessarily share her honest thoughts, What would Sally be most likely to say?"
 "Scenario:
 Imagine that Jenny wrote a poem, but she didn't know how good it was. Jenny approached Karen, who knows a lot about poems, and asked ""How was my poem?""
 Rating:
@@ -81,3 +67,17 @@ Here's how Karen actually felt about Jenny's poem:
 Question:
 If Karen wanted to make Jenny feel good, but not necessarily give informative feedback,
 What would Karen be most likely to say?"
+"Scenario:
+Imagine that Aiden wanted to get Ellie’s opinion about a TV episode they just watched. After Ellie finished the episode, Aiden asked, “What did you think?” 
+Rating:
+Here's how Ellie actually felt about the TV-show:
+3 out of 3 hearts
+Question:
+What would Ellie be most likely to say?"
+"Scenario:
+Imagine that James baked a cake, but he didn't know how good it tasted. James approached Kyle, who knows a lot about baking, and asked ""How did my cake taste?""
+Rating:
+Here's how Kyle actually felt about James's cake:
+3 out of 3 hearts
+Question:
+What would Kyle be most likely to say?"

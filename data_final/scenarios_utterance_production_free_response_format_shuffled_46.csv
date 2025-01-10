@@ -1,6 +1,6 @@
 "Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
-0 out of 3 hearts
+2 out of 3 hearts
 What did Tom feel?
 A. 0 hearts
 B. 1 heart 
@@ -8,7 +8,7 @@ C. 2 hearts
 D. 3 hearts"
 "Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
-2 out of 3 hearts
+0 out of 3 hearts
 What did Tom feel?
 A. 0 hearts
 B. 1 heart 
@@ -23,6 +23,13 @@ B. 1 heart
 C. 2 hearts
 D. 3 hearts"
 "Scenario:
+Imagine that John wanted to get Sam’s opinion about a restaurant they just visited. After Sam visited the restaurant, John asked, “What did you think?” 
+Rating:
+Here's how Sam actually felt about the restaurant:
+1 out of 3 hearts
+Question:
+What would Sam be most likely to say?"
+"Scenario:
 Imagine that Patrick wrote a review for a book, but he didn't know how good his review was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
 Rating:
 Here's how Nathan actually felt about Patrick's review:
@@ -31,13 +38,12 @@ Question:
 If Nathan wanted to BOTH make Patrick feel good AND give accurate and informative feedback,
 What would Nathan be most likely to say?"
 "Scenario:
-Imagine that Bob just gave a presentation, but he didn't know how good it was. Bob approached John, who knows a lot about giving presentations, and asked ""How was my presentation?""
+Imagine that Jackson wanted to get Charlie’s opinion about a book they just read. After Charlie finished the book, Jackson asked, “What did you think?” 
 Rating:
-Here's how John actually felt about Bob's presentation:
-0 out of 3 hearts
+Here's how Charlie actually felt about the book:
+3 out of 3 hearts
 Question:
-If John wanted to make Bob feel good, but not necessarily give informative feedback,
-What would John be most likely to say?"
+If Charlie wanted to share their honest thoughts, but not necessarily make Jackson feel good, What would Charlie be most likely to say?"
 "Scenario:
 Imagine that Mika baked some cookies, but she didn't know how good they tasted. Mika approached Hailey, who knows a lot about baking, and asked ""How did my cookie taste?""
 Rating:
@@ -46,12 +52,13 @@ Here's how Hailey actually felt about Mika's cookie:
 Question:
 What would Hailey be most likely to say?"
 "Scenario:
-Imagine that John wanted to get Sam’s opinion about a restaurant they just visited. After Sam visited the restaurant, John asked, “What did you think?” 
+Imagine that Emma performed at a piano recital, but she didn't know how good her playing sounded. Emma approached Wendy, who knows a lot about playing piano, and asked ""How was my performance?""
 Rating:
-Here's how Sam actually felt about the restaurant:
-1 out of 3 hearts
+Here's how Wendy actually felt about Emma's performance:
+3 out of 3 hearts
 Question:
-What would Sam be most likely to say?"
+If Wendy wanted to give as accurate and informative feedback as possible, but not necessarily make Emma feel good,
+What would Wendy be most likely to say?"
 "Scenario:
 Imagine that Aiden wanted to get Taylor’s opinion about a movie they just watched. After Taylor finished the movie, Aiden asked, “What did you think?” 
 Rating:
@@ -67,17 +74,10 @@ Here's how Sam actually felt about the video game:
 Question:
 If Sam wanted to BOTH make Samuel feel good AND share their honest thoughts, What would Sam be most likely to say?"
 "Scenario:
-Imagine that Jackson wanted to get Charlie’s opinion about a book they just read. After Charlie finished the book, Jackson asked, “What did you think?” 
+Imagine that Bob just gave a presentation, but he didn't know how good it was. Bob approached John, who knows a lot about giving presentations, and asked ""How was my presentation?""
 Rating:
-Here's how Charlie actually felt about the book:
-3 out of 3 hearts
+Here's how John actually felt about Bob's presentation:
+0 out of 3 hearts
 Question:
-If Charlie wanted to share their honest thoughts, but not necessarily make Jackson feel good, What would Charlie be most likely to say?"
-"Scenario:
-Imagine that Emma performed at a piano recital, but she didn't know how good her playing sounded. Emma approached Wendy, who knows a lot about playing piano, and asked ""How was my performance?""
-Rating:
-Here's how Wendy actually felt about Emma's performance:
-3 out of 3 hearts
-Question:
-If Wendy wanted to give as accurate and informative feedback as possible, but not necessarily make Emma feel good,
-What would Wendy be most likely to say?"
+If John wanted to make Bob feel good, but not necessarily give informative feedback,
+What would John be most likely to say?"

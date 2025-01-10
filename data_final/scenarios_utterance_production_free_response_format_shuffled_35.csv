@@ -1,6 +1,6 @@
 "Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
-0 out of 3 hearts
+2 out of 3 hearts
 What did Tom feel?
 A. 0 hearts
 B. 1 heart 
@@ -8,7 +8,7 @@ C. 2 hearts
 D. 3 hearts"
 "Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
-2 out of 3 hearts
+0 out of 3 hearts
 What did Tom feel?
 A. 0 hearts
 B. 1 heart 
@@ -22,13 +22,6 @@ A. 0 hearts
 B. 1 heart 
 C. 2 hearts
 D. 3 hearts"
-"Scenario:
-Imagine that Jackson wanted to get Alex’s opinion about a video game they just played. After Alex finished the game, Jackson asked, “What did you think?” 
-Rating:
-Here's how Alex actually felt about the video game:
-2 out of 3 hearts
-Question:
-What would Alex be most likely to say?"
 "Scenario:
 Imagine that Patrick wrote a review for a book, but he didn't know how good his review was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
 Rating:
@@ -45,20 +38,6 @@ Question:
 If Ann wanted to give as accurate and informative feedback as possible, but not necessarily make Diana feel good,
 What would Ann be most likely to say?"
 "Scenario:
-Imagine that Andrew wanted to get Ellie’s opinion about a song they just heard. After Ellie finished listening to the song, Andrew asked, “What did you think?” 
-Rating:
-Here's how Ellie actually felt about the song:
-1 out of 3 hearts
-Question:
-If Ellie wanted to make Andrew feel good, but not necessarily share her honest thoughts, What would Ellie be most likely to say?"
-"Scenario:
-Imagine that Mason wanted to get Taylor’s opinion about a restaurant they just visited. After Taylor visited the restaurant, Mason asked, “What did you think?” 
-Rating:
-Here's how Taylor actually felt about the restaurant:
-3 out of 3 hearts
-Question:
-If Taylor wanted to BOTH make Mason feel good AND share their honest thoughts, What would Taylor be most likely to say?"
-"Scenario:
 Imagine that Kevin drew a painting, but he didn't know how good his painting looked. Kevin approached Jake, who knows a lot about paintings, and asked ""How was my painting?""
 Rating:
 Here's how Jake actually felt about Kevin's painting:
@@ -74,6 +53,20 @@ Here's how Jessica actually felt about the TV-show:
 Question:
 If Jessica wanted to share her honest thoughts, but not necessarily make Lucas feel good, What would Jessica be most likely to say?"
 "Scenario:
+Imagine that Mason wanted to get Taylor’s opinion about a restaurant they just visited. After Taylor visited the restaurant, Mason asked, “What did you think?” 
+Rating:
+Here's how Taylor actually felt about the restaurant:
+3 out of 3 hearts
+Question:
+If Taylor wanted to BOTH make Mason feel good AND share their honest thoughts, What would Taylor be most likely to say?"
+"Scenario:
+Imagine that Andrew wanted to get Ellie’s opinion about a song they just heard. After Ellie finished listening to the song, Andrew asked, “What did you think?” 
+Rating:
+Here's how Ellie actually felt about the song:
+1 out of 3 hearts
+Question:
+If Ellie wanted to make Andrew feel good, but not necessarily share her honest thoughts, What would Ellie be most likely to say?"
+"Scenario:
 Imagine that Henry designed a mobile app, but he didn't know how good it was. Henry approached George, who knows a lot about mobile apps, and asked ""How was my app?""
 Rating:
 Here's how George actually felt about Henry's app:
@@ -81,3 +74,10 @@ Here's how George actually felt about Henry's app:
 Question:
 If George wanted to make Henry feel good, but not necessarily give informative feedback,
 What would George be most likely to say?"
+"Scenario:
+Imagine that Jackson wanted to get Alex’s opinion about a video game they just played. After Alex finished the game, Jackson asked, “What did you think?” 
+Rating:
+Here's how Alex actually felt about the video game:
+2 out of 3 hearts
+Question:
+What would Alex be most likely to say?"

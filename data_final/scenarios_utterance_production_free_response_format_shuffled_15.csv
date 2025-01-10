@@ -1,13 +1,5 @@
 "Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
-0 out of 3 hearts
-What did Tom feel?
-A. 0 hearts
-B. 1 heart 
-C. 2 hearts
-D. 3 hearts"
-"Imagine that Tom saw a presentation
-Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 2 out of 3 hearts
 What did Tom feel?
 A. 0 hearts
@@ -16,43 +8,20 @@ C. 2 hearts
 D. 3 hearts"
 "Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
+0 out of 3 hearts
+What did Tom feel?
+A. 0 hearts
+B. 1 heart 
+C. 2 hearts
+D. 3 hearts"
+"Imagine that Tom saw a presentation
+Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
 3 out of 3 hearts
 What did Tom feel?
 A. 0 hearts
 B. 1 heart 
 C. 2 hearts
 D. 3 hearts"
-"Scenario:
-Imagine that David wanted to get Jessica’s opinion about a TV episode they just watched. After Jessica finished the episode, David asked, “What did you think?” 
-Rating:
-Here's how Jessica actually felt about the TV-show:
-3 out of 3 hearts
-Question:
-If Jessica wanted to BOTH make David feel good AND share her honest thoughts, What would Jessica be most likely to say?"
-"Scenario:
-Imagine that Chris composed a song, but he didn't know how good it sounded. Chris approached Sean, who knows a lot about composing songs, and asked ""How was my song?""
-Rating:
-Here's how Sean actually felt about Chris's song:
-0 out of 3 hearts
-Question:
-If Sean wanted to give as accurate and informative feedback as possible, but not necessarily make Chris feel good,
-What would Sean be most likely to say?"
-"Scenario:
-Imagine that Sarah filmed a movie, but she didn't know how good it was. Sarah approached Lucy, who knows a lot about movies, and asked ""How was my movie?""
-Rating:
-Here's how Lucy actually felt about Sarah's movie:
-1 out of 3 hearts
-Question:
-If Lucy wanted to make Sarah feel good, but not necessarily give informative feedback,
-What would Lucy be most likely to say?"
-"Scenario:
-Imagine that James baked a cake, but he didn't know how good it tasted. James approached Kyle, who knows a lot about baking, and asked ""How did my cake taste?""
-Rating:
-Here's how Kyle actually felt about James's cake:
-3 out of 3 hearts
-Question:
-If Kyle wanted to BOTH make James feel good AND give accurate and informative feedback,
-What would Kyle be most likely to say?"
 "Scenario:
 Imagine that Nathan wanted to get Michael’s opinion about a book they just read. After Michael finished the book, Nathan asked, “What did you think?” 
 Rating:
@@ -68,6 +37,22 @@ Here's how Charlie actually felt about the video game:
 Question:
 If Charlie wanted to make Isaac feel good, but not necessarily share their honest thoughts, What would Charlie be most likely to say?"
 "Scenario:
+Imagine that James baked a cake, but he didn't know how good it tasted. James approached Kyle, who knows a lot about baking, and asked ""How did my cake taste?""
+Rating:
+Here's how Kyle actually felt about James's cake:
+3 out of 3 hearts
+Question:
+If Kyle wanted to BOTH make James feel good AND give accurate and informative feedback,
+What would Kyle be most likely to say?"
+"Scenario:
+Imagine that Sarah filmed a movie, but she didn't know how good it was. Sarah approached Lucy, who knows a lot about movies, and asked ""How was my movie?""
+Rating:
+Here's how Lucy actually felt about Sarah's movie:
+1 out of 3 hearts
+Question:
+If Lucy wanted to make Sarah feel good, but not necessarily give informative feedback,
+What would Lucy be most likely to say?"
+"Scenario:
 Imagine that Anthony wanted to get Sarah’s opinion about a song they just heard. After Sarah finished listening to the song, Anthony asked, “What did you think?” 
 Rating:
 Here's how Sarah actually felt about the song:
@@ -81,3 +66,18 @@ Here's how Bill actually felt about Tom's solo:
 2 out of 3 hearts
 Question:
 What would Bill be most likely to say?"
+"Scenario:
+Imagine that David wanted to get Jessica’s opinion about a TV episode they just watched. After Jessica finished the episode, David asked, “What did you think?” 
+Rating:
+Here's how Jessica actually felt about the TV-show:
+3 out of 3 hearts
+Question:
+If Jessica wanted to BOTH make David feel good AND share her honest thoughts, What would Jessica be most likely to say?"
+"Scenario:
+Imagine that Chris composed a song, but he didn't know how good it sounded. Chris approached Sean, who knows a lot about composing songs, and asked ""How was my song?""
+Rating:
+Here's how Sean actually felt about Chris's song:
+0 out of 3 hearts
+Question:
+If Sean wanted to give as accurate and informative feedback as possible, but not necessarily make Chris feel good,
+What would Sean be most likely to say?"

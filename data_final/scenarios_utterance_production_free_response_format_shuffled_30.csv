@@ -1,6 +1,6 @@
 "Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
-0 out of 3 hearts
+2 out of 3 hearts
 What did Tom feel?
 A. 0 hearts
 B. 1 heart 
@@ -8,7 +8,7 @@ C. 2 hearts
 D. 3 hearts"
 "Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
-2 out of 3 hearts
+0 out of 3 hearts
 What did Tom feel?
 A. 0 hearts
 B. 1 heart 
@@ -23,14 +23,6 @@ B. 1 heart
 C. 2 hearts
 D. 3 hearts"
 "Scenario:
-Imagine that Grace gave a tap dance performance, but she didn't know how good her dance looked. Grace approached Heather, who knows a lot about tap dance, and asked ""How was my dance?""
-Rating:
-Here's how Heather actually felt about Grace's dance:
-2 out of 3 hearts
-Question:
-If Heather wanted to BOTH make Grace feel good AND give accurate and informative feedback,
-What would Heather be most likely to say?"
-"Scenario:
 Imagine that Joseph wanted to get Taylor’s opinion about a TV episode they just watched. After Taylor finished the episode, Joseph asked, “What did you think?” 
 Rating:
 Here's how Taylor actually felt about the TV-show:
@@ -38,27 +30,12 @@ Here's how Taylor actually felt about the TV-show:
 Question:
 If Taylor wanted to make Joseph feel good, but not necessarily share their honest thoughts, What would Taylor be most likely to say?"
 "Scenario:
-Imagine that Diana gave a monologue during a school play, but she didn't know how good her performance went. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
-Rating:
-Here's how Ann actually felt about Diana's monologue:
-0 out of 3 hearts
-Question:
-If Ann wanted to make Diana feel good, but not necessarily give informative feedback,
-What would Ann be most likely to say?"
-"Scenario:
 Imagine that Elijah wanted to get Alex’s opinion about a movie they just watched. After Alex finished the movie, Elijah asked, “What did you think?” 
 Rating:
 Here's how Alex actually felt about the movie:
 2 out of 3 hearts
 Question:
 If Alex wanted to BOTH make Elijah feel good AND share their honest thoughts, What would Alex be most likely to say?"
-"Scenario:
-Imagine that Henry designed a mobile app, but he didn't know how good it was. Henry approached George, who knows a lot about mobile apps, and asked ""How was my app?""
-Rating:
-Here's how George actually felt about Henry's app:
-1 out of 3 hearts
-Question:
-What would George be most likely to say?"
 "Scenario:
 Imagine that Ethan wanted to get Charlie’s opinion about a song they just heard. After Charlie finished listening to the song, Ethan asked, “What did you think?” 
 Rating:
@@ -73,6 +50,29 @@ Here's how Sarah actually felt about the restaurant:
 3 out of 3 hearts
 Question:
 If Sarah wanted to share her honest thoughts, but not necessarily make Matthew feel good, What would Sarah be most likely to say?"
+"Scenario:
+Imagine that Henry designed a mobile app, but he didn't know how good it was. Henry approached George, who knows a lot about mobile apps, and asked ""How was my app?""
+Rating:
+Here's how George actually felt about Henry's app:
+1 out of 3 hearts
+Question:
+What would George be most likely to say?"
+"Scenario:
+Imagine that Diana gave a monologue during a school play, but she didn't know how good her performance went. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
+Rating:
+Here's how Ann actually felt about Diana's monologue:
+0 out of 3 hearts
+Question:
+If Ann wanted to make Diana feel good, but not necessarily give informative feedback,
+What would Ann be most likely to say?"
+"Scenario:
+Imagine that Grace gave a tap dance performance, but she didn't know how good her dance looked. Grace approached Heather, who knows a lot about tap dance, and asked ""How was my dance?""
+Rating:
+Here's how Heather actually felt about Grace's dance:
+2 out of 3 hearts
+Question:
+If Heather wanted to BOTH make Grace feel good AND give accurate and informative feedback,
+What would Heather be most likely to say?"
 "Scenario:
 Imagine that Kevin drew a painting, but he didn't know how good his painting looked. Kevin approached Jake, who knows a lot about paintings, and asked ""How was my painting?""
 Rating:

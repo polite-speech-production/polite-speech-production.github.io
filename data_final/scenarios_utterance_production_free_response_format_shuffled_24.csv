@@ -1,6 +1,6 @@
 "Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
-0 out of 3 hearts
+2 out of 3 hearts
 What did Tom feel?
 A. 0 hearts
 B. 1 heart 
@@ -8,7 +8,7 @@ C. 2 hearts
 D. 3 hearts"
 "Imagine that Tom saw a presentation
 Here's how Tom felt about the presentation, on a scale of 0 to 3 hearts:
-2 out of 3 hearts
+0 out of 3 hearts
 What did Tom feel?
 A. 0 hearts
 B. 1 heart 
@@ -31,6 +31,35 @@ Question:
 If Jake wanted to make Kevin feel good, but not necessarily give informative feedback,
 What would Jake be most likely to say?"
 "Scenario:
+Imagine that Tom played a cello solo part at a concert, but he didn't know how good his playing sounded. Tom approached Bill, who knows a lot about playing cello, and asked ""How was my solo?""
+Rating:
+Here's how Bill actually felt about Tom's solo:
+0 out of 3 hearts
+Question:
+If Bill wanted to BOTH make Tom feel good AND give accurate and informative feedback,
+What would Bill be most likely to say?"
+"Scenario:
+Imagine that Sebastian wanted to get Michael’s opinion about a movie they just watched. After Michael finished the movie, Sebastian asked, “What did you think?” 
+Rating:
+Here's how Michael actually felt about the movie:
+1 out of 3 hearts
+Question:
+If Michael wanted to share his honest thoughts, but not necessarily make Sebastian feel good, What would Michael be most likely to say?"
+"Scenario:
+Imagine that Liam wanted to get Sally’s opinion about a restaurant they just visited. After Sally visited the restaurant, Liam asked, “What did you think?” 
+Rating:
+Here's how Sally actually felt about the restaurant:
+2 out of 3 hearts
+Question:
+If Sally wanted to make Liam feel good, but not necessarily share her honest thoughts, What would Sally be most likely to say?"
+"Scenario:
+Imagine that Sebastian wanted to get Chris’s opinion about a book they just read. After Chris finished the book, Sebastian asked, “What did you think?” 
+Rating:
+Here's how Chris actually felt about the book:
+0 out of 3 hearts
+Question:
+If Chris wanted to BOTH make Sebastian feel good AND share his honest thoughts, What would Chris be most likely to say?"
+"Scenario:
 Imagine that Diana gave a monologue during a school play, but she didn't know how good her performance went. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
 Rating:
 Here's how Ann actually felt about Diana's monologue:
@@ -45,28 +74,6 @@ Here's how Ellie actually felt about the TV-show:
 Question:
 What would Ellie be most likely to say?"
 "Scenario:
-Imagine that Sebastian wanted to get Chris’s opinion about a book they just read. After Chris finished the book, Sebastian asked, “What did you think?” 
-Rating:
-Here's how Chris actually felt about the book:
-0 out of 3 hearts
-Question:
-If Chris wanted to BOTH make Sebastian feel good AND share his honest thoughts, What would Chris be most likely to say?"
-"Scenario:
-Imagine that Liam wanted to get Sally’s opinion about a restaurant they just visited. After Sally visited the restaurant, Liam asked, “What did you think?” 
-Rating:
-Here's how Sally actually felt about the restaurant:
-2 out of 3 hearts
-Question:
-If Sally wanted to make Liam feel good, but not necessarily share her honest thoughts, What would Sally be most likely to say?"
-"Scenario:
-Imagine that Tom played a cello solo part at a concert, but he didn't know how good his playing sounded. Tom approached Bill, who knows a lot about playing cello, and asked ""How was my solo?""
-Rating:
-Here's how Bill actually felt about Tom's solo:
-0 out of 3 hearts
-Question:
-If Bill wanted to BOTH make Tom feel good AND give accurate and informative feedback,
-What would Bill be most likely to say?"
-"Scenario:
 Imagine that Grace gave a tap dance performance, but she didn't know how good her dance looked. Grace approached Heather, who knows a lot about tap dance, and asked ""How was my dance?""
 Rating:
 Here's how Heather actually felt about Grace's dance:
@@ -74,10 +81,3 @@ Here's how Heather actually felt about Grace's dance:
 Question:
 If Heather wanted to give as accurate and informative feedback as possible, but not necessarily make Grace feel good,
 What would Heather be most likely to say?"
-"Scenario:
-Imagine that Sebastian wanted to get Michael’s opinion about a movie they just watched. After Michael finished the movie, Sebastian asked, “What did you think?” 
-Rating:
-Here's how Michael actually felt about the movie:
-1 out of 3 hearts
-Question:
-If Michael wanted to share his honest thoughts, but not necessarily make Sebastian feel good, What would Michael be most likely to say?"
