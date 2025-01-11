@@ -471,18 +471,6 @@ const feedback_page = {
       //   data_string: () => jsPsych.data.get().csv()
       // };
 
-//       const save_data = {
-//     type: jsPsychPipe,
-//     action: "save",
-//     experiment_id: "odX6wgoMZaHY", // Replace with your experiment ID
-//     filename: (() => {
-//         const urlParams = new URLSearchParams(window.location.search);
-//         const prolificID = urlParams.get("PROLIFIC_PID");
-//         return prolificID ? `participant_${prolificID}.csv` : `participant_${jsPsych.randomization.randomID(10)}.csv`;
-//     })(),
-//     data_string: () => jsPsych.data.get().csv()
-// };
-
       const save_data = {
     type: jsPsychPipe,
     action: "save",
@@ -490,10 +478,7 @@ const feedback_page = {
     filename: (() => {
         const urlParams = new URLSearchParams(window.location.search);
         const prolificID = urlParams.get("PROLIFIC_PID");
-        const uniqueSuffix = new Date().toISOString().replace(/[:.-]/g, "_"); // Add timestamp
-        return prolificID
-            ? `participant_${prolificID}_${uniqueSuffix}.csv`
-            : `participant_${jsPsych.randomization.randomID(10)}_${uniqueSuffix}.csv`;
+        return prolificID ? `participant_${prolificID}.csv` : `participant_${jsPsych.randomization.randomID(10)}.csv`;
     })(),
     data_string: () => jsPsych.data.get().csv()
 };
