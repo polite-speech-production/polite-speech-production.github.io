@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
     <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
     <script src="https://unpkg.com/@jspsych/plugin-survey-multi-choice@1.1.2"></script>
+    <script src="https://unpkg.com/@jspsych/plugin-fullscreen@1.1.0"></script>
     <link href="https://unpkg.com/jspsych@7.3.4/css/jspsych.css" rel="stylesheet" type="text/css" />
     <style>
       .hearts-container {
@@ -277,6 +278,19 @@ const note_page = {
     choices: ['Next']
 };
 
+const fullscreen_trial = {
+    type: jsPsychFullscreen,
+    fullscreen_mode: true,
+    message: `
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p><b>Full-Screen Mode Required</b></p>
+            <p>To ensure the best experience, this experiment will switch to full-screen mode.</p>
+            <p>Click "Continue" to proceed.</p>
+        </div>
+    `,
+    button_label: "Continue"
+};
+
 const instruction_page = {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
@@ -368,77 +382,147 @@ const trials = {
         choices: ['Next']
     };
 
+// const remaining_trials = {
+//   timeline: [{
+//     type: jsPsychHtmlButtonResponse,
+//     stimulus: function() {
+//       const question = jsPsych.timelineVariable('question').prompt;
+//       const ratingMatch = question.match(/(\d) out of 3 hearts/);
+//       const rating = ratingMatch ? parseInt(ratingMatch[1]) : 0;
+
+//       return `
+//         <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+//           ${question.replace(/Scenario:/, '<b>Scenario:</b><br>')
+//                    .replace(/Rating:/, '<br><br><b>Rating:</b><br>')
+//                    .replace(/\d out of 3 hearts/, `${rating} out of 3 hearts ${renderHearts(rating)}`)
+//                    .replace(/Question:/, '<br><b>Question:</b><br>')
+//                    .replace(/(If .*? wanted to BOTH make .*? feel good AND give accurate and informative feedback,)/, '<strong>$1</strong>')
+//                    .replace(/(If .*? wanted to give as accurate and informative feedback as possible,)/, '<strong>$1</strong>')
+//                    .replace(/(If .*? wanted to make .*? feel good,)/, '<strong>$1</strong>')
+//                    .replace(/(If .*? wanted to BOTH make .*? feel good AND share .*? honest thoughts,)/, '<strong>$1</strong>')
+//                    .replace(/(If .*? wanted to share .*? honest thoughts, )/, '<strong>$1</strong>')
+//                    .replace(/(If .*? wanted to make .*? feel good,)/, '<strong>$1</strong>')
+//                    .replace(/actually/, '<strong>actually</strong>')}
+//         </div>
+//         <form id="response-form">
+//           <div style="margin-top: 20px;">
+//             <textarea 
+//               id="response" 
+//               placeholder="Enter your response here" 
+//               rows="1" 
+//               cols="50" 
+//               required
+//               style="font-size: 16px; line-height: 1.5;"
+//             ></textarea>
+//           </div>
+//           <button type="submit" id="next-button" style="margin-top: 20px; padding: 8px 12px; font-size: 14px; border-radius: 6px;">Next</button>
+//         </form>`;
+//     },
+//     choices: [], // Disable jsPsych default button
+//     on_load: function() {
+//       const textarea = document.getElementById('response');
+
+//       // Prevent pasting and display a warning message
+//       textarea.addEventListener('paste', function(event) {
+//         event.preventDefault(); // Prevent paste action
+//         alert('Pasting is not allowed. Please type your response manually.');
+//       });
+
+//       // Handle form submission
+//       const form = document.getElementById('response-form');
+//       form.addEventListener('submit', function(event) {
+//         event.preventDefault(); // Prevent default form action
+//         const response = textarea.value.trim();
+//         if (!response) {
+//           textarea.setCustomValidity('Please fill out this field.');
+//           textarea.reportValidity();
+//         } else {
+//           textarea.setCustomValidity('');
+//           jsPsych.finishTrial({ response }); // Pass response to trial data
+//         }
+//       });
+//     },
+//     on_finish: function(data) {
+//       // Save both response and stimulus to the trial data
+//       data.response = data.response; // Response captured in `on_load`'s `finishTrial`
+//       data.stimulus = jsPsych.timelineVariable('question').prompt; // Save original prompt as stimulus
+//     },
+//   }],
+//   timeline_variables: shuffled_scenarios.slice(3).map(scenario => ({
+//     question: {
+//       prompt: scenario
+//     },
+//   })),
+// };
+
 const remaining_trials = {
-  timeline: [{
-    type: jsPsychHtmlButtonResponse,
-    stimulus: function() {
-      const question = jsPsych.timelineVariable('question').prompt;
-      const ratingMatch = question.match(/(\d) out of 3 hearts/);
-      const rating = ratingMatch ? parseInt(ratingMatch[1]) : 0;
+    timeline: [{
+        type: jsPsychHtmlButtonResponse,
+        stimulus: function() {
+            const question = jsPsych.timelineVariable('question').prompt;
+            const ratingMatch = question.match(/(\d) out of 3 hearts/);
+            const rating = ratingMatch ? parseInt(ratingMatch[1]) : 0;
 
-      return `
-        <div style="text-align: left; max-width: 600px; margin: 0 auto;">
-          ${question.replace(/Scenario:/, '<b>Scenario:</b><br>')
-                   .replace(/Rating:/, '<br><br><b>Rating:</b><br>')
-                   .replace(/\d out of 3 hearts/, `${rating} out of 3 hearts ${renderHearts(rating)}`)
-                   .replace(/Question:/, '<br><b>Question:</b><br>')
-                   .replace(/(If .*? wanted to BOTH make .*? feel good AND give accurate and informative feedback,)/, '<strong>$1</strong>')
-                   .replace(/(If .*? wanted to give as accurate and informative feedback as possible,)/, '<strong>$1</strong>')
-                   .replace(/(If .*? wanted to make .*? feel good,)/, '<strong>$1</strong>')
-                   .replace(/(If .*? wanted to BOTH make .*? feel good AND share .*? honest thoughts,)/, '<strong>$1</strong>')
-                   .replace(/(If .*? wanted to share .*? honest thoughts, )/, '<strong>$1</strong>')
-                   .replace(/(If .*? wanted to make .*? feel good,)/, '<strong>$1</strong>')
-                   .replace(/actually/, '<strong>actually</strong>')}
-        </div>
-        <form id="response-form">
-          <div style="margin-top: 20px;">
-            <textarea 
-              id="response" 
-              placeholder="Enter your response here" 
-              rows="1" 
-              cols="50" 
-              required
-              style="font-size: 16px; line-height: 1.5;"
-            ></textarea>
-          </div>
-          <button type="submit" id="next-button" style="margin-top: 20px; padding: 8px 12px; font-size: 14px; border-radius: 6px;">Next</button>
-        </form>`;
-    },
-    choices: [], // Disable jsPsych default button
-    on_load: function() {
-      const textarea = document.getElementById('response');
+            return `
+                <div style="text-align: left; max-width: 600px; margin: 0 auto;">
+                    ${question.replace(/Scenario:/, '<b>Scenario:</b><br>')
+                             .replace(/Rating:/, '<br><br><b>Rating:</b><br>')
+                             .replace(/\d out of 3 hearts/, `${rating} out of 3 hearts ${renderHearts(rating)}`)
+                             .replace(/Question:/, '<br><b>Question:</b><br>')
+                    }
+                </div>
+                <form id="response-form">
+                    <div style="margin-top: 20px;">
+                        <textarea 
+                            id="response" 
+                            placeholder="Enter your response here" 
+                            rows="1" 
+                            cols="50" 
+                            required
+                            style="font-size: 16px; line-height: 1.5;"
+                        ></textarea>
+                    </div>
+                    <p id="paste-warning" style="color: red; display: none; font-weight: bold;">
+                        Pasting is not allowed. Please type your response manually.
+                    </p>
+                    <button type="submit" id="next-button" style="margin-top: 20px; padding: 8px 12px; font-size: 14px; border-radius: 6px;">Next</button>
+                </form>`;
+        },
+        choices: [], // Disable jsPsych default button
+        on_load: function() {
+            const textarea = document.getElementById('response');
+            const warning = document.getElementById('paste-warning');
 
-      // Prevent pasting and display a warning message
-      textarea.addEventListener('paste', function(event) {
-        event.preventDefault(); // Prevent paste action
-        alert('Pasting is not allowed. Please type your response manually.');
-      });
+            // Prevent pasting and show the warning message
+            textarea.addEventListener('paste', function(event) {
+                event.preventDefault(); // Prevent paste action
+                warning.style.display = 'block'; // Show warning message
+            });
 
-      // Handle form submission
-      const form = document.getElementById('response-form');
-      form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form action
-        const response = textarea.value.trim();
-        if (!response) {
-          textarea.setCustomValidity('Please fill out this field.');
-          textarea.reportValidity();
-        } else {
-          textarea.setCustomValidity('');
-          jsPsych.finishTrial({ response }); // Pass response to trial data
-        }
-      });
-    },
-    on_finish: function(data) {
-      // Save both response and stimulus to the trial data
-      data.response = data.response; // Response captured in `on_load`'s `finishTrial`
-      data.stimulus = jsPsych.timelineVariable('question').prompt; // Save original prompt as stimulus
-    },
-  }],
-  timeline_variables: shuffled_scenarios.slice(3).map(scenario => ({
-    question: {
-      prompt: scenario
-    },
-  })),
+            // Handle form submission
+            const form = document.getElementById('response-form');
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent default form action
+                const response = textarea.value.trim();
+                if (!response) {
+                    textarea.setCustomValidity('Please fill out this field.');
+                    textarea.reportValidity();
+                } else {
+                    textarea.setCustomValidity('');
+                    jsPsych.finishTrial({ response }); // Pass response to trial data
+                }
+            });
+        },
+        on_finish: function(data) {
+            data.response = data.response; // Response captured in `on_load`'s `finishTrial`
+            data.stimulus = jsPsych.timelineVariable('question').prompt; // Save original prompt as stimulus
+        },
+    }],
+    timeline_variables: shuffled_scenarios.slice(3).map(scenario => ({
+        question: {
+            prompt: scenario
+        },
+    })),
 };
 
 // adding a feedback page asking a question about:  Did you experience any difficulties while completing this survey? and please feel free to provide any additional feedback or comments.
@@ -463,27 +547,7 @@ const feedback_page = {
     button_label: "Submit Feedback"
 };
 
-      // const save_data = {
-      //   type: jsPsychPipe,
-      //   action: "save",
-      //   experiment_id: "odX6wgoMZaHY", // Replace with your experiment ID
-      //   filename: `participant_${jsPsych.randomization.randomID(10)}.csv`,
-      //   data_string: () => jsPsych.data.get().csv()
-      // };
-
-//       const save_data = {
-//     type: jsPsychPipe,
-//     action: "save",
-//     experiment_id: "odX6wgoMZaHY", // Replace with your experiment ID
-//     filename: (() => {
-//         const urlParams = new URLSearchParams(window.location.search);
-//         const prolificID = urlParams.get("PROLIFIC_PID");
-//         return prolificID ? `participant_${prolificID}.csv` : `participant_${jsPsych.randomization.randomID(10)}.csv`;
-//     })(),
-//     data_string: () => jsPsych.data.get().csv()
-// };
-
-const save_data = {
+      const save_data = {
     type: jsPsychPipe,
     action: "save",
     experiment_id: "odX6wgoMZaHY", // Replace with your experiment ID
@@ -518,6 +582,7 @@ const save_data = {
       timeline.push(consent_page);  // Add the consent page here
       timeline.push(note_page);  // Add the note page here
       // timeline.push(start_experiment_transition);  // Add the new transition page here
+      timeline.push(fullscreen_trial);
       timeline.push(instruction_page);
       timeline.push(transition_page_warm_up);  // Add the transition page here
       timeline.push(trials);
