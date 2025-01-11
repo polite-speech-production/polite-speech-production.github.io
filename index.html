@@ -483,7 +483,7 @@ const feedback_page = {
 //     data_string: () => jsPsych.data.get().csv()
 // };
 
-      const save_data = {
+const save_data = {
     type: jsPsychPipe,
     action: "save",
     experiment_id: "odX6wgoMZaHY", // Replace with your experiment ID
@@ -491,9 +491,11 @@ const feedback_page = {
         const urlParams = new URLSearchParams(window.location.search);
         const prolificID = urlParams.get("PROLIFIC_PID");
         const uniqueSuffix = new Date().toISOString().replace(/[:.-]/g, "_"); // Add timestamp
+        const csvFileName = selectedCSV.split('/').pop().replace('.csv', ''); // Extract base name of CSV file
+
         return prolificID
-            ? `participant_${prolificID}_${uniqueSuffix}.csv`
-            : `participant_${jsPsych.randomization.randomID(10)}_${uniqueSuffix}.csv`;
+            ? `participant_${prolificID}_${csvFileName}_${uniqueSuffix}.csv`
+            : `participant_${jsPsych.randomization.randomID(10)}_${csvFileName}_${uniqueSuffix}.csv`;
     })(),
     data_string: () => jsPsych.data.get().csv()
 };
