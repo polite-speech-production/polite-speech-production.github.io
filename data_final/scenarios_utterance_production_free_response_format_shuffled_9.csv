@@ -38,20 +38,6 @@ Question:
 If Kyle wanted to give as accurate and informative feedback as possible, but not necessarily make James feel good,
 What would Kyle be most likely to say?"
 "Scenario:
-Imagine that Sarah filmed a movie, but she didn't know how good it was. Sarah approached Lucy, who knows a lot about movies, and asked ""How was my movie?""
-Rating:
-Here's how Lucy actually felt about Sarah's movie:
-0 out of 3 hearts
-Question:
-What would Lucy be most likely to say?"
-"Scenario:
-Imagine that Matthew wanted to get Jessica’s opinion about a TV episode they just watched. After Jessica finished the episode, Matthew asked, “What did you think?” 
-Rating:
-Here's how Jessica actually felt about the TV-show:
-2 out of 3 hearts
-Question:
-If Jessica wanted to share her honest thoughts, but not necessarily make Matthew feel good, What would Jessica be most likely to say?"
-"Scenario:
 Imagine that Jenny wrote a poem, but she didn't know how good it was. Jenny approached Karen, who knows a lot about poems, and asked ""How was my poem?""
 Rating:
 Here's how Karen actually felt about Jenny's poem:
@@ -60,12 +46,19 @@ Question:
 If Karen wanted to BOTH make Jenny feel good AND give accurate and informative feedback,
 What would Karen be most likely to say?"
 "Scenario:
-Imagine that Joseph wanted to get Sally’s opinion about a video game they just played. After Sally finished the game, Joseph asked, “What did you think?” 
+Imagine that Matthew wanted to get Jessica’s opinion about a TV episode they just watched. After Jessica finished the episode, Matthew asked, “What did you think?” 
 Rating:
-Here's how Sally actually felt about the video game:
+Here's how Jessica actually felt about the TV-show:
+2 out of 3 hearts
+Question:
+If Jessica wanted to share her honest thoughts, but not necessarily make Matthew feel good, What would Jessica be most likely to say?"
+"Scenario:
+Imagine that Sarah filmed a movie, but she didn't know how good it was. Sarah approached Lucy, who knows a lot about movies, and asked ""How was my movie?""
+Rating:
+Here's how Lucy actually felt about Sarah's movie:
 0 out of 3 hearts
 Question:
-What would Sally be most likely to say?"
+What would Lucy be most likely to say?"
 "Scenario:
 Imagine that Chris composed a song, but he didn't know how good it sounded. Chris approached Sean, who knows a lot about composing songs, and asked ""How was my song?""
 Rating:
@@ -74,6 +67,13 @@ Here's how Sean actually felt about Chris's song:
 Question:
 If Sean wanted to make Chris feel good, but not necessarily give informative feedback,
 What would Sean be most likely to say?"
+"Scenario:
+Imagine that Joseph wanted to get Sally’s opinion about a video game they just played. After Sally finished the game, Joseph asked, “What did you think?” 
+Rating:
+Here's how Sally actually felt about the video game:
+0 out of 3 hearts
+Question:
+What would Sally be most likely to say?"
 "Scenario:
 Imagine that Henry wanted to get Alex’s opinion about a song they just heard. After Alex finished listening to the song, Henry asked, “What did you think?” 
 Rating:

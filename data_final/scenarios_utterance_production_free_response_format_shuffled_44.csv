@@ -31,6 +31,14 @@ Question:
 If John wanted to make Bob feel good, but not necessarily give informative feedback,
 What would John be most likely to say?"
 "Scenario:
+Imagine that Patrick wrote a review for a book, but he didn't know how good his review was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
+Rating:
+Here's how Nathan actually felt about Patrick's review:
+0 out of 3 hearts
+Question:
+If Nathan wanted to BOTH make Patrick feel good AND give accurate and informative feedback,
+What would Nathan be most likely to say?"
+"Scenario:
 Imagine that William wanted to get Taylor’s opinion about a movie they just watched. After Taylor finished the movie, William asked, “What did you think?” 
 Rating:
 Here's how Taylor actually felt about the movie:
@@ -38,12 +46,12 @@ Here's how Taylor actually felt about the movie:
 Question:
 If Taylor wanted to make William feel good, but not necessarily share their honest thoughts, What would Taylor be most likely to say?"
 "Scenario:
-Imagine that Lucas wanted to get Sam’s opinion about a book they just read. After Sam finished the book, Lucas asked, “What did you think?” 
+Imagine that Mika baked some cookies, but she didn't know how good they tasted. Mika approached Hailey, who knows a lot about baking, and asked ""How did my cookie taste?""
 Rating:
-Here's how Sam actually felt about the book:
-1 out of 3 hearts
+Here's how Hailey actually felt about Mika's cookie:
+3 out of 3 hearts
 Question:
-If Sam wanted to share their honest thoughts, but not necessarily make Lucas feel good, What would Sam be most likely to say?"
+What would Hailey be most likely to say?"
 "Scenario:
 Imagine that Emma performed at a piano recital, but she didn't know how good her playing sounded. Emma approached Wendy, who knows a lot about playing piano, and asked ""How was my performance?""
 Rating:
@@ -53,20 +61,12 @@ Question:
 If Wendy wanted to give as accurate and informative feedback as possible, but not necessarily make Emma feel good,
 What would Wendy be most likely to say?"
 "Scenario:
-Imagine that Patrick wrote a review for a book, but he didn't know how good his review was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
+Imagine that Aiden wanted to get Sam’s opinion about a restaurant they just visited. After Sam visited the restaurant, Aiden asked, “What did you think?” 
 Rating:
-Here's how Nathan actually felt about Patrick's review:
-0 out of 3 hearts
-Question:
-If Nathan wanted to BOTH make Patrick feel good AND give accurate and informative feedback,
-What would Nathan be most likely to say?"
-"Scenario:
-Imagine that Mika baked some cookies, but she didn't know how good they tasted. Mika approached Hailey, who knows a lot about baking, and asked ""How did my cookie taste?""
-Rating:
-Here's how Hailey actually felt about Mika's cookie:
+Here's how Sam actually felt about the restaurant:
 3 out of 3 hearts
 Question:
-What would Hailey be most likely to say?"
+What would Sam be most likely to say?"
 "Scenario:
 Imagine that John wanted to get Josh’s opinion about a video game they just played. After Josh finished the game, John asked, “What did you think?” 
 Rating:
@@ -75,9 +75,9 @@ Here's how Josh actually felt about the video game:
 Question:
 If Josh wanted to BOTH make John feel good AND share his honest thoughts, What would Josh be most likely to say?"
 "Scenario:
-Imagine that Aiden wanted to get Sam’s opinion about a restaurant they just visited. After Sam visited the restaurant, Aiden asked, “What did you think?” 
+Imagine that Lucas wanted to get Sam’s opinion about a book they just read. After Sam finished the book, Lucas asked, “What did you think?” 
 Rating:
-Here's how Sam actually felt about the restaurant:
-3 out of 3 hearts
+Here's how Sam actually felt about the book:
+1 out of 3 hearts
 Question:
-What would Sam be most likely to say?"
+If Sam wanted to share their honest thoughts, but not necessarily make Lucas feel good, What would Sam be most likely to say?"

@@ -23,6 +23,29 @@ B. 1 heart
 C. 2 hearts
 D. 3 hearts"
 "Scenario:
+Imagine that Kevin drew a painting, but he didn't know how good his painting looked. Kevin approached Jake, who knows a lot about paintings, and asked ""How was my painting?""
+Rating:
+Here's how Jake actually felt about Kevin's painting:
+0 out of 3 hearts
+Question:
+If Jake wanted to give as accurate and informative feedback as possible, but not necessarily make Kevin feel good,
+What would Jake be most likely to say?"
+"Scenario:
+Imagine that Caleb wanted to get Michael’s opinion about a restaurant they just visited. After Michael visited the restaurant, Caleb asked, “What did you think?” 
+Rating:
+Here's how Michael actually felt about the restaurant:
+0 out of 3 hearts
+Question:
+If Michael wanted to share his honest thoughts, but not necessarily make Caleb feel good, What would Michael be most likely to say?"
+"Scenario:
+Imagine that Diana gave a monologue during a school play, but she didn't know how good her performance went. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
+Rating:
+Here's how Ann actually felt about Diana's monologue:
+1 out of 3 hearts
+Question:
+If Ann wanted to make Diana feel good, but not necessarily give informative feedback,
+What would Ann be most likely to say?"
+"Scenario:
 Imagine that Grace gave a tap dance performance, but she didn't know how good her dance looked. Grace approached Heather, who knows a lot about tap dance, and asked ""How was my dance?""
 Rating:
 Here's how Heather actually felt about Grace's dance:
@@ -38,21 +61,6 @@ Here's how George actually felt about Henry's app:
 Question:
 What would George be most likely to say?"
 "Scenario:
-Imagine that Benjamin wanted to get Charlie’s opinion about a movie they just watched. After Charlie finished the movie, Benjamin asked, “What did you think?” 
-Rating:
-Here's how Charlie actually felt about the movie:
-3 out of 3 hearts
-Question:
-If Charlie wanted to BOTH make Benjamin feel good AND share their honest thoughts, What would Charlie be most likely to say?"
-"Scenario:
-Imagine that Diana gave a monologue during a school play, but she didn't know how good her performance went. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
-Rating:
-Here's how Ann actually felt about Diana's monologue:
-1 out of 3 hearts
-Question:
-If Ann wanted to make Diana feel good, but not necessarily give informative feedback,
-What would Ann be most likely to say?"
-"Scenario:
 Imagine that William wanted to get Sarah’s opinion about a song they just heard. After Sarah finished listening to the song, William asked, “What did you think?” 
 Rating:
 Here's how Sarah actually felt about the song:
@@ -60,20 +68,12 @@ Here's how Sarah actually felt about the song:
 Question:
 What would Sarah be most likely to say?"
 "Scenario:
-Imagine that Kevin drew a painting, but he didn't know how good his painting looked. Kevin approached Jake, who knows a lot about paintings, and asked ""How was my painting?""
+Imagine that Benjamin wanted to get Charlie’s opinion about a movie they just watched. After Charlie finished the movie, Benjamin asked, “What did you think?” 
 Rating:
-Here's how Jake actually felt about Kevin's painting:
-0 out of 3 hearts
+Here's how Charlie actually felt about the movie:
+3 out of 3 hearts
 Question:
-If Jake wanted to give as accurate and informative feedback as possible, but not necessarily make Kevin feel good,
-What would Jake be most likely to say?"
-"Scenario:
-Imagine that Caleb wanted to get Michael’s opinion about a restaurant they just visited. After Michael visited the restaurant, Caleb asked, “What did you think?” 
-Rating:
-Here's how Michael actually felt about the restaurant:
-0 out of 3 hearts
-Question:
-If Michael wanted to share his honest thoughts, but not necessarily make Caleb feel good, What would Michael be most likely to say?"
+If Charlie wanted to BOTH make Benjamin feel good AND share their honest thoughts, What would Charlie be most likely to say?"
 "Scenario:
 Imagine that Jackson wanted to get Jessica’s opinion about a TV episode they just watched. After Jessica finished the episode, Jackson asked, “What did you think?” 
 Rating:

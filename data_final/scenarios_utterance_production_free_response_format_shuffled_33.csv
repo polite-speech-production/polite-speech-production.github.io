@@ -23,12 +23,12 @@ B. 1 heart
 C. 2 hearts
 D. 3 hearts"
 "Scenario:
-Imagine that Henry wanted to get Alex’s opinion about a song they just heard. After Alex finished listening to the song, Henry asked, “What did you think?” 
+Imagine that Patrick wrote a review for a book, but he didn't know how good his review was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
 Rating:
-Here's how Alex actually felt about the song:
-3 out of 3 hearts
+Here's how Nathan actually felt about Patrick's review:
+0 out of 3 hearts
 Question:
-If Alex wanted to make Henry feel good, but not necessarily share their honest thoughts, What would Alex be most likely to say?"
+What would Nathan be most likely to say?"
 "Scenario:
 Imagine that Aiden wanted to get Taylor’s opinion about a restaurant they just visited. After Taylor visited the restaurant, Aiden asked, “What did you think?” 
 Rating:
@@ -36,21 +36,6 @@ Here's how Taylor actually felt about the restaurant:
 1 out of 3 hearts
 Question:
 If Taylor wanted to BOTH make Aiden feel good AND share their honest thoughts, What would Taylor be most likely to say?"
-"Scenario:
-Imagine that Diana gave a monologue during a school play, but she didn't know how good her performance went. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
-Rating:
-Here's how Ann actually felt about Diana's monologue:
-2 out of 3 hearts
-Question:
-If Ann wanted to give as accurate and informative feedback as possible, but not necessarily make Diana feel good,
-What would Ann be most likely to say?"
-"Scenario:
-Imagine that Patrick wrote a review for a book, but he didn't know how good his review was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
-Rating:
-Here's how Nathan actually felt about Patrick's review:
-0 out of 3 hearts
-Question:
-What would Nathan be most likely to say?"
 "Scenario:
 Imagine that Joseph wanted to get Sally’s opinion about a video game they just played. After Sally finished the game, Joseph asked, “What did you think?” 
 Rating:
@@ -67,6 +52,13 @@ Question:
 If Jake wanted to BOTH make Kevin feel good AND give accurate and informative feedback,
 What would Jake be most likely to say?"
 "Scenario:
+Imagine that Matthew wanted to get Jessica’s opinion about a TV episode they just watched. After Jessica finished the episode, Matthew asked, “What did you think?” 
+Rating:
+Here's how Jessica actually felt about the TV-show:
+2 out of 3 hearts
+Question:
+If Jessica wanted to share her honest thoughts, but not necessarily make Matthew feel good, What would Jessica be most likely to say?"
+"Scenario:
 Imagine that Henry designed a mobile app, but he didn't know how good it was. Henry approached George, who knows a lot about mobile apps, and asked ""How was my app?""
 Rating:
 Here's how George actually felt about Henry's app:
@@ -75,9 +67,17 @@ Question:
 If George wanted to make Henry feel good, but not necessarily give informative feedback,
 What would George be most likely to say?"
 "Scenario:
-Imagine that Matthew wanted to get Jessica’s opinion about a TV episode they just watched. After Jessica finished the episode, Matthew asked, “What did you think?” 
+Imagine that Henry wanted to get Alex’s opinion about a song they just heard. After Alex finished listening to the song, Henry asked, “What did you think?” 
 Rating:
-Here's how Jessica actually felt about the TV-show:
+Here's how Alex actually felt about the song:
+3 out of 3 hearts
+Question:
+If Alex wanted to make Henry feel good, but not necessarily share their honest thoughts, What would Alex be most likely to say?"
+"Scenario:
+Imagine that Diana gave a monologue during a school play, but she didn't know how good her performance went. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
+Rating:
+Here's how Ann actually felt about Diana's monologue:
 2 out of 3 hearts
 Question:
-If Jessica wanted to share her honest thoughts, but not necessarily make Matthew feel good, What would Jessica be most likely to say?"
+If Ann wanted to give as accurate and informative feedback as possible, but not necessarily make Diana feel good,
+What would Ann be most likely to say?"

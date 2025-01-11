@@ -31,12 +31,13 @@ Question:
 If John wanted to give as accurate and informative feedback as possible, but not necessarily make Bob feel good,
 What would John be most likely to say?"
 "Scenario:
-Imagine that Dylan wanted to get Jacob’s opinion about a book they just read. After Jacob finished the book, Dylan asked, “What did you think?” 
+Imagine that Mika baked some cookies, but she didn't know how good they tasted. Mika approached Hailey, who knows a lot about baking, and asked ""How did my cookie taste?""
 Rating:
-Here's how Jacob actually felt about the book:
-1 out of 3 hearts
+Here's how Hailey actually felt about Mika's cookie:
+3 out of 3 hearts
 Question:
-If Jacob wanted to BOTH make Dylan feel good AND share his honest thoughts, What would Jacob be most likely to say?"
+If Hailey wanted to make Mika feel good, but not necessarily give informative feedback,
+What would Hailey be most likely to say?"
 "Scenario:
 Imagine that John wanted to get Emily’s opinion about a TV episode they just watched. After Emily finished the episode, John asked, “What did you think?” 
 Rating:
@@ -52,20 +53,6 @@ Here's how Karen actually felt about Jenny's poem:
 Question:
 What would Karen be most likely to say?"
 "Scenario:
-Imagine that Noah wanted to get Alex’s opinion about a restaurant they just visited. After Alex visited the restaurant, Noah asked, “What did you think?” 
-Rating:
-Here's how Alex actually felt about the restaurant:
-3 out of 3 hearts
-Question:
-If Alex wanted to make Noah feel good, but not necessarily share their honest thoughts, What would Alex be most likely to say?"
-"Scenario:
-Imagine that Mason wanted to get Taylor’s opinion about a movie they just watched. After Taylor finished the movie, Mason asked, “What did you think?” 
-Rating:
-Here's how Taylor actually felt about the movie:
-2 out of 3 hearts
-Question:
-If Taylor wanted to share their honest thoughts, but not necessarily make Mason feel good, What would Taylor be most likely to say?"
-"Scenario:
 Imagine that Emma performed at a piano recital, but she didn't know how good her playing sounded. Emma approached Wendy, who knows a lot about playing piano, and asked ""How was my performance?""
 Rating:
 Here's how Wendy actually felt about Emma's performance:
@@ -74,10 +61,23 @@ Question:
 If Wendy wanted to BOTH make Emma feel good AND give accurate and informative feedback,
 What would Wendy be most likely to say?"
 "Scenario:
-Imagine that Mika baked some cookies, but she didn't know how good they tasted. Mika approached Hailey, who knows a lot about baking, and asked ""How did my cookie taste?""
+Imagine that Dylan wanted to get Jacob’s opinion about a book they just read. After Jacob finished the book, Dylan asked, “What did you think?” 
 Rating:
-Here's how Hailey actually felt about Mika's cookie:
+Here's how Jacob actually felt about the book:
+1 out of 3 hearts
+Question:
+If Jacob wanted to BOTH make Dylan feel good AND share his honest thoughts, What would Jacob be most likely to say?"
+"Scenario:
+Imagine that Mason wanted to get Taylor’s opinion about a movie they just watched. After Taylor finished the movie, Mason asked, “What did you think?” 
+Rating:
+Here's how Taylor actually felt about the movie:
+2 out of 3 hearts
+Question:
+If Taylor wanted to share their honest thoughts, but not necessarily make Mason feel good, What would Taylor be most likely to say?"
+"Scenario:
+Imagine that Noah wanted to get Alex’s opinion about a restaurant they just visited. After Alex visited the restaurant, Noah asked, “What did you think?” 
+Rating:
+Here's how Alex actually felt about the restaurant:
 3 out of 3 hearts
 Question:
-If Hailey wanted to make Mika feel good, but not necessarily give informative feedback,
-What would Hailey be most likely to say?"
+If Alex wanted to make Noah feel good, but not necessarily share their honest thoughts, What would Alex be most likely to say?"

@@ -23,13 +23,6 @@ B. 1 heart
 C. 2 hearts
 D. 3 hearts"
 "Scenario:
-Imagine that Nathan wanted to get Michael’s opinion about a book they just read. After Michael finished the book, Nathan asked, “What did you think?” 
-Rating:
-Here's how Michael actually felt about the book:
-2 out of 3 hearts
-Question:
-What would Michael be most likely to say?"
-"Scenario:
 Imagine that Isaac wanted to get Charlie’s opinion about a video game they just played. After Charlie finished the game, Isaac asked, “What did you think?” 
 Rating:
 Here's how Charlie actually felt about the video game:
@@ -37,28 +30,12 @@ Here's how Charlie actually felt about the video game:
 Question:
 If Charlie wanted to make Isaac feel good, but not necessarily share their honest thoughts, What would Charlie be most likely to say?"
 "Scenario:
-Imagine that Patrick wrote a review for a book, but he didn't know how good his review was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
+Imagine that Nathan wanted to get Michael’s opinion about a book they just read. After Michael finished the book, Nathan asked, “What did you think?” 
 Rating:
-Here's how Nathan actually felt about Patrick's review:
-1 out of 3 hearts
+Here's how Michael actually felt about the book:
+2 out of 3 hearts
 Question:
-If Nathan wanted to make Patrick feel good, but not necessarily give informative feedback,
-What would Nathan be most likely to say?"
-"Scenario:
-Imagine that Henry designed a mobile app, but he didn't know how good it was. Henry approached George, who knows a lot about mobile apps, and asked ""How was my app?""
-Rating:
-Here's how George actually felt about Henry's app:
-0 out of 3 hearts
-Question:
-If George wanted to give as accurate and informative feedback as possible, but not necessarily make Henry feel good,
-What would George be most likely to say?"
-"Scenario:
-Imagine that David wanted to get Jessica’s opinion about a TV episode they just watched. After Jessica finished the episode, David asked, “What did you think?” 
-Rating:
-Here's how Jessica actually felt about the TV-show:
-3 out of 3 hearts
-Question:
-If Jessica wanted to BOTH make David feel good AND share her honest thoughts, What would Jessica be most likely to say?"
+What would Michael be most likely to say?"
 "Scenario:
 Imagine that Anthony wanted to get Sarah’s opinion about a song they just heard. After Sarah finished listening to the song, Anthony asked, “What did you think?” 
 Rating:
@@ -81,3 +58,26 @@ Here's how Ann actually felt about Diana's monologue:
 Question:
 If Ann wanted to BOTH make Diana feel good AND give accurate and informative feedback,
 What would Ann be most likely to say?"
+"Scenario:
+Imagine that Patrick wrote a review for a book, but he didn't know how good his review was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
+Rating:
+Here's how Nathan actually felt about Patrick's review:
+1 out of 3 hearts
+Question:
+If Nathan wanted to make Patrick feel good, but not necessarily give informative feedback,
+What would Nathan be most likely to say?"
+"Scenario:
+Imagine that David wanted to get Jessica’s opinion about a TV episode they just watched. After Jessica finished the episode, David asked, “What did you think?” 
+Rating:
+Here's how Jessica actually felt about the TV-show:
+3 out of 3 hearts
+Question:
+If Jessica wanted to BOTH make David feel good AND share her honest thoughts, What would Jessica be most likely to say?"
+"Scenario:
+Imagine that Henry designed a mobile app, but he didn't know how good it was. Henry approached George, who knows a lot about mobile apps, and asked ""How was my app?""
+Rating:
+Here's how George actually felt about Henry's app:
+0 out of 3 hearts
+Question:
+If George wanted to give as accurate and informative feedback as possible, but not necessarily make Henry feel good,
+What would George be most likely to say?"

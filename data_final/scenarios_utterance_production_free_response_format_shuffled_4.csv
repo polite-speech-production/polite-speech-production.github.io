@@ -23,13 +23,12 @@ B. 1 heart
 C. 2 hearts
 D. 3 hearts"
 "Scenario:
-Imagine that Mika baked some cookies, but she didn't know how good they tasted. Mika approached Hailey, who knows a lot about baking, and asked ""How did my cookie taste?""
+Imagine that Chris composed a song, but he didn't know how good it sounded. Chris approached Sean, who knows a lot about composing songs, and asked ""How was my song?""
 Rating:
-Here's how Hailey actually felt about Mika's cookie:
-0 out of 3 hearts
+Here's how Sean actually felt about Chris's song:
+3 out of 3 hearts
 Question:
-If Hailey wanted to BOTH make Mika feel good AND give accurate and informative feedback,
-What would Hailey be most likely to say?"
+What would Sean be most likely to say?"
 "Scenario:
 Imagine that Jenny wrote a poem, but she didn't know how good it was. Jenny approached Karen, who knows a lot about poems, and asked ""How was my poem?""
 Rating:
@@ -38,6 +37,20 @@ Here's how Karen actually felt about Jenny's poem:
 Question:
 If Karen wanted to give as accurate and informative feedback as possible, but not necessarily make Jenny feel good,
 What would Karen be most likely to say?"
+"Scenario:
+Imagine that Mason wanted to get Josh’s opinion about a movie they just watched. After Josh finished the movie, Mason asked, “What did you think?” 
+Rating:
+Here's how Josh actually felt about the movie:
+0 out of 3 hearts
+Question:
+If Josh wanted to BOTH make Mason feel good AND share his honest thoughts, What would Josh be most likely to say?"
+"Scenario:
+Imagine that Matthew wanted to get Charlie’s opinion about a restaurant they just visited. After Charlie visited the restaurant, Matthew asked, “What did you think?” 
+Rating:
+Here's how Charlie actually felt about the restaurant:
+1 out of 3 hearts
+Question:
+If Charlie wanted to share their honest thoughts, but not necessarily make Matthew feel good, What would Charlie be most likely to say?"
 "Scenario:
 Imagine that Noah wanted to get Jessica’s opinion about a song they just heard. After Jessica finished listening to the song, Noah asked, “What did you think?” 
 Rating:
@@ -53,20 +66,6 @@ Here's how Michael actually felt about the TV-show:
 Question:
 If Michael wanted to make Matthew feel good, but not necessarily share his honest thoughts, What would Michael be most likely to say?"
 "Scenario:
-Imagine that Matthew wanted to get Charlie’s opinion about a restaurant they just visited. After Charlie visited the restaurant, Matthew asked, “What did you think?” 
-Rating:
-Here's how Charlie actually felt about the restaurant:
-1 out of 3 hearts
-Question:
-If Charlie wanted to share their honest thoughts, but not necessarily make Matthew feel good, What would Charlie be most likely to say?"
-"Scenario:
-Imagine that Chris composed a song, but he didn't know how good it sounded. Chris approached Sean, who knows a lot about composing songs, and asked ""How was my song?""
-Rating:
-Here's how Sean actually felt about Chris's song:
-3 out of 3 hearts
-Question:
-What would Sean be most likely to say?"
-"Scenario:
 Imagine that James baked a cake, but he didn't know how good it tasted. James approached Kyle, who knows a lot about baking, and asked ""How did my cake taste?""
 Rating:
 Here's how Kyle actually felt about James's cake:
@@ -75,9 +74,10 @@ Question:
 If Kyle wanted to make James feel good, but not necessarily give informative feedback,
 What would Kyle be most likely to say?"
 "Scenario:
-Imagine that Mason wanted to get Josh’s opinion about a movie they just watched. After Josh finished the movie, Mason asked, “What did you think?” 
+Imagine that Mika baked some cookies, but she didn't know how good they tasted. Mika approached Hailey, who knows a lot about baking, and asked ""How did my cookie taste?""
 Rating:
-Here's how Josh actually felt about the movie:
+Here's how Hailey actually felt about Mika's cookie:
 0 out of 3 hearts
 Question:
-If Josh wanted to BOTH make Mason feel good AND share his honest thoughts, What would Josh be most likely to say?"
+If Hailey wanted to BOTH make Mika feel good AND give accurate and informative feedback,
+What would Hailey be most likely to say?"

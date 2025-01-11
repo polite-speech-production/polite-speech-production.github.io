@@ -23,41 +23,13 @@ B. 1 heart
 C. 2 hearts
 D. 3 hearts"
 "Scenario:
-Imagine that Ryan wanted to get Charlie’s opinion about a TV episode they just watched. After Charlie finished the episode, Ryan asked, “What did you think?” 
+Imagine that Henry designed a mobile app, but he didn't know how good it was. Henry approached George, who knows a lot about mobile apps, and asked ""How was my app?""
 Rating:
-Here's how Charlie actually felt about the TV-show:
-1 out of 3 hearts
-Question:
-If Charlie wanted to share their honest thoughts, but not necessarily make Ryan feel good, What would Charlie be most likely to say?"
-"Scenario:
-Imagine that Sebastian wanted to get Emily’s opinion about a song they just heard. After Emily finished listening to the song, Sebastian asked, “What did you think?” 
-Rating:
-Here's how Emily actually felt about the song:
+Here's how George actually felt about Henry's app:
 2 out of 3 hearts
 Question:
-If Emily wanted to make Sebastian feel good, but not necessarily share her honest thoughts, What would Emily be most likely to say?"
-"Scenario:
-Imagine that Patrick wrote a review for a book, but he didn't know how good his review was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
-Rating:
-Here's how Nathan actually felt about Patrick's review:
-3 out of 3 hearts
-Question:
-What would Nathan be most likely to say?"
-"Scenario:
-Imagine that Diana gave a monologue during a school play, but she didn't know how good her performance went. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
-Rating:
-Here's how Ann actually felt about Diana's monologue:
-1 out of 3 hearts
-Question:
-If Ann wanted to give as accurate and informative feedback as possible, but not necessarily make Diana feel good,
-What would Ann be most likely to say?"
-"Scenario:
-Imagine that Henry wanted to get Sage’s opinion about a restaurant they just visited. After Sage visited the restaurant, Henry asked, “What did you think?” 
-Rating:
-Here's how Sage actually felt about the restaurant:
-0 out of 3 hearts
-Question:
-If Sage wanted to BOTH make Henry feel good AND share their honest thoughts, What would Sage be most likely to say?"
+If George wanted to make Henry feel good, but not necessarily give informative feedback,
+What would George be most likely to say?"
 "Scenario:
 Imagine that William wanted to get Michael’s opinion about a video game they just played. After Michael finished the game, William asked, “What did you think?” 
 Rating:
@@ -65,6 +37,13 @@ Here's how Michael actually felt about the video game:
 3 out of 3 hearts
 Question:
 What would Michael be most likely to say?"
+"Scenario:
+Imagine that Patrick wrote a review for a book, but he didn't know how good his review was. Patrick approached Nathan, who knows a lot about writing reviews, and asked ""How was my review?""
+Rating:
+Here's how Nathan actually felt about Patrick's review:
+3 out of 3 hearts
+Question:
+What would Nathan be most likely to say?"
 "Scenario:
 Imagine that Kevin drew a painting, but he didn't know how good his painting looked. Kevin approached Jake, who knows a lot about paintings, and asked ""How was my painting?""
 Rating:
@@ -74,10 +53,31 @@ Question:
 If Jake wanted to BOTH make Kevin feel good AND give accurate and informative feedback,
 What would Jake be most likely to say?"
 "Scenario:
-Imagine that Henry designed a mobile app, but he didn't know how good it was. Henry approached George, who knows a lot about mobile apps, and asked ""How was my app?""
+Imagine that Ryan wanted to get Charlie’s opinion about a TV episode they just watched. After Charlie finished the episode, Ryan asked, “What did you think?” 
 Rating:
-Here's how George actually felt about Henry's app:
+Here's how Charlie actually felt about the TV-show:
+1 out of 3 hearts
+Question:
+If Charlie wanted to share their honest thoughts, but not necessarily make Ryan feel good, What would Charlie be most likely to say?"
+"Scenario:
+Imagine that Henry wanted to get Sage’s opinion about a restaurant they just visited. After Sage visited the restaurant, Henry asked, “What did you think?” 
+Rating:
+Here's how Sage actually felt about the restaurant:
+0 out of 3 hearts
+Question:
+If Sage wanted to BOTH make Henry feel good AND share their honest thoughts, What would Sage be most likely to say?"
+"Scenario:
+Imagine that Diana gave a monologue during a school play, but she didn't know how good her performance went. Diana approached Ann, who knows a lot about giving monologues, and asked ""How was my monologue?""
+Rating:
+Here's how Ann actually felt about Diana's monologue:
+1 out of 3 hearts
+Question:
+If Ann wanted to give as accurate and informative feedback as possible, but not necessarily make Diana feel good,
+What would Ann be most likely to say?"
+"Scenario:
+Imagine that Sebastian wanted to get Emily’s opinion about a song they just heard. After Emily finished listening to the song, Sebastian asked, “What did you think?” 
+Rating:
+Here's how Emily actually felt about the song:
 2 out of 3 hearts
 Question:
-If George wanted to make Henry feel good, but not necessarily give informative feedback,
-What would George be most likely to say?"
+If Emily wanted to make Sebastian feel good, but not necessarily share her honest thoughts, What would Emily be most likely to say?"

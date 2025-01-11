@@ -23,12 +23,12 @@ B. 1 heart
 C. 2 hearts
 D. 3 hearts"
 "Scenario:
-Imagine that Jackson wanted to get Alex’s opinion about a book they just read. After Alex finished the book, Jackson asked, “What did you think?” 
+Imagine that Anthony wanted to get Alex’s opinion about a TV episode they just watched. After Alex finished the episode, Anthony asked, “What did you think?” 
 Rating:
-Here's how Alex actually felt about the book:
-3 out of 3 hearts
+Here's how Alex actually felt about the TV-show:
+0 out of 3 hearts
 Question:
-What would Alex be most likely to say?"
+If Alex wanted to BOTH make Anthony feel good AND share their honest thoughts, What would Alex be most likely to say?"
 "Scenario:
 Imagine that Chris composed a song, but he didn't know how good it sounded. Chris approached Sean, who knows a lot about composing songs, and asked ""How was my song?""
 Rating:
@@ -46,13 +46,6 @@ Question:
 If Kyle wanted to BOTH make James feel good AND give accurate and informative feedback,
 What would Kyle be most likely to say?"
 "Scenario:
-Imagine that Tom played a cello solo part at a concert, but he didn't know how good his playing sounded. Tom approached Bill, who knows a lot about playing cello, and asked ""How was my solo?""
-Rating:
-Here's how Bill actually felt about Tom's solo:
-3 out of 3 hearts
-Question:
-What would Bill be most likely to say?"
-"Scenario:
 Imagine that Sarah filmed a movie, but she didn't know how good it was. Sarah approached Lucy, who knows a lot about movies, and asked ""How was my movie?""
 Rating:
 Here's how Lucy actually felt about Sarah's movie:
@@ -61,12 +54,12 @@ Question:
 If Lucy wanted to make Sarah feel good, but not necessarily give informative feedback,
 What would Lucy be most likely to say?"
 "Scenario:
-Imagine that Jayden wanted to get Chris’s opinion about a song they just heard. After Chris finished listening to the song, Jayden asked, “What did you think?” 
+Imagine that Jackson wanted to get Alex’s opinion about a book they just read. After Alex finished the book, Jackson asked, “What did you think?” 
 Rating:
-Here's how Chris actually felt about the song:
-1 out of 3 hearts
+Here's how Alex actually felt about the book:
+3 out of 3 hearts
 Question:
-If Chris wanted to share his honest thoughts, but not necessarily make Jayden feel good, What would Chris be most likely to say?"
+What would Alex be most likely to say?"
 "Scenario:
 Imagine that David wanted to get Sam’s opinion about a video game they just played. After Sam finished the game, David asked, “What did you think?” 
 Rating:
@@ -75,9 +68,16 @@ Here's how Sam actually felt about the video game:
 Question:
 If Sam wanted to make David feel good, but not necessarily share their honest thoughts, What would Sam be most likely to say?"
 "Scenario:
-Imagine that Anthony wanted to get Alex’s opinion about a TV episode they just watched. After Alex finished the episode, Anthony asked, “What did you think?” 
+Imagine that Jayden wanted to get Chris’s opinion about a song they just heard. After Chris finished listening to the song, Jayden asked, “What did you think?” 
 Rating:
-Here's how Alex actually felt about the TV-show:
-0 out of 3 hearts
+Here's how Chris actually felt about the song:
+1 out of 3 hearts
 Question:
-If Alex wanted to BOTH make Anthony feel good AND share their honest thoughts, What would Alex be most likely to say?"
+If Chris wanted to share his honest thoughts, but not necessarily make Jayden feel good, What would Chris be most likely to say?"
+"Scenario:
+Imagine that Tom played a cello solo part at a concert, but he didn't know how good his playing sounded. Tom approached Bill, who knows a lot about playing cello, and asked ""How was my solo?""
+Rating:
+Here's how Bill actually felt about Tom's solo:
+3 out of 3 hearts
+Question:
+What would Bill be most likely to say?"

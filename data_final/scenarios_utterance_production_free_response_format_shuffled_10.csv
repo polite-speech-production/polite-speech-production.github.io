@@ -23,29 +23,6 @@ B. 1 heart
 C. 2 hearts
 D. 3 hearts"
 "Scenario:
-Imagine that Sarah filmed a movie, but she didn't know how good it was. Sarah approached Lucy, who knows a lot about movies, and asked ""How was my movie?""
-Rating:
-Here's how Lucy actually felt about Sarah's movie:
-1 out of 3 hearts
-Question:
-What would Lucy be most likely to say?"
-"Scenario:
-Imagine that Chris composed a song, but he didn't know how good it sounded. Chris approached Sean, who knows a lot about composing songs, and asked ""How was my song?""
-Rating:
-Here's how Sean actually felt about Chris's song:
-0 out of 3 hearts
-Question:
-If Sean wanted to make Chris feel good, but not necessarily give informative feedback,
-What would Sean be most likely to say?"
-"Scenario:
-Imagine that James baked a cake, but he didn't know how good it tasted. James approached Kyle, who knows a lot about baking, and asked ""How did my cake taste?""
-Rating:
-Here's how Kyle actually felt about James's cake:
-3 out of 3 hearts
-Question:
-If Kyle wanted to give as accurate and informative feedback as possible, but not necessarily make James feel good,
-What would Kyle be most likely to say?"
-"Scenario:
 Imagine that Andrew wanted to get Jacob’s opinion about a video game they just played. After Jacob finished the game, Andrew asked, “What did you think?” 
 Rating:
 Here's how Jacob actually felt about the video game:
@@ -53,19 +30,19 @@ Here's how Jacob actually felt about the video game:
 Question:
 What would Jacob be most likely to say?"
 "Scenario:
-Imagine that Jayden wanted to get Charlie’s opinion about a TV episode they just watched. After Charlie finished the episode, Jayden asked, “What did you think?” 
-Rating:
-Here's how Charlie actually felt about the TV-show:
-3 out of 3 hearts
-Question:
-If Charlie wanted to share their honest thoughts, but not necessarily make Jayden feel good, What would Charlie be most likely to say?"
-"Scenario:
 Imagine that Liam wanted to get Alex’s opinion about a restaurant they just visited. After Alex visited the restaurant, Liam asked, “What did you think?” 
 Rating:
 Here's how Alex actually felt about the restaurant:
 2 out of 3 hearts
 Question:
 If Alex wanted to BOTH make Liam feel good AND share their honest thoughts, What would Alex be most likely to say?"
+"Scenario:
+Imagine that Sarah filmed a movie, but she didn't know how good it was. Sarah approached Lucy, who knows a lot about movies, and asked ""How was my movie?""
+Rating:
+Here's how Lucy actually felt about Sarah's movie:
+1 out of 3 hearts
+Question:
+What would Lucy be most likely to say?"
 "Scenario:
 Imagine that Gabriel wanted to get Sarah’s opinion about a song they just heard. After Sarah finished listening to the song, Gabriel asked, “What did you think?” 
 Rating:
@@ -81,3 +58,26 @@ Here's how Karen actually felt about Jenny's poem:
 Question:
 If Karen wanted to BOTH make Jenny feel good AND give accurate and informative feedback,
 What would Karen be most likely to say?"
+"Scenario:
+Imagine that James baked a cake, but he didn't know how good it tasted. James approached Kyle, who knows a lot about baking, and asked ""How did my cake taste?""
+Rating:
+Here's how Kyle actually felt about James's cake:
+3 out of 3 hearts
+Question:
+If Kyle wanted to give as accurate and informative feedback as possible, but not necessarily make James feel good,
+What would Kyle be most likely to say?"
+"Scenario:
+Imagine that Chris composed a song, but he didn't know how good it sounded. Chris approached Sean, who knows a lot about composing songs, and asked ""How was my song?""
+Rating:
+Here's how Sean actually felt about Chris's song:
+0 out of 3 hearts
+Question:
+If Sean wanted to make Chris feel good, but not necessarily give informative feedback,
+What would Sean be most likely to say?"
+"Scenario:
+Imagine that Jayden wanted to get Charlie’s opinion about a TV episode they just watched. After Charlie finished the episode, Jayden asked, “What did you think?” 
+Rating:
+Here's how Charlie actually felt about the TV-show:
+3 out of 3 hearts
+Question:
+If Charlie wanted to share their honest thoughts, but not necessarily make Jayden feel good, What would Charlie be most likely to say?"
